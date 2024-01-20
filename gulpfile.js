@@ -1,7 +1,7 @@
 "use strict"
 
 // 出力するWPテーマ名を記入
-const themeName = 'test'
+const themeName = 'mavs-wp'
 
 // gulp関連のモジュールを読み込む
 const bs = require("browser-sync")
