@@ -5,36 +5,225 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,user-scalable=yes" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="description" content="トップページのディスクリプション">
-  <title>トップページ</title>
+  <meta name="description" content="Mavericks(マーベリックス)は、北海道札幌市を拠点にホームページ制作・Webシステム開発会社です。長所を活かしたチームづくりで最高のパフォーマンスを提供致します。">
+  <title>
+    株式会社マーベリックス
+  </title>
   <meta property="og:title" content="" />
   <meta property="og:description" content="" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="" />
   <meta property="og:image" content="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Inter&family=Jost:wght@500&family=M+PLUS+1:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <link href="./assets/css/common.css" rel="stylesheet" />
   <link href="./assets/css/style.css" rel="stylesheet" />
-  <link rel="icon" type="image/png" href="./assets/favicon.ico" />
-  <script src="./assets/js/script.js"></script>
 </head>
 
 <body>
-  <header class="c-header" id="js-header">
-    <div class="c-header_wrap">
-      <h1><a href="/"></a><img src="assets/image/logo.png" alt="" width="80"></a></h1>
-      <h2>トップトプヘッダー</h2>
+  <header class="header">
+    <h1 class="header__ttl"><a href="/" class="header__ttlLink"><img src="assets/image/mavs_logo.svg" alt="株式会社マーベリックス"></a></h1>
+    <div id="menuBtn" class="menuBtn">
+      <span id="menuBtn__top" class="menuBtn__top"></span>
+      <span id="menuBtn__middle" class="menuBtn__middle"></span>
+      <span id="menuBtn__bottom" class="menuBtn__bottom"></span>
     </div>
+    <nav id="gnav" class="gnav">
+      <div class="gnav__pc">
+        <ul class="gnav__nav">
+          <li class="gnav__list"><a href="#" class="gnav__link">ABOUT</a></li>
+          <li class="gnav__list"><a href="#" class="gnav__link">SERVICE</a></li>
+          <li class="gnav__list"><a href="#" class="gnav__link">NEWS</a></li>
+          <li class="gnav__list"><a href="#" class="gnav__link">BLOG</a></li>
+          <li class="gnav__list"><a href="#" class="gnav__link">COMPANY</a></li>
+          <li class="gnav__list"><a href="#" class="gnav__link">RECRUIT</a></li>
+          <li class="gnav__list"><a href="#" class="gnav__link">CONTACT</a></li>
+        </ul>
+      </div>
+      <div class="gnav__sp">
+        <ul class="gnav__nav">
+          <li class="gnav__list"><a href="#" class="gnav__link">TOP</a></li>
+          <li class="gnav__list"><a href="#" class="gnav__link">ABOUT</a></li>
+          <li class="gnav__list"><a href="#" class="gnav__link">WORKS</a></li>
+          <li class="gnav__list"><a href="#" class="gnav__link">SERVICE</a></li>
+          <li class="gnav__list"><a href="#" class="gnav__link">MEMBER</a></li>
+          <li class="gnav__list"><a href="#" class="gnav__link">COMPANY</a></li>
+          <li class="gnav__list"><a href="#" class="gnav__link">BLOG</a></li>
+          <li class="gnav__list"><a href="#" class="gnav__link">NEWS</a></li>
+        </ul>
+        <div class="gnav__box">
+          <div class="gnav__btn"><a href="#" class="gnav__btnLink">CONTACT</a></div>
+          <div class="gnav__btn"><a href="#" class="gnav__btnLink">RECRUIT</a></div>
+        </div>
+      </div>
+    </nav>
   </header>
 
-  <main class="topMain c-main">
-
+  <main id="top" class="main">
+    <div class="mv">
+      <div class="mv__imgBox">
+        <div class="mv__img--01"></div>
+        <div class="mv__img--02"></div>
+        <div class="mv__img--03"></div>
+        <div class="mv__img--04"></div>
+      </div>
+      <div class="mv__txtBox">
+        <p class="mv__catchcopy--en">UNION</p>
+        <p class="mv__catchcopy--en">CREATE</p>
+        <p class="mv__catchcopy--en">STRENGTH</p>
+        <p class="mv__catchcopy--ja">最高のチームで、最高の価値を提供する</p>
+      </div>
+      <div class="mv__roundIcon"></div>
+    </div>
+    <section id="about" class="about">
+      <h2 class="about__ttl">ABOUT</h2>
+      <div class="about__box">
+        <p class="about__txt">マーベリックスは<br class="about__br">技術力とコミュニケーションスキルを<br class="about__br">兼ね備えたエンジニア集団。</p>
+        <p class="about__txt">それぞれの個性を活かしチームで取り組む<br class="about__br">からこそ最高の価値を提供できる。</p>
+        <p class="about__txt">変化を恐れず己を磨き、挑戦を続けながら<br class="about__br">明日の世界を創造していく。</p>
+      </div>
+      <div class="about__btn"><a href="#" class="about__btnLink">READ MORE</a></div>
+    </section>
+    <section id="service" class="service">
+      <div class="service__box">
+        <h2 class="service__ttl"><span>S</span>ERVICE</h2>
+        <p class="service__sub">サービス</p>
+        <p class="service__txt">
+          マーベリックスは経験豊富なメンバーによるサイト制作やシステム開発を得意としています。さらに業務に柔軟に対応できる「リモートラボ」なら、お客様の開発を効率的に進めることができます。
+        </p>
+        <div class="service__btn"><a href="#" class="service__btnLink">READ MORE</a></div>
+      </div>
+      <div class="service__box">
+        <p class="service__pic"><img src="assets/image/top/service.jpg" alt="業務風景" class="service__img"></p>
+      </div>
+    </section>
+    <section id="blog" class="blog">
+      <div class="blog__box">
+        <h2 class="blog__ttl"><span>B</span>LOG</h2>
+        <p class="blog__sub">ブログ</p>
+      </div>
+      <!-- Swiper本体 -->
+      <div class="swiper blog-swiper">
+        <!-- Swiperラッパー -->
+        <div class="swiper-wrapper blog-swiper__wrapper">
+          <!-- スライド -->
+          <div class="swiper-slide blog-swiper__slide">
+            <a href="#" class="blog__link">
+              <p class="blog__pic"><img src="assets/image/top/tmb.jpg" alt="サムネイル画像" class="blog__img"></p>
+              <p class="blog__info">2023.09.28 | CATEGORY</p>
+              <p class="blog__cap">タイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+            </a>
+          </div>
+          <div class="swiper-slide blog-swiper__slide">
+            <a href="#" class="blog__link">
+              <p class="blog__pic"><img src="assets/image/top/tmb.jpg" alt="サムネイル画像" class="blog__img"></p>
+              <p class="blog__info">2023.09.28 | CATEGORY</p>
+              <p class="blog__cap">タイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+            </a>
+          </div>
+          <div class="swiper-slide blog-swiper__slide">
+            <a href="#" class="blog__link">
+              <p class="blog__pic"><img src="assets/image/top/tmb.jpg" alt="サムネイル画像" class="blog__img"></p>
+              <p class="blog__info">2023.09.28 | CATEGORY</p>
+              <p class="blog__cap">タイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+            </a>
+          </div>
+          <div class="swiper-slide blog-swiper__slide">
+            <a href="#" class="blog__link">
+              <p class="blog__pic"><img src="assets/image/top/tmb.jpg" alt="サムネイル画像" class="blog__img"></p>
+              <p class="blog__info">2023.09.28 | CATEGORY</p>
+              <p class="blog__cap">タイトルタイトルタイトルタイトルタイトルタイトルタイトル</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="blog__btn"><a href="#" class="blog__btnLink">READ MORE</a></div>
+    </section>
+    <section id="member" class="member">
+      <div class="member__box">
+        <h2 class="member__ttl"><span>M</span>EMBER</h2>
+        <p class="member__sub">メンバー</p>
+      </div>
+      <picture class="member__pic">
+        <source media="(max-width: 769px)" srcset="assets/image/top/member_sp.jpg">
+        <img src="assets/image/top/member_pc.jpg" alt="オフィス風景" class="member__img">
+      </picture>
+      <p class="member__txt">個性あるマーベリックスの仲間をご紹介します！</p>
+      <div class="member__btn"><a href="#" class="member__btnLink">READ MORE</a></div>
+    </section>
+    <div class="loopTxt">
+      <p class="loopTxt__txt">MAVS</p>
+      <p class="loopTxt__txt">MAVS</p>
+      <p class="loopTxt__txt">MAVS</p>
+      <p class="loopTxt__txt">MAVS</p>
+    </div>
+    <div id="recruit" class="recruit">
+      <div class="recruit__wrapper">
+        <p class="recruit__catchcopy">
+          CLIMB TO<br class="recruit__br--sp"> THE TOP <br class="recruit__br--pc">
+          WITH MARVERICKS
+        </p>
+        <p class="recruit__txt">
+          マーベリックスでは一緒に働く<br class="recruit__br--sp">メンバーを募集しています。<br>
+          まずはカレーを食べに行きましょう！
+        </p>
+        <div class="recruit__btn"><a href="#" class="recruit__btnLink">READ MORE</a></div>
+      </div>
+    </div>
+    <section id="news" class="news">
+      <div class="news__box">
+        <h2 class="news__ttl"><span>N</span>EWS</h2>
+        <p class="news__sub">ニュース</p>
+      </div>
+      <ul class="news__ul">
+        <li class="news__list">
+          <a href="#" class="news__link">
+            <p class="news__date">2022.05.01</p>
+            <p class="news__cap">ホームページをリニューアルしました</p>
+          </a>
+        </li>
+        <li class="news__list">
+          <a href="#" class="news__link">
+            <p class="news__date">2022.05.01</p>
+            <p class="news__cap">ホームページをリニューアルしました</p>
+          </a>
+        </li>
+        <li class="news__list">
+          <a href="#" class="news__link">
+            <p class="news__date">2022.05.01</p>
+            <p class="news__cap">ホームページをリニューアルしました</p>
+          </a>
+        </li>
+      </ul>
+      <div class="news__btn"><a href="#" class="news__btnLink">READ MORE</a></div>
+    </section>
   </main>
 
-  <footer class="c-footer">
-    <div class="c-footer_wrap">
-      <div class="copyright">©test.inc</div>
+  <footer class="footer">
+    <nav class="fnav">
+      <ul class="fnav__nav">
+        <li class="fnav__list"><a href="#" class="fnav__link">TOP</a></li>
+        <li class="fnav__list"><a href="#" class="fnav__link">ABOUT</a></li>
+        <li class="fnav__list"><a href="#" class="fnav__link">WORKS</a></li>
+        <li class="fnav__list"><a href="#" class="fnav__link">SERVICE</a></li>
+        <li class="fnav__list"><a href="#" class="fnav__link">MEMBER</a></li>
+        <li class="fnav__list"><a href="#" class="fnav__link">COMPANY</a></li>
+        <li class="fnav__list"><a href="#" class="fnav__link">BLOG</a></li>
+        <li class="fnav__list"><a href="#" class="fnav__link">NEWS</a></li>
+      </ul>
+    </nav>
+    <div class="footer__container">
+      <div class="footer__box">
+        <div class="footer__btn"><a href="#" class="footer__btnLink">CONTACT</a></div>
+        <div class="footer__btn"><a href="#" class="footer__btnLink">RECRUIT</a></div>
+      </div>
+      <p class="footer__logo"><a href="/" class="footer__link"><img src="assets/image/footer_logo.svg" alt="株式会社マーベリックス" class="footer__img"></a></p>
+      <p class="footer__copy"><small class="footer__small">&copy;Mavericks Inc.</small></p>
     </div>
   </footer>
+
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

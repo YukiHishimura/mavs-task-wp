@@ -2,7 +2,15 @@
 base
 ================================================================ */
 
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Oswald:wght@300;400;700&display=swap");
+/* ================================================================
+Google font
+font-family: 'Allura', cursive;
+font-family: 'Inter', sans-serif;
+font-family: 'Jost', sans-serif;
+font-family: 'M PLUS 1', sans-serif;
+font-family: 'Noto Sans JP', sans-serif;
+================================================================ */
+
 
 html {
   overflow-y: scroll;
@@ -18,29 +26,14 @@ html {
     font-size: calc(10 / 375 * 100vw);
   }
 }
+
 body {
   color: #222;
   background: #fff;
-  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro",
-    "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic",
-    sans-serif;
+  font-family: 'M PLUS 1', 'Noto Sans JP', sans-serif;
   -webkit-text-size-adjust: none;
   line-height: 1.7;
   overflow: hidden;
   width: 100%;
   font-size: 1.6rem;
-}
-@media screen and (max-width: 768px) {
-  .inner {
-    width: 92%;
-  }
-}
-
-/* ================================================================
-  clearfix
-================================================================ */
-.clearfix:after {
-  content: "";
-  display: block;
-  clear: both;
 }

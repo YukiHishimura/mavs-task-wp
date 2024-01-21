@@ -1,47 +1,7 @@
 @import '_variable.scss';
-body {
-}
 
-@media screen and (min-width: 769px) {
-  .c-onlySp {
-    display: none !important;
-  }
-}
-@media #{$sp} {
-  .c-onlyPc {
-    display: none !important;
-  }
-}
+// ヘッダー
 
-.c {
-  &-main {
-  }
-  &-header {
-    background: #ddd;
-    font-size: 22px;
-    &_wrap {
-      @include inner;
-    }
-  }
-  &-footer {
-    background: #ddd;
-    &_wrap {
-      @include inner;
-    }
-  }
-  &-link {
-    a {
-      display: block;
-      width: 200px;
-      padding: 10px;
-      border-radius: 10px;
-      text-align: center;
-      color: #fff;
-      background-color: $colorOrange;
-      &:hover {
-        color: #fff;
-        background: #f56500;
-      }
-    }
-  }
-}
+// フッター
+
+// ナビゲーション

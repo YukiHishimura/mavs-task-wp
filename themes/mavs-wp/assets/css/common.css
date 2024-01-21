@@ -6,7 +6,6 @@
  * *********************************** */
 /* Reset margin, padding, border
  * *********************************** */
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Oswald:wght@300;400;700&display=swap");
 html,
 body,
 h1,
@@ -181,6 +180,14 @@ q:before {
 /* ================================================================
 base
 ================================================================ */
+/* ================================================================
+Google font
+font-family: 'Allura', cursive;
+font-family: 'Inter', sans-serif;
+font-family: 'Jost', sans-serif;
+font-family: 'M PLUS 1', sans-serif;
+font-family: 'Noto Sans JP', sans-serif;
+================================================================ */
 html {
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -201,26 +208,12 @@ html {
 body {
   color: #222;
   background: #fff;
-  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+  font-family: "M PLUS 1", "Noto Sans JP", sans-serif;
   -webkit-text-size-adjust: none;
   line-height: 1.7;
   overflow: hidden;
   width: 100%;
   font-size: 1.6rem;
-}
-
-@media screen and (max-width: 768px) {
-  .inner {
-    width: 92%;
-  }
-}
-/* ================================================================
-  clearfix
-================================================================ */
-.clearfix:after {
-  content: "";
-  display: block;
-  clear: both;
 }
 
 /* ================================================================
@@ -229,61 +222,3 @@ body {
 /* ================================================================
 mixin
 ================================================================ */
-@media screen and (min-width: 769px) {
-  .c-onlySp {
-    display: none !important;
-  }
-}
-@media only screen and (max-width:769px) {
-  .c-onlyPc {
-    display: none !important;
-  }
-}
-.c-header {
-  background: #ddd;
-  font-size: 22px;
-}
-.c-header_wrap {
-  margin-top: 0;
-  margin-bottom: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 102.4rem;
-  width: 98%;
-}
-@media only screen and (max-width:769px) {
-  .c-header_wrap {
-    width: 92%;
-    max-width: 32.7rem;
-  }
-}
-.c-footer {
-  background: #ddd;
-}
-.c-footer_wrap {
-  margin-top: 0;
-  margin-bottom: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 102.4rem;
-  width: 98%;
-}
-@media only screen and (max-width:769px) {
-  .c-footer_wrap {
-    width: 92%;
-    max-width: 32.7rem;
-  }
-}
-.c-link a {
-  display: block;
-  width: 200px;
-  padding: 10px;
-  border-radius: 10px;
-  text-align: center;
-  color: #fff;
-  background-color: #ea9631;
-}
-.c-link a:hover {
-  color: #fff;
-  background: #f56500;
-}
