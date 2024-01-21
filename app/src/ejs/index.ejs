@@ -1,35 +1,12 @@
 <% 
 let title = 'トップページ'; 
 let description = 'トップページのディスクリプション'; 
-let pageId = 'home'; 
+let pageId = 'topPage'; 
 %>
 <%- include('./common/_header', { title: title, description: description, pageId: pageId }) %>
 
 <main class="topMain c-main">
-  <section class="topMv">
-    <div class="topMv_wrap">
-    </div>
-  </section>
-  <section class="topContents">
-    <div class="topContents_wrap">
-      <div class="topContents_title">
-        <h2>タイトルだよ</h2>
-      </div>
-      <p class="topContents_text">テキスト</p>
-      <div class="c-link"><a href="about.html">会社概要ページへ</a></div>
-    </div>
-  </section>
-  <section class="topImages">
-    <div class="topImages_wrap">
-      <p>JPG</p>
-      <img src="assets/image/morning.jpg" alt="">
-      <p>PNG</p>
-      <img src="assets/image/fashion.png" alt="">
-      <p>SVG</p>
-      <img src="assets/image/car.svg" alt="">
-      <%- include('./common/_parts')  %>
-    </div>
-  </section>
+  
 </main>
 
 <%- include('./common/_footer')  %>

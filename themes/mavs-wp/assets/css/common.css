@@ -1,0 +1,289 @@
+@charset "UTF-8";
+/* ***********************************
+ *
+ *    Ire's CSS Reset & Base
+ *    https://github.com/ireade/css/blob/master/base.scss
+ * *********************************** */
+/* Reset margin, padding, border
+ * *********************************** */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Oswald:wght@300;400;700&display=swap");
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+em,
+small,
+strong,
+sub,
+sup,
+mark,
+del,
+ins,
+strike,
+abbr,
+dfn,
+blockquote,
+q,
+cite,
+code,
+pre,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+div,
+section,
+article,
+main,
+aside,
+nav,
+header,
+hgroup,
+footer,
+img,
+figure,
+figcaption,
+address,
+time,
+audio,
+video,
+canvas,
+iframe,
+details,
+summary,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Typography
+  * *********************************** */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+
+* {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+a,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Layout
+  * *********************************** */
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Elements
+  * *********************************** */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+img {
+  border-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+
+/* Attributes & states
+  * *********************************** */
+[hidden] {
+  display: none !important;
+}
+
+[disabled] {
+  cursor: not-allowed;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Utility classes
+  * *********************************** */
+.sr-only {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  left: -9999px;
+  top: -9999px;
+}
+
+/* ================================================================
+base
+================================================================ */
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  font-size: 0.6944444444vw;
+}
+@media screen and (max-width: 1440px) {
+  html {
+    font-size: 0.6944444444vw;
+  }
+}
+@media screen and (max-width: 769px) {
+  html {
+    font-size: 2.6666666667vw;
+  }
+}
+
+body {
+  color: #222;
+  background: #fff;
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+  -webkit-text-size-adjust: none;
+  line-height: 1.7;
+  overflow: hidden;
+  width: 100%;
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 768px) {
+  .inner {
+    width: 92%;
+  }
+}
+/* ================================================================
+  clearfix
+================================================================ */
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ================================================================
+変数
+================================================================ */
+/* ================================================================
+mixin
+================================================================ */
+@media screen and (min-width: 769px) {
+  .c-onlySp {
+    display: none !important;
+  }
+}
+@media only screen and (max-width:769px) {
+  .c-onlyPc {
+    display: none !important;
+  }
+}
+.c-header {
+  background: #ddd;
+  font-size: 22px;
+}
+.c-header_wrap {
+  margin-top: 0;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 102.4rem;
+  width: 98%;
+}
+@media only screen and (max-width:769px) {
+  .c-header_wrap {
+    width: 92%;
+    max-width: 32.7rem;
+  }
+}
+.c-footer {
+  background: #ddd;
+}
+.c-footer_wrap {
+  margin-top: 0;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 102.4rem;
+  width: 98%;
+}
+@media only screen and (max-width:769px) {
+  .c-footer_wrap {
+    width: 92%;
+    max-width: 32.7rem;
+  }
+}
+.c-link a {
+  display: block;
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  background-color: #ea9631;
+}
+.c-link a:hover {
+  color: #fff;
+  background: #f56500;
+}
