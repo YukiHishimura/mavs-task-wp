@@ -23,14 +23,14 @@ html {
   }
 
   @media screen and (max-width: 769px) {
-    font-size: calc(10 / 375 * 100vw);
+    font-size: calc(10 / 390 * 100vw);
   }
 }
 
 body {
   color: #222;
   background: #fff;
-  font-family: 'M PLUS 1', 'Noto Sans JP', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   -webkit-text-size-adjust: none;
   line-height: 1.7;
   overflow: hidden;

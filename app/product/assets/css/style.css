@@ -11,70 +11,111 @@ mixin
 /* ================================================================
 mixin
 ================================================================ */
-.topContents_wrap {
-  margin-top: 0;
-  margin-bottom: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 102.4rem;
-  width: 98%;
+.mv {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh;
 }
-@media only screen and (max-width:769px) {
-  .topContents_wrap {
-    width: 92%;
-    max-width: 32.7rem;
-  }
+.mv__imgBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
 }
-.topContents_title {
-  font-size: 22px;
+.mv__img--01 {
+  position: absolute;
+  height: 100vh;
+  aspect-ratio: 664/812;
+  background: url(../image/top/mv_city.png) center center/cover;
 }
-@media only screen and (max-width:769px) {
-  .topContents_title {
-    text-align: center;
-  }
+.mv__img--02 {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  height: 86.7vh;
+  aspect-ratio: 620/703;
+  transform: translateX(-10%);
+  background: url(../image/top/mv_bg1.png) center center/cover;
 }
-.topContents_text {
-  font-size: 16px;
+.mv__img--03 {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  height: 68vh;
+  aspect-ratio: 609/556;
+  transform: translateX(-23%);
+  background: url(../image/top/mv_wolf.png) center center/cover;
 }
-
-.topImages_wrap {
-  margin-top: 0;
-  margin-bottom: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 102.4rem;
-  width: 98%;
+.mv__img--04 {
+  position: absolute;
+  bottom: 0;
+  right: -170px;
+  z-index: -2;
+  width: 66rem;
+  aspect-ratio: 1140/812;
+  background: url(../image/top/mv_bg2.png) center center/cover;
 }
-@media only screen and (max-width:769px) {
-  .topImages_wrap {
-    width: 92%;
-    max-width: 32.7rem;
-  }
+.mv__txtBox {
+  width: 35rem;
+  margin: 0 auto;
+  margin-top: 11.8vh;
 }
-
-/* ================================================================
-変数
-================================================================ */
-/* ================================================================
-mixin
-================================================================ */
-.aboutContents_wrap {
-  margin-top: 0;
-  margin-bottom: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 102.4rem;
-  width: 98%;
+.mv__catchcopy--en {
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  font-family: "M PLUS 1", sans-serif;
+  font-size: 6.7rem;
 }
-@media only screen and (max-width:769px) {
-  .aboutContents_wrap {
-    width: 92%;
-    max-width: 32.7rem;
-  }
+.mv__catchcopy--en:nth-child(3) {
+  margin-bottom: 0.5rem;
 }
-.aboutContents_title {
-  font-size: 20px;
+.mv__catchcopy--en:nth-child(3)::after {
+  content: "";
+  display: block;
+  height: 1.2px;
+  margin-top: 1rem;
+  margin-left: calc(50% - 50vw);
+  background: #000;
 }
-.aboutContents_text {
-  font-size: 16px;
+.mv__catchcopy--en span {
+  position: relative;
+}
+.mv__catchcopy--en span::before {
+  content: "U";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: block;
+  background: #000;
+  color: #fff;
+}
+.mv__catchcopy--ja {
+  letter-spacing: 0.04em;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.mv__roundIcon {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12.7vh;
+  aspect-ratio: 1/1;
+  background: url(../image/top/round_logo.svg) center center/contain;
+}
+.mv__roundIcon::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 16vh;
+  aspect-ratio: 1/1;
+  background: url(../image/top/round_text.svg) center center/contain;
 }
