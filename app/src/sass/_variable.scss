@@ -22,15 +22,83 @@ $colorOrange: #FFB54B;
 $colorGray: #888;
 $colorDarkGray: #4d4d4d;
 
+// フォント
+$en: 'M PLUS 1', sans-serif;
+$ja: 'Noto Sans JP', sans-serif;
+
 /* ================================================================
 mixin
 ================================================================ */
 
+// ナビゲーション ボタン
+@mixin navBtn {
+  width: 24.1rem;
+  transform: skewX(-20deg);
+  border: 1px solid #fff;
 
+  &Link {
+    display: block;
+    padding: 1.3rem 0;
+    transform: skewX(20deg);
+    text-align: center;
+    font-family: "futura-pt", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+}
+
+// READ MOREボタン
+@mixin roundBtn {
+  width: 16.8rem;
+
+  a {
+    display: block;
+    padding: 0.8rem 0;
+    border-radius: 999px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    font-family: "futura-pt", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+}
+
+// セクションタイトル
+@mixin secTtl($c) {
+  width: fit-content;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+  font-family: $en;
+  font-size: 5.3rem;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 1.2px;
+    margin-top: 0.5rem;
+    margin-left: calc(50% - 50vw);
+    background: #000;
+  }
+
+  span {
+    position: relative;
+
+    &::before {
+      content: $c;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: block;
+      background: #000;
+      color: #fff;
+    }
+  }
+}
 
 @mixin textGrad($deg: 90deg, $s: 0%, $e: 40%) {
-  background: linear-gradient($deg, #6fc3d3 $s, #0e7092 $e);
+  background: linear-gradient($deg, #0000A9 $s, #970054 $e);
   -webkit-background-clip: text; //テキストでくり抜く
   -webkit-text-fill-color: transparent; //くり抜いた部分は背景を表示
 }
-

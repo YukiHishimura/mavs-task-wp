@@ -1,133 +1,524 @@
 @import "_variable.scss";
 
-// メインビジュアル
-.mv {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 100vh;
+#top {
 
-  &__img {
-    &Box {
+  // メインビジュアル
+  .mv {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  
+    &__img {
+      &Box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+      }
+  
+      // 中央グラデーション画像
+      &--01 {
+        position: absolute;
+        height: 100vh;
+        aspect-ratio: 664 / 812;
+        background: url(../image/top/mv_city.png) center center / cover;
+      }
+  
+      // グレーライン
+      &--02 {
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+        height: 86.7vh;
+        aspect-ratio: 620 / 703;
+        transform: translateX(-10%);
+        background: url(../image/top/mv_bg1.png) center center / cover;
+      }
+  
+      // 狼
+      &--03 {
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        height: 68vh;
+        aspect-ratio: 609 / 556;
+        transform: translateX(-23%);
+        background: url(../image/top/mv_wolf.png) center center / cover;
+      }
+  
+      // 葉
+      &--04 {
+        position: absolute;
+        bottom: 0;
+        right: -170px;
+        z-index: -2;
+        width: 66rem;
+        aspect-ratio: 1140 / 812;
+        background: url(../image/top/mv_bg2.png) center center / cover;
+      }
+    }
+  
+    &__txtBox {
+      width: 35rem;
+      margin: 0 auto;
+      margin-top: 11.8vh;
+    }
+  
+    &__catchcopy {
+      &--en {
+        line-height: 0.9;
+        letter-spacing: -0.03em;
+        font-family: $en;
+        font-size: 6.7rem;
+  
+        &:nth-child(3) {
+          margin-bottom: .5rem;
+  
+          &::after {
+            content: "";
+            display: block;
+            height: 1.2px;
+            margin-top: 1rem;
+            margin-left: calc(50% - 50vw);
+            background: #000;
+          }
+        }
+  
+        span {
+          position: relative;
+  
+          &::before {
+            content: "U";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            display: block;
+            background: #000;
+            color: #fff;
+          }
+        }
+      }
+  
+      &--ja {
+        letter-spacing: 0.04em;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+    }
+  
+    &__roundIcon {
       position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
+      bottom: 3rem;
+      left: 3rem;
       display: flex;
       justify-content: center;
-      width: 100%;
-      height: 100vh;
-    }
-
-    // 中央グラデーション画像
-    &--01 {
-      position: absolute;
-      height: 100vh;
-      aspect-ratio: 664 / 812;
-      background: url(../image/top/mv_city.png) center center / cover;
-    }
-
-    // グレーライン
-    &--02 {
-      position: absolute;
-      bottom: 0;
-      z-index: -1;
-      height: 86.7vh;
-      aspect-ratio: 620 / 703;
-      transform: translateX(-10%);
-      background: url(../image/top/mv_bg1.png) center center / cover;
-    }
-
-    // 狼
-    &--03 {
-      position: absolute;
-      bottom: 0;
-      z-index: 1;
-      height: 68vh;
-      aspect-ratio: 609 / 556;
-      transform: translateX(-23%);
-      background: url(../image/top/mv_wolf.png) center center / cover;
-    }
-
-    // 葉
-    &--04 {
-      position: absolute;
-      bottom: 0;
-      right: -170px;
-      z-index: -2;
-      width: 66rem;
-      aspect-ratio: 1140 / 812;
-      background: url(../image/top/mv_bg2.png) center center / cover;
+      align-items: center;
+      height: 12.7vh;
+      aspect-ratio: 1 / 1;
+      background: url(../image/top/round_logo.svg) center center / contain;
+  
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        height: 16vh;
+        aspect-ratio: 1 / 1;
+        background: url(../image/top/round_text.svg) center center / contain;
+      }
     }
   }
-
-  &__txtBox {
-    width: 35rem;
+  
+  // アバウトセクション
+  .about {
+    position: relative;
+    width: 33rem;
     margin: 0 auto;
-    margin-top: 11.8vh;
-  }
-
-  &__catchcopy {
-    &--en {
-      line-height: 0.9;
-      letter-spacing: -0.03em;
-      font-family: 'M PLUS 1', sans-serif;
-      font-size: 6.7rem;
-
-      &:nth-child(3) {
-        margin-bottom: .5rem;
-
-        &::after {
-          content: "";
-          display: block;
-          height: 1.2px;
-          margin-top: 1rem;
-          margin-left: calc(50% - 50vw);
-          background: #000;
-        }
-      }
-
-      span {
-        position: relative;
-
-        &::before {
-          content: "U";
-          position: absolute;
-          top: 50%;
-          left: 0;
-          transform: translateY(-50%);
-          display: block;
-          background: #000;
-          color: #fff;
-        }
-      }
+    margin-bottom: 13rem;
+    padding-top: 13rem;
+  
+    &__ttl {
+      margin-bottom: 4rem;
+      text-align: center;
+      font-family: $en;
+      font-size: 3.9rem;
     }
-
-    &--ja {
-      letter-spacing: 0.04em;
-      font-size: 1.5rem;
+  
+    &__box {
+      margin-bottom: 4rem;
+    }
+  
+    &__txt {
+      line-height: 2;
+      font-size: 1.7rem;
       font-weight: 700;
     }
+  
+    &__btn {
+      @include roundBtn;
+      margin: 0 auto;
+    }
+  
+    &__bg {
+      &Box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 308vh;
+        transform: translateX(-42.5vh);
+      }
+  
+      &Img {
+        &--01 {
+          position: absolute;
+          top: 0;
+          height: 308vh;
+          aspect-ratio: 1392 / 2606;
+          background: url(../image/top/top_bg1.png) center center / cover;
+        }
+  
+        &--02 {
+          position: absolute;
+          top: 112px;
+          z-index: -1;
+          height: 260vh;
+          aspect-ratio: 1224 / 2202;
+          transform: translateX(-20px);
+          background: url(../image/top/top_bg2.png) center center / cover;
+        }
+      }
+    }
+  }
+  
+  // サービスセクション
+  .service {
+    width: 33rem;
+    margin: 0 auto;
+    margin-bottom: 13rem;
+
+    &__box {
+      &:nth-child(1) {
+        margin-bottom: 6rem;
+      }
+    }
+
+    &__ttl {
+      @include secTtl("S");
+    }
+
+    &__sub {
+      margin-bottom: 4rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    &__txt {
+      margin-bottom: 4rem;
+      line-height: 1.78;
+      font-size: 1.4rem;
+    }
+
+    &__btn {
+      @include roundBtn;
+      margin: 0 auto;
+    }
+
+    &__pic {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 1.5rem;
+        left: 3rem;
+        z-index: -1;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #e6e6e6;
+      }
+    }
   }
 
-  &__roundIcon {
-    position: absolute;
-    bottom: 2.5rem;
-    left: 2.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 12.7vh;
-    aspect-ratio: 1 / 1;
-    background: url(../image/top/round_logo.svg) center center / contain;
+  // ブログセクション
+  .blog {
+    width: 33rem;
+    margin: 0 auto;
+    margin-bottom: 13rem;
+
+    &__box {
+      width: fit-content;
+      margin: 0 auto;
+    }
+
+    &__ttl {
+      @include secTtl("B");
+
+      &::after {
+        margin-left: 0;
+        margin-right: calc(50% - 50vw);
+      }
+    }
+
+    &__sub {
+      margin-bottom: 4rem;
+      text-align: right;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    &__btn {
+      @include roundBtn;
+      margin: 0 auto;
+    }
+  }
+
+  // メンバーセクション
+  .member {
+    margin-bottom: 10rem;
+
+    &__box {
+      width: 33rem;
+      margin: 0 auto;
+    }
+
+    &__ttl {
+      @include secTtl("M");
+    }
+
+    &__sub {
+      margin-bottom: 4rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    &__pic {
+      position: relative;
+      display: block;
+      width: 33.5rem;
+      aspect-ratio: 335 / 198;
+      margin-bottom: 5rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -2;
+        width: 31rem;
+        aspect-ratio: 310 / 272;
+        transform: translate(60%, -40%);
+        background: url(../image/top/plants.png) center center / cover;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 1.5rem;
+        left: 3rem;
+        z-index: -1;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #e6e6e6;
+      }
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__txt {
+      width: 33rem;
+      margin: 0 auto;
+      margin-bottom: 4rem;
+      line-height: 2;
+      font-size: 1.4rem;
+    }
+
+    &__btn {
+      @include roundBtn;
+      margin: 0 auto;
+    }
+  }
+
+  // ループテキスト
+  .loopTxt {
+    margin-bottom: 10rem;
+
+    &__wrapper {
+      display: flex;
+    }
+
+    &__img {
+      height: 7rem;
+      aspect-ratio: 2108 / 140;
+      background: url(../image/top/loop_text.svg) center center / contain;
+    }
+  }
+
+  // リクルートバナー
+  .recruit {
+    position: relative;
+    margin-bottom: 13rem;
+    background: url(../image/top/banner_bg_sp.jpg) center center / cover;
 
     &::before {
       content: "";
       position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
       display: block;
-      height: 16vh;
-      aspect-ratio: 1 / 1;
-      background: url(../image/top/round_text.svg) center center / contain;
+      height: 29.1rem;
+      aspect-ratio: 419 / 539;
+      transform: translate(-40%, 5%);
+      background: url(../image/top/banner_climbing.png) center center / contain;
+      pointer-events: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      z-index: 0;
+      display: block;
+      width: 11.5rem;
+      aspect-ratio: 257 / 371;
+      transform: translate(-20%, -40%);
+      background: url(../image/top/banner_logo.svg) center center / contain;
+    }
+
+    &__link {
+      position: relative;
+      z-index: 1;
+      display: block;
+      padding: 2rem 1.5rem 1.8rem;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3.8rem 0 2.5rem;
+      border: 2px solid #000;
+    }
+
+    &__catchcopy {
+      @include textGrad(90deg, 0%, 100%);
+      position: relative;
+      width: fit-content;
+      margin-bottom: 1.9rem;
+      padding-left: 5.3rem;
+      line-height: 1;
+      font-family: $en;
+      font-size: 3.8rem;
+
+      &::before {
+        content: "You Can!";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: block;
+        padding: 1rem;
+        transform: rotate(-16.6deg) translate(10%, -40%);
+        background: #b3b3b3;
+        font-family: 'Allura', cursive;
+        font-size: 4rem;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    &__txt {
+      width: fit-content;
+      margin-bottom: 2.4rem;
+      text-align: center;
+      line-height: 1.5;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    &__br {
+      &--pc {
+        display: none;
+      }
+    }
+
+    &__btn {
+      width: 16.7rem;
+      padding: 1rem 0;
+      transform: skewX(-20deg);
+      background: linear-gradient(90deg, #FF00D1 0%, #F7931E 100%);
+
+      &Txt {
+        display: block;
+        transform: skewX(20deg);
+        text-align: center;
+        color: #fff;
+        font-family: "futura-pt", sans-serif;
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  // ニュースセクション
+  .news {
+    width: 33rem;
+    margin: 0 auto;
+    margin-bottom: 17.2rem;
+
+    &__ttl {
+      @include secTtl("N");
+    }
+
+    &__sub {
+      margin-bottom: 4rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    &__ul {
+      margin-bottom: 4rem;
+      border-top: 1px solid #000;
+    }
+
+    &__list {
+      border-bottom: 1px solid #000;
+    }
+
+    &__link {
+      display: block;
+      padding: 1.5rem 0;
+    }
+
+    &__date {
+      line-height: 2;
+      font-size: 1.4rem;
+    }
+
+    &__cap {
+      line-height: 1.86;
+      font-size: 1.5rem;
+    }
+
+    &__btn {
+      @include roundBtn;
+      margin: 0 auto;
     }
   }
 }
+
