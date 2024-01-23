@@ -31,11 +31,13 @@ mixin
 
 // ナビゲーション ボタン
 @mixin navBtn {
+  overflow: hidden;
   width: 24.1rem;
   transform: skewX(-20deg);
   border: 1px solid #fff;
 
   &Link {
+    position: relative;
     display: block;
     padding: 1.3rem 0;
     transform: skewX(20deg);
@@ -43,6 +45,37 @@ mixin
     font-family: "futura-pt", sans-serif;
     font-size: 1.6rem;
     font-weight: 500;
+    transition: 0.4s;
+
+    &::before {
+      @media screen and (min-width: 770px) {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        display: block;
+        width: 120%;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        background: #fff;
+        transform: translate(-50%, -50%) scale(0);
+        transition: 0.4s;
+      }
+    }
+
+    &:hover {
+      @media screen and (min-width: 770px) {
+        color: #000;
+        letter-spacing: 0.05em;
+      }
+
+      &::before {
+        @media screen and (min-width: 770px) {
+          transform: translate(-50%, -50%)
+        }
+      }
+    }
   }
 }
 
@@ -77,7 +110,7 @@ mixin
         left: 50%;
         z-index: -2;
         display: block;
-        width: 100%;
+        width: 105%;
         aspect-ratio: 1 / 1;
         transform: translate(-50%, -50%);
         background: #000;
@@ -92,7 +125,7 @@ mixin
         left: 50%;
         z-index: -1;
         display: block;
-        width: 100%;
+        width: 105%;
         aspect-ratio: 1 / 1;
         transform: translate(-50%, -50%) scale(0);
         border-radius: 50%;

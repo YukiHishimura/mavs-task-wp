@@ -8,7 +8,7 @@
     position: relative;
     width: 100%;
     height: 100vh;
-  
+
     &__img {
       &Box {
         position: absolute;
@@ -24,7 +24,7 @@
           left: -3.4rem;
         }
       }
-  
+
       // 中央グラデーション画像
       &--01 {
         position: absolute;
@@ -32,7 +32,7 @@
         aspect-ratio: 664 / 812;
         background: url(../image/top/mv_city.png) center center / cover;
       }
-  
+
       // グレーライン
       &--02 {
         position: absolute;
@@ -43,7 +43,7 @@
         transform: translateX(-13%);
         background: url(../image/top/mv_bg1.png) center center / cover;
       }
-  
+
       // 狼
       &--03 {
         position: absolute;
@@ -60,7 +60,7 @@
           transform: translateX(43%);
         }
       }
-  
+
       // 葉
       &--04 {
         position: absolute;
@@ -73,12 +73,12 @@
 
         @media screen and (min-width: 1000px) {
           right: auto;
-          left: 26%;
+          left: 27%;
           width: 114rem;
         }
       }
     }
-  
+
     &__txtBox {
       width: 35rem;
       margin: 0 auto;
@@ -94,7 +94,7 @@
         transform: translateY(-50%);
       }
     }
-  
+
     &__catchcopy {
       &--en {
         line-height: 0.9;
@@ -105,10 +105,10 @@
         @media screen and (min-width: 1000px) {
           font-size: 11.8rem;
         }
-  
+
         &:nth-child(3) {
           margin-bottom: .5rem;
-  
+
           &::after {
             content: "";
             display: block;
@@ -122,10 +122,10 @@
             }
           }
         }
-  
+
         span {
           position: relative;
-  
+
           &::before {
             content: "U";
             position: absolute;
@@ -138,7 +138,7 @@
           }
         }
       }
-  
+
       &--ja {
         letter-spacing: 0.04em;
         font-size: 1.5rem;
@@ -150,7 +150,7 @@
         }
       }
     }
-  
+
     &__roundIcon {
       position: absolute;
       bottom: 3rem;
@@ -167,7 +167,7 @@
         left: 5.1rem;
         height: 13.3vh;
       }
-  
+
       &::before {
         content: "";
         position: absolute;
@@ -182,7 +182,7 @@
       }
     }
   }
-  
+
   // アバウトセクション
   .about {
     position: relative;
@@ -196,7 +196,7 @@
       margin-bottom: 12rem;
       padding-top: 17rem;
     }
-  
+
     &__ttl {
       margin-bottom: 4rem;
       text-align: center;
@@ -207,11 +207,11 @@
         font-size: 4.9rem;
       }
     }
-  
+
     &__box {
       margin-bottom: 4rem;
     }
-  
+
     &__txt {
       line-height: 2;
       font-size: 1.7rem;
@@ -227,6 +227,7 @@
           transform: translateX(-2.1rem);
         }
       }
+
       &:nth-child(3) {
         @media screen and (min-width: 770px) {
           transform: translateX(-4.2rem);
@@ -239,12 +240,12 @@
         display: none;
       }
     }
-  
+
     &__btn {
       @include roundBtn;
       margin: 0 auto;
     }
-  
+
     &__bg {
       &Box {
         position: absolute;
@@ -261,7 +262,7 @@
           left: -3.4rem;
         }
       }
-  
+
       &Img {
         &--01 {
           position: absolute;
@@ -270,7 +271,7 @@
           aspect-ratio: 1392 / 2606;
           background: url(../image/top/top_bg1.png) center center / cover;
         }
-  
+
         &--02 {
           position: absolute;
           top: 112px;
@@ -283,7 +284,7 @@
       }
     }
   }
-  
+
   // サービスセクション
   .service {
     width: 33rem;
@@ -623,6 +624,11 @@
     margin-bottom: 13rem;
     background: url(../image/top/banner_bg_sp.jpg) center center / cover;
 
+    @media screen and (min-width: 770px) {
+      margin-bottom: 13.7rem;
+      background: url(../image/top/banner_bg_pc.jpg) center center / cover;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -635,6 +641,12 @@
       transform: translate(-40%, 5%);
       background: url(../image/top/banner_climbing.png) center center / contain;
       pointer-events: none;
+      transition: 0.4s;
+
+      @media screen and (min-width: 770px) {
+        height: 52rem;
+        transform: translate(0, 5%);
+      }
     }
 
     &::after {
@@ -648,6 +660,26 @@
       aspect-ratio: 257 / 371;
       transform: translate(-20%, -40%);
       background: url(../image/top/banner_logo.svg) center center / contain;
+      transition: 0.4s;
+
+      @media screen and (min-width: 770px) {
+        width: 24rem;
+        transform: translate(-40%, -47%);
+      }
+    }
+
+    &:hover {
+      &::before {
+        @media screen and (min-width: 770px) {
+          transform: translate(2%, 5%) scale(1.05);
+        }
+      }
+
+      &::after {
+        @media screen and (min-width: 770px) {
+          transform: translate(-43%, -47%) scale(1.05);
+        }
+      }
     }
 
     &__link {
@@ -655,6 +687,10 @@
       z-index: 1;
       display: block;
       padding: 2rem 1.5rem 1.8rem;
+
+      @media screen and (min-width: 770px) {
+        padding: 2rem;
+      }
     }
 
     &__wrapper {
@@ -663,6 +699,10 @@
       align-items: center;
       padding: 3.8rem 0 2.5rem;
       border: 2px solid #000;
+
+      @media screen and (min-width: 770px) {
+        padding: 12.2rem 0 6.9rem;
+      }
     }
 
     &__catchcopy {
@@ -674,6 +714,12 @@
       line-height: 1;
       font-family: $en;
       font-size: 3.8rem;
+
+      @media screen and (min-width: 770px) {
+        margin-bottom: 1.5rem;
+        padding: 0;
+        font-size: 6.7rem;
+      }
 
       &::before {
         content: "You Can!";
@@ -689,6 +735,12 @@
         font-size: 4rem;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+
+        @media screen and (min-width: 770px) {
+          padding: 2rem;
+          transform: rotate(-16.6deg) translate(-20%, -72%);
+          font-size: 9rem;
+        }
       }
     }
 
@@ -699,19 +751,65 @@
       line-height: 1.5;
       font-size: 1.4rem;
       font-weight: 700;
+
+      @media screen and (min-width: 770px) {
+        margin-bottom: 2.1rem;
+        font-size: 2rem;
+      }
     }
 
     &__br {
       &--pc {
         display: none;
+
+        @media screen and (min-width: 770px) {
+          display: block;
+        }
+      }
+
+      &--sp {
+        @media screen and (min-width: 770px) {
+          display: none;
+        }
       }
     }
 
     &__btn {
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 16.7rem;
       padding: 1rem 0;
       transform: skewX(-20deg);
       background: linear-gradient(90deg, #FF00D1 0%, #F7931E 100%);
+
+      @media screen and (min-width: 770px) {
+        width: 22rem;
+      }
+
+      &::before {
+        @media screen and (min-width: 770px) {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 105%;
+          aspect-ratio: 1 / 1;
+          transform: scale(0);
+          border-radius: 50%;
+          background: linear-gradient(90deg, #0000A9 0%, #970054 100%);
+          transition: 0.4s;
+        }
+      }
+
+      &:hover {
+        &::before {
+          @media screen and (min-width: 770px) {
+            transform: none;
+          }
+        }
+      }
 
       &Txt {
         display: block;
@@ -720,6 +818,10 @@
         color: #fff;
         font-family: "futura-pt", sans-serif;
         font-size: 1.3rem;
+
+        @media screen and (min-width: 770px) {
+          font-size: 1.6rem;
+        }
       }
     }
   }
@@ -730,6 +832,19 @@
     margin: 0 auto;
     margin-bottom: 17.2rem;
 
+    @media screen and (min-width: 770px) {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      width: 100rem;
+      margin-bottom: 13.4rem;
+    }
+
+    &__box {
+      position: relative;
+      top: -1.2rem;
+    }
+
     &__ttl {
       @include secTtl("N");
     }
@@ -738,11 +853,20 @@
       margin-bottom: 4rem;
       font-size: 1.2rem;
       font-weight: 700;
+
+      @media screen and (min-width: 770px) {
+        font-size: 1.6rem;
+      }
     }
 
     &__ul {
       margin-bottom: 4rem;
       border-top: 1px solid #000;
+
+      @media screen and (min-width: 770px) {
+        width: 73.1rem;
+        margin: 0;
+      }
     }
 
     &__list {
@@ -752,22 +876,52 @@
     &__link {
       display: block;
       padding: 1.5rem 0;
+      transition: 0.2s;
+
+      @media screen and (min-width: 770px) {
+        display: flex;
+        align-items: center;
+        padding: 1.9rem 0;
+      }
+
+      &:hover {
+        @media screen and (min-width: 770px) {
+          background: #eee;
+        }
+      }
     }
 
     &__date {
       line-height: 2;
       font-size: 1.4rem;
+
+      @media screen and (min-width: 770px) {
+        width: 17.5rem;
+        text-align: center;
+        line-height: 1.75;
+        font-size: 1.6rem;
+      }
     }
 
     &__cap {
       line-height: 1.86;
       font-size: 1.5rem;
+
+      @media screen and (min-width: 770px) {
+        width: 55.6rem;
+        line-height: 1.75;
+        font-size: 1.6rem;
+      }
     }
 
     &__btn {
       @include roundBtn;
       margin: 0 auto;
+
+      @media screen and (min-width: 770px) {
+        position: absolute;
+        bottom: 0;
+      }
     }
   }
 }
-

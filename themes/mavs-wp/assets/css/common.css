@@ -201,7 +201,7 @@ html {
 }
 
 body {
-  color: #222;
+  color: #000;
   background: #fff;
   font-family: "Noto Sans JP", sans-serif;
   -webkit-text-size-adjust: none;
@@ -303,6 +303,11 @@ mixin
   background: #000;
   color: #fff;
 }
+@media screen and (min-width: 770px) {
+  .footer {
+    padding: 6.6rem 10rem 6.8rem;
+  }
+}
 .footer::before {
   content: "";
   position: absolute;
@@ -329,15 +334,30 @@ mixin
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 770px) {
+  .footer__wrapper {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
 .footer__box {
   margin-bottom: 5.7rem;
 }
+@media screen and (min-width: 770px) {
+  .footer__box {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 7.6rem;
+  }
+}
 .footer__btn {
+  overflow: hidden;
   width: 24.1rem;
   transform: skewX(-20deg);
   border: 1px solid #fff;
 }
 .footer__btnLink {
+  position: relative;
   display: block;
   padding: 1.3rem 0;
   transform: skewX(20deg);
@@ -345,15 +365,54 @@ mixin
   font-family: "futura-pt", sans-serif;
   font-size: 1.6rem;
   font-weight: 500;
+  transition: 0.4s;
+}
+@media screen and (min-width: 770px) {
+  .footer__btnLink::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    display: block;
+    width: 120%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: #fff;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.4s;
+  }
+}
+@media screen and (min-width: 770px) {
+  .footer__btnLink:hover {
+    color: #000;
+    letter-spacing: 0.05em;
+  }
+}
+@media screen and (min-width: 770px) {
+  .footer__btnLink:hover::before {
+    transform: translate(-50%, -50%);
+  }
 }
 .footer__btn:nth-child(1) {
   margin-bottom: 0.6rem;
+}
+@media screen and (min-width: 770px) {
+  .footer__btn:nth-child(1) {
+    margin: 0;
+  }
 }
 .footer__logo {
   width: 16.1rem;
   aspect-ratio: 161/54;
   margin: 0 auto;
   margin-bottom: 1rem;
+}
+@media screen and (min-width: 770px) {
+  .footer__logo {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
 }
 .footer__link {
   display: block;
@@ -367,6 +426,11 @@ mixin
   text-align: center;
   font-size: 1rem;
   font-weight: 700;
+}
+@media screen and (min-width: 770px) {
+  .footer__copy {
+    text-align: left;
+  }
 }
 
 .gnav {
@@ -522,11 +586,13 @@ mixin
   top: 30vh;
 }
 .gnav__btn {
+  overflow: hidden;
   width: 24.1rem;
   transform: skewX(-20deg);
   border: 1px solid #fff;
 }
 .gnav__btnLink {
+  position: relative;
   display: block;
   padding: 1.3rem 0;
   transform: skewX(20deg);
@@ -534,6 +600,34 @@ mixin
   font-family: "futura-pt", sans-serif;
   font-size: 1.6rem;
   font-weight: 500;
+  transition: 0.4s;
+}
+@media screen and (min-width: 770px) {
+  .gnav__btnLink::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    display: block;
+    width: 120%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: #fff;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.4s;
+  }
+}
+@media screen and (min-width: 770px) {
+  .gnav__btnLink:hover {
+    color: #000;
+    letter-spacing: 0.05em;
+  }
+}
+@media screen and (min-width: 770px) {
+  .gnav__btnLink:hover::before {
+    transform: translate(-50%, -50%);
+  }
 }
 .gnav__btn:nth-child(1) {
   margin-bottom: 0.6rem;
@@ -543,6 +637,11 @@ mixin
   margin-bottom: 6rem;
   transform: translateX(-1.5rem);
   font-family: "futura-pt", sans-serif;
+}
+@media screen and (min-width: 770px) {
+  .fnav {
+    transform: translateX(-5rem);
+  }
 }
 .fnav__nav {
   display: flex;
@@ -555,4 +654,10 @@ mixin
 .fnav__link {
   display: block;
   padding: 0.5rem;
+  transition: 0.3s;
+}
+@media screen and (min-width: 770px) {
+  .fnav__link:hover {
+    color: #888;
+  }
 }
