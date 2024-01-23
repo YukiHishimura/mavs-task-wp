@@ -16,14 +16,11 @@ html {
   overflow-y: scroll;
   scroll-behavior: smooth;
   font-size: 62.5%;
-  font-size: calc(10 / 1440 * 100vw);
+  font-size: calc(10 / 390 * 100vw);  // SP
 
-  @media screen and (max-width: 1440px) {
+  // PC
+  @media screen and (min-width: 770px) {
     font-size: calc(10 / 1440 * 100vw);
-  }
-
-  @media screen and (max-width: 769px) {
-    font-size: calc(10 / 390 * 100vw);
   }
 }
 

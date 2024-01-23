@@ -54,12 +54,65 @@ mixin
     display: block;
     padding: 0.8rem 0;
     border-radius: 999px;
+    border: 1px solid #000;
     background: #000;
     color: #fff;
     text-align: center;
     font-family: "futura-pt", sans-serif;
     font-size: 1.6rem;
     font-weight: 500;
+
+    @media screen and (min-width: 770px) {
+      overflow: hidden;
+      position: relative;
+      background: transparent;
+      transition: 0.4s;
+    }
+
+    &::before {
+      @media screen and (min-width: 770px) {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -2;
+        display: block;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        transform: translate(-50%, -50%);
+        background: #000;
+      }
+    }
+
+    &::after {
+      @media screen and (min-width: 770px) {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        display: block;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        transform: translate(-50%, -50%) scale(0);
+        border-radius: 50%;
+        background: #fff;
+        transition: 0.4s;
+      }
+    }
+
+    &:hover {
+      @media screen and (min-width: 770px) {
+        color: #000;
+        letter-spacing: 0.05em;
+      }
+
+      &::after {
+        @media screen and (min-width: 770px) {
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
   }
 }
 
@@ -71,6 +124,10 @@ mixin
   font-family: $en;
   font-size: 5.3rem;
 
+  @media screen and (min-width: 770px) {
+    font-size: 7.1rem;
+  }
+
   &::after {
     content: "";
     display: block;
@@ -78,6 +135,10 @@ mixin
     margin-top: 0.5rem;
     margin-left: calc(50% - 50vw);
     background: #000;
+
+    @media screen and (min-width: 770px) {
+      height: 2px;
+    }
   }
 
   span {

@@ -12,9 +12,10 @@ function initSwiper() {
 
     if (w > 769) {
         // PC
-        const gap = window.innerWidth * 0.026;
+        const gap = window.innerWidth * 0.018;
         newsSwiper = new Swiper('.blog-swiper', {
-            slidesPerView: 4,  // PC
+            loop: true,
+            slidesPerView: 2.5,  // PC
             spaceBetween: gap,
         });
         swiperBool = true;
