@@ -258,7 +258,6 @@ mixin
   background: #e6e6e6;
 }
 #top .blog {
-  width: 33rem;
   margin: 0 auto;
   margin-bottom: 13rem;
 }
@@ -302,6 +301,34 @@ mixin
   margin-bottom: 4rem;
   text-align: right;
   font-size: 1.2rem;
+  font-weight: 700;
+}
+#top .blog-swiper {
+  margin-left: 3rem;
+  margin-bottom: 4rem;
+}
+#top .blog__link {
+  display: block;
+}
+#top .blog__pic {
+  width: 100%;
+  aspect-ratio: 300/168;
+  margin-bottom: 2.7rem;
+}
+#top .blog__pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#top .blog__info {
+  margin-bottom: 0.4rem;
+  color: #4d4d4d;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+#top .blog__cap {
+  line-height: 1.67;
+  font-size: 1.8rem;
   font-weight: 700;
 }
 #top .blog__btn {

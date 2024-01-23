@@ -238,6 +238,8 @@ mixin
   padding: 1.2rem 1.5rem;
 }
 .header__ttl {
+  position: relative;
+  z-index: 2;
   height: 50px;
   aspect-ratio: 36/52;
 }
@@ -252,6 +254,7 @@ mixin
 
 .menuBtn {
   position: relative;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -349,7 +352,68 @@ mixin
 }
 
 .gnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  color: #fff;
+  font-family: "futura-pt", sans-serif;
+  transition: 0.4s;
+}
+.gnav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 55vh;
+  aspect-ratio: 199/469;
+  background: url(../image/menu_corner.png) center center/contain;
+}
+.gnav__pc {
   display: none;
+}
+.gnav__nav {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 0.5rem;
+  column-gap: 4.8rem;
+  height: 17rem;
+  transform: translate(15%, -30%);
+}
+.gnav__link {
+  display: block;
+  padding: 0.5rem;
+}
+.gnav__box {
+  position: relative;
+  top: 30vh;
+}
+.gnav__btn {
+  width: 24.1rem;
+  transform: skewX(-20deg);
+  border: 1px solid #fff;
+}
+.gnav__btnLink {
+  display: block;
+  padding: 1.3rem 0;
+  transform: skewX(20deg);
+  text-align: center;
+  font-family: "futura-pt", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.gnav__btn:nth-child(1) {
+  margin-bottom: 0.6rem;
 }
 
 .fnav {
