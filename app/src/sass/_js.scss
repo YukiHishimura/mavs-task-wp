@@ -1,5 +1,5 @@
 @import '_variable.scss';
-// JavaScriptで付け替えるclass
+// JavaScriptで付け外しするclass
 
 // ----------スライドメニュー--------------------
 .translateNav {
@@ -12,6 +12,7 @@
     .gnav__sp {
         transform: translateX(0);
         opacity: 1;
+        transition: 0.4s 0.4s; // メニュー閉じる時はすぐに戻す
     }
 }
 
@@ -19,9 +20,11 @@
 .rotateTop {
     transform: rotate(45deg);
 }
+
 .hideMiddle {
     opacity: 0;
 }
+
 .rotateBottom {
     transform: rotate(-45deg);
 }
@@ -29,4 +32,137 @@
 // ヘッダーロゴ色反転
 .changeLogoColor {
     filter: invert(100%);
+}
+
+// ----------各要素の表示--------------------
+// 最初は非表示
+.hidden {
+    transform: translateX(-5%);
+    opacity: 0;
+}
+
+// 表示
+#top {
+    // 付与するクラス
+    .show {
+        // about
+        .about {
+            &__ttl {
+                &Inner {
+                    @include showTtlInner;
+                }
+            }
+
+            &__box {
+                @include slideIn(0.6s);
+            }
+
+            &__btn {
+                @include slideIn(0.9s);
+            }
+        }
+
+        // service
+        .service {
+            &__ttl {
+                @include showUnderLine;
+
+                &Inner {
+                    @include showTtlInner;
+                }
+            }
+
+            &__sub, &__txt {
+                @include slideIn(0.6s);
+            }
+
+            &__btn {
+                @include slideIn(0.9s);
+            }
+
+            &__box {
+                @include slideIn(1.2s);
+            }
+        }
+
+        // blog
+        .blog {
+            &__ttl {
+                @include showUnderLine;
+
+                &Inner {
+                    @include showTtlInner;
+                }
+            }
+
+            &__sub {
+                @include slideIn(0.6s);
+            }
+
+            &__btn {
+                @include slideIn(0.9s);
+            }
+        }
+
+        // member
+        .member {
+            &__ttl {
+                @include showUnderLine;
+
+                &Inner {
+                    @include showTtlInner;
+                }
+            }
+
+            &__sub {
+                @include slideIn(0.6s);
+            }
+
+            &__pic {
+                @include slideIn(0.9s);
+            }
+
+            &__txt {
+                @include slideIn(1.2s);
+            }
+
+            &__btn {
+                @include slideIn(1.5s);
+            }
+        }
+
+        // recruit
+        &.recruit {
+            @include slideIn(0.6s);
+
+            .recruit {
+                &__wrapper {
+                    @include slideIn(0.9s);
+                }
+            }
+        }
+
+        // news
+        .news {
+            &__ttl {
+                @include showUnderLine;
+
+                &Inner {
+                    @include showTtlInner;
+                }
+            }
+
+            &__sub {
+                @include slideIn(0.6s);
+            }
+
+            &__ul {
+                @include slideIn(0.9s);
+            }
+
+            &__btn {
+                @include slideIn(1.2s);
+            }
+        }
+    }
 }

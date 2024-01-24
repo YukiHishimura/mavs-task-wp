@@ -1,6 +1,6 @@
 @import "_variable.scss";
 
-// テキスト無限ループ
+// ----------テキスト無限ループ--------------------
 .slideTxt {
     animation: slideTxtAnime 20s linear infinite;
 }
@@ -14,7 +14,7 @@
     }
 }
 
-// 円形テキスト回転
+// ----------円形テキスト回転--------------------
 .rotateTxt {
     &::before {
         animation: rotateTxtAnime 30s linear infinite;

@@ -254,7 +254,6 @@ $tabRatio: 3; // サイズ調整用比率
         z-index: 1;
         transform: translateX(-10%); // メニュー表示時に戻す
         opacity: 0; // メニュー表示時に戻す
-        transition: 0.4s 0.4s;
 
         @media screen and (min-width: 1000px) {
             display: none;

@@ -265,6 +265,8 @@
     }
 
     &__ttl {
+      width: fit-content;
+      margin: 0 auto;
       margin-bottom: 4rem;
       text-align: center;
       font-family: $en;
@@ -273,7 +275,13 @@
       @media screen and (min-width: 770px) {
         font-size: 4.9rem;
       }
+
+      &Inner {
+        @include ttlInner;
+      }
     }
+
+    
 
     &__box {
       margin-bottom: 4rem;
@@ -382,6 +390,10 @@
 
     &__ttl {
       @include secTtl("S");
+
+      &Inner {
+        @include ttlInner;
+      }
     }
 
     &__sub {
@@ -466,6 +478,10 @@
       &::after {
         margin-left: 0;
         margin-right: calc(50% - 50vw);
+      }
+
+      &Inner {
+        @include ttlInner;
       }
     }
 
@@ -573,6 +589,10 @@
 
     &__ttl {
       @include secTtl("M");
+
+      &Inner {
+        @include ttlInner;
+      }
     }
 
     &__sub {
@@ -587,6 +607,7 @@
 
     &__pic {
       position: relative;
+      z-index: -1;
       display: block;
       width: 33.5rem;
       aspect-ratio: 335 / 198;
@@ -931,6 +952,10 @@
 
     &__ttl {
       @include secTtl("N");
+
+      &Inner {
+        @include ttlInner;
+      }
     }
 
     &__sub {

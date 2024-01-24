@@ -29,7 +29,7 @@ $ja: 'Noto Sans JP', sans-serif;
 mixin
 ================================================================ */
 
-// ナビゲーション ボタン
+// ----------ナビゲーション ボタン--------------------
 @mixin navBtn {
   overflow: hidden;
   width: 24.1rem;
@@ -97,7 +97,8 @@ mixin
   }
 }
 
-// READ MOREボタン
+
+// ----------READ MOREボタン--------------------
 @mixin roundBtn {
   width: 16.8rem;
 
@@ -167,7 +168,8 @@ mixin
   }
 }
 
-// セクションタイトル
+
+// ----------セクションタイトル--------------------
 @mixin secTtl($c) {
   width: fit-content;
   margin-bottom: 0.5rem;
@@ -179,6 +181,7 @@ mixin
     font-size: 7.1rem;
   }
 
+  //下線
   &::after {
     content: "";
     display: block;
@@ -186,6 +189,8 @@ mixin
     margin-top: 0.5rem;
     margin-left: calc(50% - 50vw);
     background: #000;
+    transform: scaleX(0);
+    transform-origin: left;
 
     @media screen and (min-width: 770px) {
       height: 2px;
@@ -194,7 +199,8 @@ mixin
 
   span {
     position: relative;
-
+    
+    //一文字目
     &::before {
       content: $c;
       position: absolute;
@@ -207,7 +213,90 @@ mixin
     }
   }
 }
+// 下線の出現アニメーション
+@mixin showUnderLine {
+  &::after {
+    animation: scaleUpLine 0.5s 0.3s forwards;
+    @keyframes scaleUpLine {
+      100% {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
 
+
+// ----------タイトルインナー--------------------
+// デフォルト
+@mixin ttlInner {
+  overflow: hidden;
+  position: relative;
+  -webkit-text-fill-color: transparent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120%;
+    height: 100%;
+    background: #000;
+    transform: translateX(-151%) skew(-23deg);
+  }
+
+  span {
+    &::before {
+      transform: scaleX(0) translateY(-50%);
+    }
+  }
+}
+
+// 出現アニメーション
+@mixin showTtlInner {
+  // テキスト表示
+  animation: showTtl 0.5s 0.3s forwards;
+  @keyframes showTtl {
+    100% {
+      -webkit-text-fill-color: currentcolor;
+    }
+  }
+
+  &::before {
+    // 流れる黒いBox
+    animation: slideBox 0.5s 0.3s forwards;
+    @keyframes slideBox {
+      100% {
+        transform: translateX(151%) skew(-23deg);
+      }
+    }
+  }
+
+  span {
+    &::before {
+      // 一文字目の表示
+      animation: scaleUpBg 0.1s 0.3s forwards;
+      @keyframes scaleUpBg {
+        100% {
+          transform: scaleX(1) translateY(-50%);
+        }
+      }
+    }
+  }
+}
+
+
+// ----------各要素スライドイン--------------------
+@mixin slideIn($delay) {
+  animation: slideInAnime 0.3s $delay forwards;
+  @keyframes slideInAnime {
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
+
+
+// ----------グラデーションテキスト--------------------
 @mixin textGrad($deg: 90deg, $s: 0%, $e: 40%) {
   background: linear-gradient($deg, #0000A9 $s, #970054 $e);
   -webkit-background-clip: text; //テキストでくり抜く
