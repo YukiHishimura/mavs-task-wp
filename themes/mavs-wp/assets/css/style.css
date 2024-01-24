@@ -27,6 +27,11 @@ mixin
   width: 100%;
   height: 100vh;
 }
+@media screen and (min-width: 770px) {
+  #top .mv__imgBox {
+    left: 5.19rem;
+  }
+}
 @media screen and (min-width: 1000px) {
   #top .mv__imgBox {
     left: -3.4rem;
@@ -36,7 +41,7 @@ mixin
   position: absolute;
   height: 100vh;
   aspect-ratio: 664/812;
-  background: url(../image/top/mv_city.png) center center/cover;
+  background: url(../image/top/mv_city.png) center center/cover no-repeat;
 }
 #top .mv__img--02 {
   position: absolute;
@@ -45,7 +50,7 @@ mixin
   height: 86.7vh;
   aspect-ratio: 620/703;
   transform: translateX(-13%);
-  background: url(../image/top/mv_bg1.png) center center/cover;
+  background: url(../image/top/mv_bg1.png) center center/cover no-repeat;
 }
 #top .mv__img--03 {
   position: absolute;
@@ -54,12 +59,19 @@ mixin
   height: 68vh;
   aspect-ratio: 609/556;
   transform: translateX(-23%);
-  background: url(../image/top/mv_wolf.png) center center/cover;
+  background: url(../image/top/mv_wolf.png) center center/cover no-repeat;
+}
+@media screen and (min-width: 770px) {
+  #top .mv__img--03 {
+    height: auto;
+    width: 122.83rem;
+    transform: translateX(-16%);
+  }
 }
 @media screen and (min-width: 1000px) {
   #top .mv__img--03 {
     z-index: -1;
-    height: 84.7vh;
+    width: 75.3rem;
     transform: translateX(43%);
   }
 }
@@ -70,16 +82,23 @@ mixin
   z-index: -2;
   width: 66rem;
   aspect-ratio: 1140/812;
-  background: url(../image/top/mv_bg2.png) center center/cover;
+  background: url(../image/top/mv_bg2.png) center center/cover no-repeat;
+}
+@media screen and (min-width: 770px) {
+  #top .mv__img--04 {
+    right: -70px;
+    width: 197.22rem;
+  }
 }
 @media screen and (min-width: 1000px) {
   #top .mv__img--04 {
     right: auto;
     left: 27%;
     width: 114rem;
+    min-height: 100vh;
   }
 }
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 1000px) {
   #top .mv__img--04::before {
     content: "";
     position: absolute;
@@ -96,12 +115,19 @@ mixin
   margin: 0 auto;
   margin-top: 11.8vh;
 }
+@media screen and (min-width: 770px) {
+  #top .mv__txtBox {
+    width: fit-content;
+    margin: 0;
+    margin-top: 9.8vh;
+    margin-left: 6.1588rem;
+  }
+}
 @media screen and (min-width: 1000px) {
   #top .mv__txtBox {
     position: absolute;
     top: 50%;
     left: 0;
-    width: fit-content;
     margin: 0;
     margin-left: 3.1rem;
     transform: translateY(-50%);
@@ -112,6 +138,11 @@ mixin
   letter-spacing: -0.03em;
   font-family: "M PLUS 1", sans-serif;
   font-size: 6.7rem;
+}
+@media screen and (min-width: 770px) {
+  #top .mv__catchcopy--en {
+    font-size: 23.528rem;
+  }
 }
 @media screen and (min-width: 1000px) {
   #top .mv__catchcopy--en {
@@ -129,9 +160,16 @@ mixin
   margin-left: calc(50% - 50vw);
   background: #000;
 }
+@media screen and (min-width: 770px) {
+  #top .mv__catchcopy--en:nth-child(3)::after {
+    height: 2.3px;
+    margin-top: 3.114rem;
+  }
+}
 @media screen and (min-width: 1000px) {
   #top .mv__catchcopy--en:nth-child(3)::after {
     height: 2px;
+    margin-top: 1rem;
   }
 }
 #top .mv__catchcopy--en span {
@@ -152,6 +190,12 @@ mixin
   font-size: 1.5rem;
   font-weight: 700;
 }
+@media screen and (min-width: 770px) {
+  #top .mv__catchcopy--ja {
+    padding-left: 0.865rem;
+    font-size: 5.017rem;
+  }
+}
 @media screen and (min-width: 1000px) {
   #top .mv__catchcopy--ja {
     padding-left: 0.5rem;
@@ -169,6 +213,13 @@ mixin
   aspect-ratio: 1/1;
   background: url(../image/top/round_logo.svg) center center/contain no-repeat;
 }
+@media screen and (min-width: 770px) {
+  #top .mv__roundIcon {
+    bottom: 8.823rem;
+    left: 8.823rem;
+    height: 9vh;
+  }
+}
 @media screen and (min-width: 1000px) {
   #top .mv__roundIcon {
     bottom: 5.1rem;
@@ -183,6 +234,11 @@ mixin
   height: 16vh;
   aspect-ratio: 1/1;
   background: url(../image/top/round_text.svg) center center/contain no-repeat;
+}
+@media screen and (min-width: 770px) {
+  #top .mv__roundIcon::before {
+    height: 11.3vh;
+  }
 }
 @media screen and (min-width: 1000px) {
   #top .mv__roundIcon::before {
@@ -318,6 +374,11 @@ mixin
   width: 100%;
   height: 308vh;
   transform: translateX(-42.5vh);
+}
+@media screen and (min-width: 770px) {
+  #top .about__bgBox {
+    left: 5.19rem;
+  }
 }
 @media screen and (min-width: 1000px) {
   #top .about__bgBox {

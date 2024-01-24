@@ -20,6 +20,10 @@
         width: 100%;
         height: 100vh;
 
+        @media screen and (min-width: 770px) {
+          left: calc( 3rem * 1.73 );
+        }
+
         @media screen and (min-width: 1000px) {
           left: -3.4rem;
         }
@@ -30,7 +34,7 @@
         position: absolute;
         height: 100vh;
         aspect-ratio: 664 / 812;
-        background: url(../image/top/mv_city.png) center center / cover;
+        background: url(../image/top/mv_city.png) center center / cover no-repeat;
       }
 
       // グレーライン
@@ -41,7 +45,7 @@
         height: 86.7vh;
         aspect-ratio: 620 / 703;
         transform: translateX(-13%);
-        background: url(../image/top/mv_bg1.png) center center / cover;
+        background: url(../image/top/mv_bg1.png) center center / cover no-repeat;
       }
 
       // 狼
@@ -52,11 +56,23 @@
         height: 68vh;
         aspect-ratio: 609 / 556;
         transform: translateX(-23%);
-        background: url(../image/top/mv_wolf.png) center center / cover;
+        background: url(../image/top/mv_wolf.png) center center / cover no-repeat;
 
+        @media screen and (min-width: 770px) {
+          height: auto;
+          width: calc( 71rem * 1.73 );
+          transform: translateX(-16%);
+        }
+
+        // @media screen and (min-width: 1000px) {
+        //   z-index: -1;
+        //   height: 84.7vh;
+        //   width: auto;
+        //   transform: translateX(43%);
+        // }
         @media screen and (min-width: 1000px) {
           z-index: -1;
-          height: 84.7vh;
+          width: 75.3rem;
           transform: translateX(43%);
         }
       }
@@ -69,17 +85,23 @@
         z-index: -2;
         width: 66rem;
         aspect-ratio: 1140 / 812;
-        background: url(../image/top/mv_bg2.png) center center / cover;
+        background: url(../image/top/mv_bg2.png) center center / cover no-repeat;
+
+        @media screen and (min-width: 770px) {
+          right: -70px;
+          width: calc( 114rem * 1.73 );
+        }
 
         @media screen and (min-width: 1000px) {
           right: auto;
           left: 27%;
           width: 114rem;
+          min-height: 100vh;
         }
 
         // はみ出し隠す
         &::before {
-          @media screen and (min-width: 770px) {
+          @media screen and (min-width: 1000px) {
             content: "";
             position: absolute;
             top: 0;
@@ -98,11 +120,17 @@
       margin: 0 auto;
       margin-top: 11.8vh;
 
+      @media screen and (min-width: 770px) {
+        width: fit-content;
+        margin: 0;
+        margin-top: 9.8vh;
+        margin-left: calc( 3.56rem * 1.73 );
+      }
+
       @media screen and (min-width: 1000px) {
         position: absolute;
         top: 50%;
         left: 0;
-        width: fit-content;
         margin: 0;
         margin-left: 3.1rem;
         transform: translateY(-50%);
@@ -115,6 +143,10 @@
         letter-spacing: -0.03em;
         font-family: $en;
         font-size: 6.7rem;
+
+        @media screen and (min-width: 770px) {
+          font-size: calc( 13.6rem * 1.73 );
+        }
 
         @media screen and (min-width: 1000px) {
           font-size: 11.8rem;
@@ -131,8 +163,14 @@
             margin-left: calc(50% - 50vw);
             background: #000;
 
+            @media screen and (min-width: 770px) {
+              height: 2.3px;
+              margin-top: calc( 1.8rem * 1.73 );
+            }
+
             @media screen and (min-width: 1000px) {
               height: 2px;
+              margin-top: 1rem;
             }
           }
         }
@@ -158,6 +196,11 @@
         font-size: 1.5rem;
         font-weight: 700;
 
+        @media screen and (min-width: 770px) {
+          padding-left: calc( 0.5rem * 1.73 );
+          font-size: calc( 2.9rem * 1.73 );
+        }
+
         @media screen and (min-width: 1000px) {
           padding-left: 0.5rem;
           font-size: 2.5rem;
@@ -176,6 +219,12 @@
       aspect-ratio: 1 / 1;
       background: url(../image/top/round_logo.svg) center center / contain no-repeat;
 
+      @media screen and (min-width: 770px) {
+        bottom: calc( 5.1rem * 1.73 );
+        left: calc( 5.1rem * 1.73 );
+        height: 9vh;
+      }
+
       @media screen and (min-width: 1000px) {
         bottom: 5.1rem;
         left: 5.1rem;
@@ -189,6 +238,10 @@
         height: 16vh;
         aspect-ratio: 1 / 1;
         background: url(../image/top/round_text.svg) center center / contain no-repeat;
+
+        @media screen and (min-width: 770px) {
+          height: 11.3vh;
+        }
 
         @media screen and (min-width: 1000px) {
           height: 16.7vh;
@@ -271,6 +324,10 @@
         width: 100%;
         height: 308vh;
         transform: translateX(-42.5vh);
+
+        @media screen and (min-width: 770px) {
+          left: calc( 3rem * 1.73 );
+        }
 
         @media screen and (min-width: 1000px) {
           left: -3.4rem;

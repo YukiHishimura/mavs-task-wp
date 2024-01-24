@@ -469,7 +469,7 @@ mixin
   display: block;
   height: 55vh;
   aspect-ratio: 199/469;
-  background: url(../image/menu_corner.png) center center/contain;
+  background: url(../image/menu_corner.png) center center/contain no-repeat;
 }
 @media screen and (min-width: 1000px) {
   .gnav::before {
@@ -498,6 +498,13 @@ mixin
   column-gap: 4.8rem;
   height: 17rem;
   transform: translate(15%, -30%);
+}
+@media screen and (min-width: 770px) {
+  .gnav__nav {
+    row-gap: 1.5rem;
+    column-gap: 14.4rem;
+    height: 51rem;
+  }
 }
 @media screen and (min-width: 1000px) {
   .gnav__nav {
@@ -574,6 +581,18 @@ mixin
   padding: 0.5rem;
   transition: 0.3s;
 }
+@media screen and (min-width: 770px) {
+  .gnav__link {
+    padding: 1.5rem;
+    font-size: 4.8rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .gnav__link {
+    padding: 0.5rem;
+    font-size: 1.6rem;
+  }
+}
 @media screen and (min-width: 1000px) {
   .gnav__link:hover {
     padding-top: 0;
@@ -629,8 +648,24 @@ mixin
     transform: translate(-50%, -50%);
   }
 }
+@media screen and (min-width: 770px) {
+  .gnav__btn {
+    width: 72.3rem;
+  }
+}
 .gnav__btn:nth-child(1) {
   margin-bottom: 0.6rem;
+}
+@media screen and (min-width: 770px) {
+  .gnav__btn:nth-child(1) {
+    margin-bottom: 1.8rem;
+  }
+}
+@media screen and (min-width: 770px) {
+  .gnav__btnLink {
+    padding: 3.9rem 0;
+    font-size: 4.8rem;
+  }
 }
 
 .fnav {

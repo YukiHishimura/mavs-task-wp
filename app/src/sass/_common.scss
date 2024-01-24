@@ -74,9 +74,11 @@
         background: #fff;
         transition: 0.4s;
     }
+
     &__top {
         transform: translateY(-6px);
     }
+
     &__bottom {
         transform: translateY(6px);
     }
@@ -184,6 +186,7 @@
 }
 
 // ナビゲーション
+$tabRatio: 3; // サイズ調整用比率
 .gnav {
     position: fixed;
     top: 0;
@@ -220,7 +223,7 @@
         display: block;
         height: 55vh;
         aspect-ratio: 199 / 469;
-        background: url(../image/menu_corner.png) center center / contain;
+        background: url(../image/menu_corner.png) center center / contain no-repeat;
 
         @media screen and (min-width: 1000px) {
             display: none;
@@ -250,6 +253,12 @@
         column-gap: 4.8rem;
         height: 17rem;
         transform: translate(15%, -30%);
+
+        @media screen and (min-width: 770px) {
+            row-gap: calc( 0.5rem * $tabRatio );
+            column-gap: calc( 4.8rem * $tabRatio );
+            height: calc( 17rem * $tabRatio );
+        }
 
         @media screen and (min-width: 1000px) {
             position: static;
@@ -317,7 +326,7 @@
 
                 &:hover {
                     @media screen and (min-width: 1000px) {
-                        color: #000;        
+                        color: #000;
                     }
 
                     &::after {
@@ -334,6 +343,16 @@
         display: block;
         padding: 0.5rem;
         transition: 0.3s;
+
+        @media screen and (min-width: 770px) {
+            padding: calc( 0.5rem * $tabRatio );
+            font-size: calc( 1.6rem * $tabRatio );
+        }
+
+        @media screen and (min-width: 1000px) {
+            padding: 0.5rem;
+            font-size: 1.6rem;
+        }
 
         &:hover {
             @media screen and (min-width: 1000px) {
@@ -352,8 +371,23 @@
     &__btn {
         @include navBtn;
 
+        @media screen and (min-width: 770px) {
+            width: calc( 24.1rem * $tabRatio );
+        }
+
         &:nth-child(1) {
             margin-bottom: 0.6rem;
+
+            @media screen and (min-width: 770px) {
+                margin-bottom: calc( 0.6rem * $tabRatio );
+            }
+        }
+
+        &Link {
+            @media screen and (min-width: 770px) {
+                padding: calc( 1.3rem * $tabRatio ) 0;
+                font-size: calc( 1.6rem * $tabRatio );
+            }
         }
     }
 }
