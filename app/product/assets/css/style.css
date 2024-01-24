@@ -5,6 +5,30 @@
 /* ================================================================
 mixin
 ================================================================ */
+.slideTxt {
+  animation: slideTxtAnime 20s linear infinite;
+}
+
+@keyframes slideTxtAnime {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.rotateTxt::before {
+  animation: rotateTxtAnime 30s linear infinite;
+}
+
+@keyframes rotateTxtAnime {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* ================================================================
 変数
 ================================================================ */
@@ -1409,6 +1433,13 @@ mixin
 ================================================================ */
 .translateNav {
   transform: translateY(0);
+}
+.translateNav::after {
+  transform: rotate(23deg) translate(50%, 20%);
+}
+.translateNav .gnav__sp {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .rotateTop {

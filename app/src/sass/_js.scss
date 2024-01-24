@@ -4,6 +4,15 @@
 // ----------スライドメニュー--------------------
 .translateNav {
     transform: translateY(0);
+
+    &::after {
+        transform: rotate(23deg) translate(50%, 20%);
+    }
+
+    .gnav__sp {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 // メニューアイコン変形

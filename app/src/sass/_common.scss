@@ -181,6 +181,7 @@
 // ナビゲーション
 $tabRatio: 3; // サイズ調整用比率
 .gnav {
+    overflow: hidden;
     position: fixed;
     top: 0;
     left: 0;
@@ -223,6 +224,23 @@ $tabRatio: 3; // サイズ調整用比率
         }
     }
 
+    &::after {
+        content: "";
+        position: absolute;
+        top: -20%;
+        left: -20%;
+        display: block;
+        width: 100%;
+        height: 80vh;
+        background: #000;
+        transform: rotate(23deg);
+        transition: 0.3s 0.3s;
+
+        @media screen and (min-width: 1000px) {
+            display: none;
+        }
+    }
+
     &__pc {
         display: none;
 
@@ -232,6 +250,12 @@ $tabRatio: 3; // サイズ調整用比率
     }
 
     &__sp {
+        position: relative;
+        z-index: 1;
+        transform: translateX(-10%); // メニュー表示時に戻す
+        opacity: 0; // メニュー表示時に戻す
+        transition: 0.4s 0.4s;
+
         @media screen and (min-width: 1000px) {
             display: none;
         }
