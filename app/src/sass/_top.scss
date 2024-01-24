@@ -76,6 +76,20 @@
           left: 27%;
           width: 114rem;
         }
+
+        // はみ出し隠す
+        &::before {
+          @media screen and (min-width: 770px) {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 30vw;
+            height: 100vh;
+            background: #fff;
+          }
+        }
       }
     }
 
@@ -160,7 +174,7 @@
       align-items: center;
       height: 12.7vh;
       aspect-ratio: 1 / 1;
-      background: url(../image/top/round_logo.svg) center center / contain;
+      background: url(../image/top/round_logo.svg) center center / contain no-repeat;
 
       @media screen and (min-width: 1000px) {
         bottom: 5.1rem;
@@ -174,7 +188,7 @@
         display: block;
         height: 16vh;
         aspect-ratio: 1 / 1;
-        background: url(../image/top/round_text.svg) center center / contain;
+        background: url(../image/top/round_text.svg) center center / contain no-repeat;
 
         @media screen and (min-width: 1000px) {
           height: 16.7vh;
@@ -610,7 +624,7 @@
     &__img {
       height: 7rem;
       aspect-ratio: 2108 / 140;
-      background: url(../image/top/loop_text.svg) center center / contain;
+      background: url(../image/top/loop_text.svg) center center / contain no-repeat;
 
       @media screen and (min-width: 770px) {
         height: 12.8rem;
@@ -639,7 +653,7 @@
       height: 29.1rem;
       aspect-ratio: 419 / 539;
       transform: translate(-40%, 5%);
-      background: url(../image/top/banner_climbing.png) center center / contain;
+      background: url(../image/top/banner_climbing.png) center center / contain no-repeat;
       pointer-events: none;
       transition: 0.4s;
 
@@ -659,7 +673,7 @@
       width: 11.5rem;
       aspect-ratio: 257 / 371;
       transform: translate(-20%, -40%);
-      background: url(../image/top/banner_logo.svg) center center / contain;
+      background: url(../image/top/banner_logo.svg) center center / contain no-repeat;
       transition: 0.4s;
 
       @media screen and (min-width: 770px) {

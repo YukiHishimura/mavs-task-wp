@@ -79,6 +79,18 @@ mixin
     width: 114rem;
   }
 }
+@media screen and (min-width: 770px) {
+  #top .mv__img--04::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 30vw;
+    height: 100vh;
+    background: #fff;
+  }
+}
 #top .mv__txtBox {
   width: 35rem;
   margin: 0 auto;
@@ -155,7 +167,7 @@ mixin
   align-items: center;
   height: 12.7vh;
   aspect-ratio: 1/1;
-  background: url(../image/top/round_logo.svg) center center/contain;
+  background: url(../image/top/round_logo.svg) center center/contain no-repeat;
 }
 @media screen and (min-width: 1000px) {
   #top .mv__roundIcon {
@@ -170,7 +182,7 @@ mixin
   display: block;
   height: 16vh;
   aspect-ratio: 1/1;
-  background: url(../image/top/round_text.svg) center center/contain;
+  background: url(../image/top/round_text.svg) center center/contain no-repeat;
 }
 @media screen and (min-width: 1000px) {
   #top .mv__roundIcon::before {
@@ -919,7 +931,7 @@ mixin
 #top .loopTxt__img {
   height: 7rem;
   aspect-ratio: 2108/140;
-  background: url(../image/top/loop_text.svg) center center/contain;
+  background: url(../image/top/loop_text.svg) center center/contain no-repeat;
 }
 @media screen and (min-width: 770px) {
   #top .loopTxt__img {
@@ -947,7 +959,7 @@ mixin
   height: 29.1rem;
   aspect-ratio: 419/539;
   transform: translate(-40%, 5%);
-  background: url(../image/top/banner_climbing.png) center center/contain;
+  background: url(../image/top/banner_climbing.png) center center/contain no-repeat;
   pointer-events: none;
   transition: 0.4s;
 }
@@ -967,7 +979,7 @@ mixin
   width: 11.5rem;
   aspect-ratio: 257/371;
   transform: translate(-20%, -40%);
-  background: url(../image/top/banner_logo.svg) center center/contain;
+  background: url(../image/top/banner_logo.svg) center center/contain no-repeat;
   transition: 0.4s;
 }
 @media screen and (min-width: 770px) {
