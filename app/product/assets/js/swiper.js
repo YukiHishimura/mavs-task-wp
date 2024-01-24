@@ -17,6 +17,11 @@ function initSwiper() {
             loop: true,
             slidesPerView: 2.5,  // PC
             spaceBetween: gap,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            speed: 500,
         });
         swiperBool = true;
     } else {
@@ -26,6 +31,11 @@ function initSwiper() {
             loop: true,
             slidesPerView: 1.2,
             spaceBetween: gap,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            speed: 500,
         });
         swiperBool = true;
     }

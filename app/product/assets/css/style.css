@@ -1179,6 +1179,19 @@ mixin
     transition: 0.4s;
   }
 }
+#top .recruit__btn::after {
+  content: "";
+  position: absolute;
+  width: 1.9rem;
+  aspect-ratio: 192/82;
+  background: url(../image/arrow.svg) center center/contain no-repeat;
+  transform: skew(20deg) translateX(290%);
+}
+@media screen and (min-width: 770px) {
+  #top .recruit__btn::after {
+    transform: skew(20deg) translateX(330%);
+  }
+}
 @media screen and (min-width: 770px) {
   #top .recruit__btn:hover::before {
     transform: none;
@@ -1386,4 +1399,30 @@ mixin
     position: absolute;
     bottom: 0;
   }
+}
+
+/* ================================================================
+変数
+================================================================ */
+/* ================================================================
+mixin
+================================================================ */
+.translateNav {
+  transform: translateY(0);
+}
+
+.rotateTop {
+  transform: rotate(45deg);
+}
+
+.hideMiddle {
+  opacity: 0;
+}
+
+.rotateBottom {
+  transform: rotate(-45deg);
+}
+
+.changeLogoColor {
+  filter: invert(100%);
 }

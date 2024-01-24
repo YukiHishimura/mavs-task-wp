@@ -252,12 +252,7 @@ mixin
   display: block;
 }
 .header__ttlLink img {
-  transition: 0.2s;
-}
-@media screen and (min-width: 1000px) {
-  .header__ttlLink:hover img {
-    filter: invert(60%);
-  }
+  transition: 0.4s;
 }
 .header__img {
   width: 100%;
@@ -275,6 +270,7 @@ mixin
   height: 50px;
   background: #000;
   border-radius: 50%;
+  cursor: pointer;
 }
 @media screen and (min-width: 1000px) {
   .menuBtn {
@@ -383,6 +379,17 @@ mixin
     transition: 0.4s;
   }
 }
+.footer__btnLink::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 1.9rem;
+  aspect-ratio: 192/82;
+  margin-left: 2rem;
+  transform: translateY(-50%);
+  background: url(../image/arrow.svg) center center/contain no-repeat;
+  transition: 0.4s;
+}
 @media screen and (min-width: 770px) {
   .footer__btnLink:hover {
     color: #000;
@@ -392,6 +399,11 @@ mixin
 @media screen and (min-width: 770px) {
   .footer__btnLink:hover::before {
     transform: translate(-50%, -50%);
+  }
+}
+@media screen and (min-width: 770px) {
+  .footer__btnLink:hover::after {
+    filter: invert(100%);
   }
 }
 .footer__btn:nth-child(1) {
@@ -544,7 +556,7 @@ mixin
     left: 50%;
     z-index: -2;
     display: block;
-    width: 100%;
+    width: 110%;
     aspect-ratio: 1/1;
     transform: translate(-50%, -50%);
     background: #000;
@@ -558,7 +570,7 @@ mixin
     left: 50%;
     z-index: -1;
     display: block;
-    width: 100%;
+    width: 110%;
     aspect-ratio: 1/1;
     transform: translate(-50%, -50%) scale(0);
     border-radius: 50%;
@@ -637,6 +649,17 @@ mixin
     transition: 0.4s;
   }
 }
+.gnav__btnLink::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 1.9rem;
+  aspect-ratio: 192/82;
+  margin-left: 2rem;
+  transform: translateY(-50%);
+  background: url(../image/arrow.svg) center center/contain no-repeat;
+  transition: 0.4s;
+}
 @media screen and (min-width: 770px) {
   .gnav__btnLink:hover {
     color: #000;
@@ -646,6 +669,11 @@ mixin
 @media screen and (min-width: 770px) {
   .gnav__btnLink:hover::before {
     transform: translate(-50%, -50%);
+  }
+}
+@media screen and (min-width: 770px) {
+  .gnav__btnLink:hover::after {
+    filter: invert(100%);
   }
 }
 @media screen and (min-width: 770px) {
@@ -665,6 +693,12 @@ mixin
   .gnav__btnLink {
     padding: 3.9rem 0;
     font-size: 4.8rem;
+  }
+}
+@media screen and (min-width: 770px) {
+  .gnav__btnLink::after {
+    width: 5.7rem;
+    margin-left: 6rem;
   }
 }
 

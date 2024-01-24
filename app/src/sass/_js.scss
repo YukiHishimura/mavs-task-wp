@@ -1,0 +1,23 @@
+@import '_variable.scss';
+// JavaScriptで付け替えるclass
+
+// ----------スライドメニュー--------------------
+.translateNav {
+    transform: translateY(0);
+}
+
+// メニューアイコン変形
+.rotateTop {
+    transform: rotate(45deg);
+}
+.hideMiddle {
+    opacity: 0;
+}
+.rotateBottom {
+    transform: rotate(-45deg);
+}
+
+// ヘッダーロゴ色反転
+.changeLogoColor {
+    filter: invert(100%);
+}

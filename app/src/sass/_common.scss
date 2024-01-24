@@ -31,15 +31,7 @@
             display: block;
 
             img {
-                transition: 0.2s;
-            }
-
-            &:hover {
-                img {
-                    @media screen and (min-width: 1000px) {
-                        filter: invert(60%);
-                    }
-                }
+                transition: 0.4s;
             }
         }
     }
@@ -61,6 +53,7 @@
     height: 50px;
     background: #000;
     border-radius: 50%;
+    cursor: pointer;
 
     @media screen and (min-width: 1000px) {
         display: none;
@@ -300,7 +293,7 @@ $tabRatio: 3; // サイズ調整用比率
                         left: 50%;
                         z-index: -2;
                         display: block;
-                        width: 100%;
+                        width: 110%;
                         aspect-ratio: 1 / 1;
                         transform: translate(-50%, -50%);
                         background: #000;
@@ -315,7 +308,7 @@ $tabRatio: 3; // サイズ調整用比率
                         left: 50%;
                         z-index: -1;
                         display: block;
-                        width: 100%;
+                        width: 110%;
                         aspect-ratio: 1 / 1;
                         transform: translate(-50%, -50%) scale(0);
                         border-radius: 50%;
@@ -387,6 +380,13 @@ $tabRatio: 3; // サイズ調整用比率
             @media screen and (min-width: 770px) {
                 padding: calc( 1.3rem * $tabRatio ) 0;
                 font-size: calc( 1.6rem * $tabRatio );
+            }
+
+            &::after {
+                @media screen and (min-width: 770px) {
+                    width: calc( 1.9rem * $tabRatio );
+                    margin-left: calc( 2rem * $tabRatio );
+                  }
             }
         }
     }

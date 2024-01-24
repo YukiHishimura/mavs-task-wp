@@ -64,6 +64,18 @@ mixin
       }
     }
 
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 1.9rem;
+      aspect-ratio: 192 / 82;
+      margin-left: 2rem;
+      transform: translateY(-50%);
+      background: url(../image/arrow.svg) center center / contain no-repeat;
+      transition: 0.4s;
+    }
+
     &:hover {
       @media screen and (min-width: 770px) {
         color: #000;
@@ -73,6 +85,12 @@ mixin
       &::before {
         @media screen and (min-width: 770px) {
           transform: translate(-50%, -50%)
+        }
+      }
+
+      &::after {
+        @media screen and (min-width: 770px) {
+          filter: invert(100%);
         }
       }
     }
