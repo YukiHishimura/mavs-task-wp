@@ -76,19 +76,42 @@
 
 #top {
     .slideIn {
-        opacity: 0;
-        @media screen and (max-width: 999px) {
-            transform: translate(-5%, 0);
+        &Img {
+            opacity: 0;
+            transform: translateX(-5%);
             @include slideIn(2.3s);
         }
 
-        @media screen and (min-width: 1000px) {
-            transform: translate(-5%, -50%);
-            animation: slideInCopy 0.3s 2.3s forwards;
-            @keyframes slideInCopy {
-                100% {
-                    transform: translate(0%, -50%);
-                    opacity: 1;
+        &Copy {
+            opacity: 0;
+            @media screen and (max-width: 999px) {
+                transform: translate(-5%, 0);
+                @include slideIn(2.3s);
+            }
+    
+            @media screen and (min-width: 1000px) {
+                transform: translate(-5%, -50%);
+                animation: slideInCopy 0.3s 2.3s forwards;
+                @keyframes slideInCopy {
+                    100% {
+                        transform: translate(0%, -50%);
+                        opacity: 1;
+                    }
+                }
+            }
+
+            p {
+                &:nth-child(3) {
+                    &::after {
+                        transform: scaleX(0);
+                        transform-origin: left;
+                        animation: scaleUpLine 0.3s 2.4s forwards;
+                        @keyframes scaleUpLine {
+                            100% {
+                                transform: scaleX(1);
+                            }
+                        }
+                    }
                 }
             }
         }
