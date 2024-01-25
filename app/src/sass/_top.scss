@@ -2,7 +2,7 @@
 
 #top {
 
-  // メインビジュアル
+  // ----------メインビジュアル--------------------
   .mv {
     overflow: hidden;
     position: relative;
@@ -250,7 +250,7 @@
     }
   }
 
-  // アバウトセクション
+  // ----------アバウトセクション--------------------
   .about {
     position: relative;
     width: 33rem;
@@ -340,6 +340,19 @@
         @media screen and (min-width: 1000px) {
           left: -3.4rem;
         }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 10%;
+          z-index: 1;
+          display: block;
+          width: 200vw;
+          height: 100%;
+          background: #fff;
+          transform-origin: bottom;
+        }
       }
 
       &Img {
@@ -364,7 +377,7 @@
     }
   }
 
-  // サービスセクション
+  // ----------サービスセクション--------------------
   .service {
     width: 33rem;
     margin: 0 auto;
@@ -459,7 +472,7 @@
     }
   }
 
-  // ブログセクション
+  // ----------ブログセクション--------------------
   .blog {
     margin-bottom: 13rem;
 
@@ -570,7 +583,7 @@
     }
   }
 
-  // メンバーセクション
+  // ----------メンバーセクション--------------------
   .member {
     margin-bottom: 10rem;
 
@@ -687,7 +700,7 @@
     }
   }
 
-  // ループテキスト
+  // ----------ループテキスト--------------------
   .loopTxt {
     margin-bottom: 10rem;
 
@@ -710,7 +723,7 @@
     }
   }
 
-  // リクルートバナー
+  // ----------リクルートバナー--------------------
   .recruit {
     position: relative;
     margin-bottom: 13rem;
@@ -931,7 +944,7 @@
     }
   }
 
-  // ニュースセクション
+  // ----------ニュースセクション--------------------
   .news {
     width: 33rem;
     margin: 0 auto;

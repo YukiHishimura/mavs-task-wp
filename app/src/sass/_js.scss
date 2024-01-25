@@ -60,6 +60,17 @@
             &__btn {
                 @include slideIn(0.9s);
             }
+
+            &__bgBox {
+                &::before {
+                    animation: scaleDown 0.6s 0.1s forwards;
+                    @keyframes scaleDown {
+                        100% {
+                            transform: scaleY(0);
+                        }
+                    }
+                }
+            }
         }
 
         // service

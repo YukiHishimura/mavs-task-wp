@@ -1,4 +1,100 @@
 @import "_variable.scss";
+// jsで付与するクラスは _js.scssに記述
+
+// ----------ローディングアニメーション--------------------
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    // background: #000;
+    pointer-events: none;
+
+    &::before {
+        content: "";
+        flex-shrink: 0;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        border: 1px solid #000;
+        background: #000;
+        transform: skewX(-23deg);
+        animation: translateBgLeft 0.1s 2.2s forwards;
+        @keyframes translateBgLeft {
+            100% {
+                transform: skewX(-23deg) translateY(-100%);
+            }
+        }
+    }
+    &::after {
+        content: "";
+        flex-shrink: 0;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        border: 1px solid #000;
+        background: #000;
+        transform: skewX(-23deg);
+        animation: translateBgRight 0.1s 2.2s forwards;
+        @keyframes translateBgRight {
+            100% {
+                transform: skewX(-23deg) translateY(100%);
+            }
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        z-index: 1;
+        width: 20rem;
+        aspect-ratio: 161 / 54;
+        background: url(../image/footer_logo.svg) center center / contain no-repeat;
+        transform: scale(50);
+        animation: scaleDownLogo 1.2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards,
+                    opacityDownLogo 0.2s 1.8s forwards;
+        @keyframes scaleDownLogo {
+            100% {
+                transform: scale(1);
+            }
+        }
+        @keyframes opacityDownLogo {
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @media screen and (min-width: 770px) {
+            width: 50rem;
+        }
+    }
+}
+
+#top {
+    .slideIn {
+        opacity: 0;
+        @media screen and (max-width: 999px) {
+            transform: translate(-5%, 0);
+            @include slideIn(2.3s);
+        }
+
+        @media screen and (min-width: 1000px) {
+            transform: translate(-5%, -50%);
+            animation: slideInCopy 0.3s 2.3s forwards;
+            @keyframes slideInCopy {
+                100% {
+                    transform: translate(0%, -50%);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
 
 // ----------テキスト無限ループ--------------------
 .slideTxt {
