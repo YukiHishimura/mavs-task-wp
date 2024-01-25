@@ -299,6 +299,7 @@ mixin
 #top .about__ttlInner {
   overflow: hidden;
   position: relative;
+  padding-top: 0.5rem;
   -webkit-text-fill-color: transparent;
 }
 #top .about__ttlInner::before {
@@ -469,7 +470,7 @@ mixin
 #top .service__ttl {
   width: fit-content;
   margin-bottom: 0.5rem;
-  line-height: 1;
+  line-height: 0.9;
   font-family: "M PLUS 1", sans-serif;
   font-size: 5.3rem;
 }
@@ -503,12 +504,14 @@ mixin
   left: 0;
   transform: translateY(-50%);
   display: block;
+  padding-top: 0.3rem;
   background: #000;
   color: #fff;
 }
 #top .service__ttlInner {
   overflow: hidden;
   position: relative;
+  padding-top: 0.5rem;
   -webkit-text-fill-color: transparent;
 }
 #top .service__ttlInner::before {
@@ -660,7 +663,7 @@ mixin
 #top .blog__ttl {
   width: fit-content;
   margin-bottom: 0.5rem;
-  line-height: 1;
+  line-height: 0.9;
   font-family: "M PLUS 1", sans-serif;
   font-size: 5.3rem;
 }
@@ -694,6 +697,7 @@ mixin
   left: 0;
   transform: translateY(-50%);
   display: block;
+  padding-top: 0.3rem;
   background: #000;
   color: #fff;
 }
@@ -704,6 +708,7 @@ mixin
 #top .blog__ttlInner {
   overflow: hidden;
   position: relative;
+  padding-top: 0.5rem;
   -webkit-text-fill-color: transparent;
 }
 #top .blog__ttlInner::before {
@@ -874,7 +879,7 @@ mixin
 #top .member__ttl {
   width: fit-content;
   margin-bottom: 0.5rem;
-  line-height: 1;
+  line-height: 0.9;
   font-family: "M PLUS 1", sans-serif;
   font-size: 5.3rem;
 }
@@ -908,12 +913,14 @@ mixin
   left: 0;
   transform: translateY(-50%);
   display: block;
+  padding-top: 0.3rem;
   background: #000;
   color: #fff;
 }
 #top .member__ttlInner {
   overflow: hidden;
   position: relative;
+  padding-top: 0.5rem;
   -webkit-text-fill-color: transparent;
 }
 #top .member__ttlInner::before {
@@ -1327,12 +1334,16 @@ mixin
 }
 #top .news__box {
   position: relative;
-  top: -1.2rem;
+}
+@media screen and (min-width: 770px) {
+  #top .news__box {
+    top: -1.2rem;
+  }
 }
 #top .news__ttl {
   width: fit-content;
   margin-bottom: 0.5rem;
-  line-height: 1;
+  line-height: 0.9;
   font-family: "M PLUS 1", sans-serif;
   font-size: 5.3rem;
 }
@@ -1366,12 +1377,14 @@ mixin
   left: 0;
   transform: translateY(-50%);
   display: block;
+  padding-top: 0.3rem;
   background: #000;
   color: #fff;
 }
 #top .news__ttlInner {
   overflow: hidden;
   position: relative;
+  padding-top: 0.5rem;
   -webkit-text-fill-color: transparent;
 }
 #top .news__ttlInner::before {

@@ -947,7 +947,10 @@
 
     &__box {
       position: relative;
-      top: -1.2rem;
+
+      @media screen and (min-width: 770px) {
+        top: -1.2rem;
+      }
     }
 
     &__ttl {
