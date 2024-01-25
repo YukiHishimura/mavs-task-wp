@@ -1,7 +1,6 @@
-const num = 27
-console.log(num)
+// 全ページ共通
 
-// スライドメニュー
+// ----------スライドメニュー--------------------
 const menuBtn = document.querySelector('#menuBtn');
 const menuBtnTop = document.querySelector('#menuBtn__top');
 const menuBtnMiddle = document.querySelector('#menuBtn__middle');
@@ -21,7 +20,7 @@ function disableScroll(e) {
 }
 
 // クリックでクラス付け外し
-menuBtn.addEventListener('click', function() {
+menuBtn.addEventListener('click', function () {
     // アニメーション中は、ボタンをクリックできないようにする
     this.style.pointerEvents = "none";
 
@@ -47,5 +46,16 @@ menuBtn.addEventListener('click', function() {
         menuOpened = true;
     }
 
-    setTimeout(pointerEventsAuto, 400); 
+    setTimeout(pointerEventsAuto, 400);
+});
+
+
+// ----------TOPへ戻るボタン--------------------
+const goTopBtn = document.querySelector('#footer__goTop');
+
+goTopBtn.addEventListener('click', function () {
+    window.scroll({
+        top: 0,
+        behavior: "smooth",
+    });
 });

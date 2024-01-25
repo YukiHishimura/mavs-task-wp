@@ -1,7 +1,7 @@
 @import '_variable.scss';
 // ヘッダー、フッター、ナビゲーション
 
-// ヘッダー
+// ----------ヘッダー--------------------
 .header {
     position: fixed;
     top: 0;
@@ -77,9 +77,8 @@
     }
 }
 
-// フッター
+// ----------フッター--------------------
 .footer {
-    overflow: hidden;
     position: relative;
     padding: 10rem 0 8rem;
     background: #000;
@@ -92,7 +91,7 @@
     &::before {
         content: "";
         position: absolute;
-        top: -1px;
+        top: 0px;
         left: -1px;
         display: block;
         width: 9.1rem;
@@ -104,7 +103,7 @@
     &::after {
         content: "";
         position: absolute;
-        bottom: -1px;
+        bottom: 0px;
         right: -1px;
         display: block;
         width: 9.1rem;
@@ -176,10 +175,55 @@
             text-align: left;
         }
     }
+
+    &__goTop {
+        position: absolute;
+        top: -7.2rem;
+        right: 1.3rem;
+        display: block;
+        width: 3.8rem;
+        height: 5.6rem;
+        cursor: pointer;
+
+        @media screen and (min-width: 770px) {
+            top: -7.6rem;
+            right: 3.6rem;
+        }
+
+        &::before {
+            content: "";
+            position: relative;
+            display: block;
+            width: 3.8rem;
+            height: 5.6rem;
+            background: url(../image/go-top.svg) center center / contain no-repeat;
+            pointer-events: none;
+        }
+
+        &:hover {
+            &::before {
+                @media screen and (min-width: 770px) {
+                    animation: btnAnime 1s;
+                    @keyframes btnAnime {
+                        25% {
+                            transform: translateY(-0.5rem);
+                        }
+                        50% {
+                            transform: translateY(0);
+                        }
+                        75% {
+                            transform: translateY(-0.5rem);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
-// ナビゲーション
+// ----------ナビゲーション--------------------
 $tabRatio: 3; // サイズ調整用比率
+
 .gnav {
     overflow: hidden;
     position: fixed;
@@ -271,9 +315,9 @@ $tabRatio: 3; // サイズ調整用比率
         transform: translate(15%, -30%);
 
         @media screen and (min-width: 770px) {
-            row-gap: calc( 0.5rem * $tabRatio );
-            column-gap: calc( 4.8rem * $tabRatio );
-            height: calc( 17rem * $tabRatio );
+            row-gap: calc(0.5rem * $tabRatio );
+            column-gap: calc(4.8rem * $tabRatio );
+            height: calc(17rem * $tabRatio );
         }
 
         @media screen and (min-width: 1000px) {
@@ -361,8 +405,8 @@ $tabRatio: 3; // サイズ調整用比率
         transition: 0.3s;
 
         @media screen and (min-width: 770px) {
-            padding: calc( 0.5rem * $tabRatio );
-            font-size: calc( 1.6rem * $tabRatio );
+            padding: calc(0.5rem * $tabRatio );
+            font-size: calc(1.6rem * $tabRatio );
         }
 
         @media screen and (min-width: 1000px) {
@@ -388,28 +432,28 @@ $tabRatio: 3; // サイズ調整用比率
         @include navBtn;
 
         @media screen and (min-width: 770px) {
-            width: calc( 24.1rem * $tabRatio );
+            width: calc(24.1rem * $tabRatio );
         }
 
         &:nth-child(1) {
             margin-bottom: 0.6rem;
 
             @media screen and (min-width: 770px) {
-                margin-bottom: calc( 0.6rem * $tabRatio );
+                margin-bottom: calc(0.6rem * $tabRatio );
             }
         }
 
         &Link {
             @media screen and (min-width: 770px) {
-                padding: calc( 1.3rem * $tabRatio ) 0;
-                font-size: calc( 1.6rem * $tabRatio );
+                padding: calc(1.3rem * $tabRatio ) 0;
+                font-size: calc(1.6rem * $tabRatio );
             }
 
             &::after {
                 @media screen and (min-width: 770px) {
-                    width: calc( 1.9rem * $tabRatio );
-                    margin-left: calc( 2rem * $tabRatio );
-                  }
+                    width: calc(1.9rem * $tabRatio );
+                    margin-left: calc(2rem * $tabRatio );
+                }
             }
         }
     }
