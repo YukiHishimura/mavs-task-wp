@@ -1,0 +1,8 @@
+<% let title='ブログ | 株式会社マーベリックス' ;
+ let description='Mavericks(マーベリックス)は、北海道札幌市を拠点にホームページ制作・Webシステム開発会社です。長所を活かしたチームづくりで最高のパフォーマンスを提供致します。' ;
+ let pageId='category' ; %>
+<%- include('./common/_header', { title: title, description: description, pageId: pageId }) %>
+
+<%- include('./common/_archive-parts', { pageId: pageId }) %>
+
+<%- include('./common/_footer', { pageId: pageId }) %>
