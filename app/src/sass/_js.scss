@@ -177,3 +177,27 @@
         }
     }
 }
+
+// ----------BLOGカテゴリーリスト展開用--------------------
+#archive {
+    .opened {
+        top: -4rem;
+
+        .category {
+            &__name {
+                top: 2rem;
+            }
+
+            &__btn {
+                &::after {
+                    transform: rotate(180deg);
+                }
+            }
+
+            &__ul {
+                height: 24rem;
+                padding: 1rem 0;
+            }
+        }
+    }
+}

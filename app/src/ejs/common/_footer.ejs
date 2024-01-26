@@ -28,8 +28,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./assets/js/swiper.js"></script>
     <script src="./assets/js/scroll-anime.js"></script>
-  <%_ } else { -%>
-      <!-- TOPページじゃないとき -->
+  <%_ } else if (pageId==='blog' || pageId==='category') { -%>
+    <script src="./assets/js/blog.js"></script>
   <%_ } -%>
     <script src="./assets/js/script.js"></script>
 </body>
