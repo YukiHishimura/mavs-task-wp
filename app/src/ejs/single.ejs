@@ -1,0 +1,83 @@
+<% let title='投稿タイトル挿入 | 株式会社マーベリックス';
+ let description='Mavericks(マーベリックス)は、北海道札幌市を拠点にホームページ制作・Webシステム開発会社です。長所を活かしたチームづくりで最高のパフォーマンスを提供致します。';
+ let pageId='single'; %>
+<%- include('./common/_header', { title: title, description: description, pageId: pageId }) %>
+
+<main id="single">
+    <div class="wrpper">
+        <div class="pageTtl">
+            <h2 class="pageTtl__ttl"><span>B</span>LOG</h2>
+            <p class="pageTtl__sub">ブログ</p>
+        </div>
+        <div class="content">
+            <!-- コンテンツ -->
+            <p class="content__info">2023.09.28 | CATEGORY</p>
+            <p class="content__cap">E CROSS TALK vol.10 ワークショップに参加しました！</p>
+            <p class="content__pic"><img src="assets/image/single/eye-catch.jpg" alt="アイキャッチ画像"></p>
+
+            <!-- ユーザー編集エリア -->
+            <div class="content__area">
+                <h2>H2タイトル</h2>
+                <p>
+                    テキストテキストテキストテキスト<strong>太字テキスト</strong>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+                    こちらが<a href="#">おすすめリンク</a>です
+                </p>
+                <h3>H3タイトル</h3>
+                <p>
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                </p>
+                <table>
+                    <tr>
+                        <th>タイトル</th>
+                        <th>タイトル</th>
+                        <th>タイトル</th>
+                    </tr>
+                    <tr>
+                        <td>テキスト</td>
+                        <td>テキスト</td>
+                        <td>テキスト</td>
+                    </tr>
+                    <tr>
+                        <td>テキスト</td>
+                        <td>テキスト</td>
+                        <td>テキスト</td>
+                    </tr>
+                    <tr>
+                        <td>テキスト</td>
+                        <td>テキスト</td>
+                        <td>テキスト</td>
+                    </tr>
+                </table>
+                <h4>H4タイトル</h4>
+                <p>
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                </p>
+                <ol>
+                    <li>リストタイトル<br>あいうえお</li>
+                    <li>リストタイトル</li>
+                    <li>リストタイトル</li>
+                </ol>
+                <ul>
+                    <li>リストタイトル<br>かきくけこ</li>
+                    <li>リストタイトル</li>
+                    <li>リストタイトル</li>
+                </ul>
+                <h5>H5タイトル</h5>
+                <p>
+                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                </p>
+            </div>
+
+            <ul class="content__nav">
+                <li class="content__prev"><a href="#" class="content__prevLink">PREV</a></li>
+                <li class="content__next"><a href="#" class="content__nextLink">NEXT</a></li>
+            </ul>
+        </div>
+        <div class="pageBg">
+            <div class="pageBg__img--01"></div>
+            <div class="pageBg__img--02"></div>
+        </div>
+    </div>
+</main>
+
+<%- include('./common/_footer', { pageId: pageId }) %>

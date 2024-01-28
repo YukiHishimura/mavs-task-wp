@@ -1794,6 +1794,11 @@ mixin
   margin: 0 auto;
   margin-bottom: 17.2rem;
 }
+@media screen and (min-width: 770px) {
+  #archive .pagenation {
+    margin-bottom: 18.2rem;
+  }
+}
 #archive .wp-pagenavi {
   display: flex;
   gap: 0.2rem;
