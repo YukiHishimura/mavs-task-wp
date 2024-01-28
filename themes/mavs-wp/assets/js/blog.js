@@ -20,3 +20,10 @@ catBtn.addEventListener('click', function() {
         catBtn.style.pointerEvents = "auto";
     }, 400);
 });
+
+// ウィンドウサイズ変更でリセット
+window.addEventListener('resize', function() {
+    catEl.classList.remove('opened');
+    catBtn.classList.remove('opened');
+    listOpened = false;
+});

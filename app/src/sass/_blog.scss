@@ -6,9 +6,15 @@
   }
 
   .pageTtl {
-    margin-top: 11.2rem;
+    margin-top: 112px;
     margin-left: 3.3rem;
     margin-bottom: 6rem;
+
+    @media screen and (min-width: 770px) {
+      margin-top: 139px;
+      margin-left: 22rem;
+      margin-bottom: 6.4rem;
+    }
 
     &__ttl {
       @include secTtl("B");
@@ -32,6 +38,11 @@
     margin-bottom: 8rem;
     transition: 0.4s;
 
+    @media screen and (min-width: 770px) {
+      width: 43.7rem;
+      margin-bottom: 8.5rem;
+    }
+
     &__name {
       position: relative;
       top: 0;
@@ -40,6 +51,14 @@
       font-size: 3.6rem;
       font-weight: 700;
       transition: 0.4s;
+
+      @media screen and (min-width: 770px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 0.88;
+        font-size: 4rem;
+      }
 
       &::before {
         content: "CATEGORY";
@@ -53,6 +72,14 @@
         line-height: 1.6;
         font-size: 1.8rem;
         font-weight: 700;
+
+        @media screen and (min-width: 770px) {
+          width: 14.5rem;
+          margin-bottom: 0;
+          padding-top: 0.1rem;
+          padding-bottom: 0.4rem;
+          font-size: 2.4rem;
+        }
       }
     }
 
@@ -64,6 +91,10 @@
       border-bottom: 2px solid #000;
       font-size: 2rem;
       font-weight: 700;
+
+      @media screen and (min-width: 770px) {
+        display: none;
+      }
 
       &::after {
         content: "";
@@ -85,11 +116,47 @@
       transform: translateY(99%);
       transition: 0.4s;
 
+      @media screen and (min-width: 770px) {
+        position: static;
+        display: flex;
+        justify-content: space-between;
+        width: 40.5rem;
+        height: auto;
+        margin: 0 auto;
+        transform: none;
+        background: transparent;
+      }
+
       a {
         display: block;
         padding: 1rem 2rem;
         font-size: 2rem;
         font-weight: 700;
+
+        @media screen and (min-width: 770px) {
+          padding: 1rem 0;
+          transition: 0.3s;
+        }
+
+        &:hover {
+          @media screen and (min-width: 770px) {
+            color: #888;
+          }
+        }
+      }
+    }
+
+    .current-cat {
+      @media screen and (min-width: 770px) {
+        border-bottom: 2px solid #000;
+      }
+
+      a {
+        &:hover {
+          @media screen and (min-width: 770px) {
+            color: #000;
+          }
+        }
       }
     }
   }
@@ -99,16 +166,48 @@
     margin: 0 auto;
     margin-bottom: 8rem;
 
+    @media screen and (min-width: 770px) {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 5rem;
+      column-gap: 3rem;
+      width: 124.2rem;
+    }
+
     &__slide {
       margin-bottom: 3rem;
       box-shadow: 0 0.4rem 4px rgba(0, 0, 0, 0.25);
+
+      @media screen and (min-width: 770px) {
+        width: 39.4rem;
+        margin-bottom: 0;
+      }
 
       &:nth-last-child(1) {
         margin-bottom: 0;
       }
     }
 
+    &__link {
+      display: block;
+
+      &:hover {
+        img {
+          @media screen and (min-width: 770px) {
+            transform: scale(1.05);
+          }
+        }
+
+        p {
+          @media screen and (min-width: 770px) {
+            color: #888;
+          }
+        }
+      }
+    }
+
     &__pic {
+      overflow: hidden;
       width: 100%;
       aspect-ratio: 330 / 186;
 
@@ -116,6 +215,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: 0.3s;
       }
     }
 
@@ -129,12 +229,22 @@
       color: #4d4d4d;
       font-size: 1.4rem;
       font-weight: 700;
+
+      @media screen and (min-width: 770px) {
+        font-size: 1.6rem;
+        transition: 0.3s;
+      }
     }
 
     &__cap {
       line-height: 1.67;
       font-size: 1.8rem;
       font-weight: 700;
+
+      @media screen and (min-width: 770px) {
+        font-size: 2rem;
+        transition: 0.3s;
+      }
     }
   }
 
@@ -174,7 +284,7 @@
 
   .pageBg {
     position: absolute;
-    top: -11.2rem;
+    top: -112px;
     left: 0;
     z-index: -5;
     display: flex;
@@ -184,11 +294,12 @@
     transform: translateX(-42.5vh);
 
     @media screen and (min-width: 770px) {
+      top: -139px;
       left: calc(3rem * 1.73);
     }
 
     @media screen and (min-width: 1000px) {
-      left: -3.4rem;
+      left: -5rem;
     }
 
     &__img {
