@@ -1812,12 +1812,21 @@ mixin
   text-align: center;
   font-family: "futura-pt", sans-serif;
   font-size: 1.6rem;
+  font-weight: 500;
 }
 #archive .wp-pagenavi a:nth-child(1), #archive .wp-pagenavi span:nth-child(1) {
   border-radius: 999px 0 0 999px;
 }
 #archive .wp-pagenavi a:nth-last-child(1), #archive .wp-pagenavi span:nth-last-child(1) {
   border-radius: 0 999px 999px 0;
+}
+#archive .wp-pagenavi a {
+  transition: 0.3s;
+}
+@media screen and (min-width: 770px) {
+  #archive .wp-pagenavi a:hover {
+    background: #aaa;
+  }
 }
 #archive .wp-pagenavi .current {
   background: #888;
@@ -1880,7 +1889,7 @@ mixin
   #single .pageTtl {
     margin-top: 139px;
     margin-left: 22rem;
-    margin-bottom: 6.4rem;
+    margin-bottom: 6.7rem;
   }
 }
 #single .pageTtl__ttl {
@@ -1939,11 +1948,24 @@ mixin
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 0.4rem 4px rgba(0, 0, 0, 0.25);
 }
+@media screen and (min-width: 770px) {
+  #single .content {
+    width: 124rem;
+    margin-bottom: 26.5rem;
+    padding: 10rem 12rem;
+  }
+}
 #single .content__info {
   margin-bottom: 2rem;
   color: #4d4d4d;
   font-size: 1.4rem;
   font-weight: 700;
+}
+@media screen and (min-width: 770px) {
+  #single .content__info {
+    margin-bottom: 3rem;
+    font-size: 1.6rem;
+  }
 }
 #single .content__cap {
   margin-bottom: 3rem;
@@ -1951,10 +1973,22 @@ mixin
   font-size: 2.2rem;
   font-weight: 700;
 }
+@media screen and (min-width: 770px) {
+  #single .content__cap {
+    margin-bottom: 6rem;
+    line-height: 1;
+    font-size: 3.4rem;
+  }
+}
 #single .content__pic {
   width: 100%;
   aspect-ratio: 1000/592;
   margin-bottom: 4rem;
+}
+@media screen and (min-width: 770px) {
+  #single .content__pic {
+    margin-bottom: 6rem;
+  }
 }
 #single .content__pic img {
   width: 100%;
@@ -1965,8 +1999,19 @@ mixin
   margin-bottom: 8rem;
   font-size: 1.4rem;
 }
+@media screen and (min-width: 770px) {
+  #single .content__area {
+    line-height: 1.75;
+    font-size: 1.6rem;
+  }
+}
 #single .content__area > * {
   margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 770px) {
+  #single .content__area > * {
+    margin-bottom: 2rem;
+  }
 }
 #single .content__area > *:nth-last-child(1) {
   margin-bottom: 0;
@@ -1976,12 +2021,23 @@ mixin
   font-size: 2.2rem;
   font-weight: 700;
 }
+@media screen and (min-width: 770px) {
+  #single .content__area h2 {
+    font-size: 2.8rem;
+  }
+}
 #single .content__area h3 {
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #000;
   line-height: 1.17;
   font-size: 1.8rem;
   font-weight: 700;
+}
+@media screen and (min-width: 770px) {
+  #single .content__area h3 {
+    padding-bottom: 1rem;
+    font-size: 2.4rem;
+  }
 }
 #single .content__area h4 {
   padding-left: 1rem;
@@ -1991,9 +2047,20 @@ mixin
   font-size: 1.6rem;
   font-weight: 700;
 }
+@media screen and (min-width: 770px) {
+  #single .content__area h4 {
+    padding-bottom: 0.3rem;
+    font-size: 2rem;
+  }
+}
 #single .content__area h5 {
   font-size: 1.4rem;
   font-weight: 700;
+}
+@media screen and (min-width: 770px) {
+  #single .content__area h5 {
+    font-size: 1.6rem;
+  }
 }
 #single .content__area strong {
   font-weight: 700;
@@ -2001,6 +2068,12 @@ mixin
 #single .content__area a {
   color: #00c2ff;
   font-weight: 700;
+  transition: 0.3s;
+}
+@media screen and (min-width: 770px) {
+  #single .content__area a:hover {
+    color: #8adbf3;
+  }
 }
 #single .content__area table, #single .content__area th, #single .content__area td {
   border-collapse: collapse;
@@ -2010,6 +2083,11 @@ mixin
 #single .content__area th, #single .content__area td {
   padding: 0.5rem 1rem;
   line-height: 2.2;
+}
+@media screen and (min-width: 770px) {
+  #single .content__area th, #single .content__area td {
+    padding: 1rem 2rem;
+  }
 }
 #single .content__area table {
   width: 100%;
@@ -2024,6 +2102,11 @@ mixin
 #single .content__area ol li {
   padding-left: 0.4rem;
 }
+@media screen and (min-width: 770px) {
+  #single .content__area ol li {
+    padding-left: 0.9rem;
+  }
+}
 #single .content__area ul {
   margin-left: 2rem;
   list-style-type: disc;
@@ -2031,20 +2114,48 @@ mixin
 #single .content__area ul li {
   padding-left: 0.2rem;
 }
+@media screen and (min-width: 770px) {
+  #single .content__area ul li {
+    padding-left: 0.5rem;
+  }
+}
 #single .content__area li::marker {
   color: #ED1E79;
+}
+@media screen and (min-width: 770px) {
+  #single .content__area li::marker {
+    line-height: 1.67;
+    font-size: 1.8rem;
+  }
 }
 #single .content__nav {
   display: flex;
   justify-content: space-between;
   font-family: "futura-pt", sans-serif;
   font-size: 1.4rem;
+  font-weight: 500;
+}
+@media screen and (min-width: 770px) {
+  #single .content__nav {
+    font-size: 1.6rem;
+  }
 }
 #single .content__prevLink {
   position: relative;
   display: block;
   width: 5.6rem;
   text-align: right;
+  transition: 0.3s;
+}
+@media screen and (min-width: 770px) {
+  #single .content__prevLink {
+    width: 7.4rem;
+  }
+}
+@media screen and (min-width: 770px) {
+  #single .content__prevLink:hover {
+    filter: invert(60%);
+  }
 }
 #single .content__prevLink::before {
   content: "";
@@ -2056,10 +2167,26 @@ mixin
   transform: translate(0, -50%) rotate(180deg);
   background: url(../image/single/arrow_black.svg) center center/contain no-repeat;
 }
+@media screen and (min-width: 770px) {
+  #single .content__prevLink::before {
+    width: 1.92rem;
+  }
+}
 #single .content__nextLink {
   position: relative;
   display: block;
   width: 5.6rem;
+  transition: 0.3s;
+}
+@media screen and (min-width: 770px) {
+  #single .content__nextLink {
+    width: 7.4rem;
+  }
+}
+@media screen and (min-width: 770px) {
+  #single .content__nextLink:hover {
+    filter: invert(60%);
+  }
 }
 #single .content__nextLink::after {
   content: "";
@@ -2070,6 +2197,11 @@ mixin
   aspect-ratio: 192/82;
   transform: translate(0, -50%);
   background: url(../image/single/arrow_black.svg) center center/contain no-repeat;
+}
+@media screen and (min-width: 770px) {
+  #single .content__nextLink::after {
+    width: 1.92rem;
+  }
 }
 #single .pageBg {
   position: absolute;

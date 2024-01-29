@@ -13,7 +13,7 @@
     @media screen and (min-width: 770px) {
       margin-top: 139px;
       margin-left: 22rem;
-      margin-bottom: 6.4rem;
+      margin-bottom: 6.7rem;
     }
 
     &__ttl {
@@ -38,11 +38,22 @@
     background: rgba(255, 255, 255, 0.90);
     box-shadow: 0 0.4rem 4px rgba(0, 0, 0, 0.25);
 
+    @media screen and (min-width: 770px) {
+      width: 124rem;
+      margin-bottom: 26.5rem;
+      padding: 10rem 12rem;
+    }
+
     &__info {
       margin-bottom: 2rem;
       color: #4d4d4d;
       font-size: 1.4rem;
       font-weight: 700;
+
+      @media screen and (min-width: 770px) {
+        margin-bottom: 3rem;
+        font-size: 1.6rem;
+      }
     }
 
     &__cap {
@@ -50,12 +61,22 @@
       line-height: 1.4;
       font-size: 2.2rem;
       font-weight: 700;
+
+      @media screen and (min-width: 770px) {
+        margin-bottom: 6rem;
+        line-height: 1;
+        font-size: 3.4rem;
+      }
     }
 
     &__pic {
       width: 100%;
       aspect-ratio: 1000 / 592;
       margin-bottom: 4rem;
+
+      @media screen and (min-width: 770px) {
+        margin-bottom: 6rem;
+      }
 
       img {
         width: 100%;
@@ -69,9 +90,18 @@
       margin-bottom: 8rem;
       font-size: 1.4rem; // 基本テキスト
 
+      @media screen and (min-width: 770px) {
+        line-height: 1.75;
+        font-size: 1.6rem; // 基本テキスト
+      }
+
       // 各要素間の余白
       &>* {
         margin-bottom: 1.5rem;
+
+        @media screen and (min-width: 770px) {
+          margin-bottom: 2rem;
+        }
 
         &:nth-last-child(1) {
           margin-bottom: 0;
@@ -82,6 +112,10 @@
         line-height: 1;
         font-size: 2.2rem;
         font-weight: 700;
+
+        @media screen and (min-width: 770px) {
+          font-size: 2.8rem;
+        }
       }
 
       h3 {
@@ -90,6 +124,11 @@
         line-height: 1.17;
         font-size: 1.8rem;
         font-weight: 700;
+
+        @media screen and (min-width: 770px) {
+          padding-bottom: 1rem;
+          font-size: 2.4rem;
+        }
       }
 
       h4 {
@@ -99,11 +138,20 @@
         line-height: 1.4;
         font-size: 1.6rem;
         font-weight: 700;
+
+        @media screen and (min-width: 770px) {
+          padding-bottom: 0.3rem;
+          font-size: 2rem;
+        }
       }
 
       h5 {
         font-size: 1.4rem;
         font-weight: 700;
+
+        @media screen and (min-width: 770px) {
+          font-size: 1.6rem;
+        }
       }
 
       strong {
@@ -113,6 +161,13 @@
       a {
         color: #00c2ff;
         font-weight: 700;
+        transition: 0.3s;
+
+        &:hover {
+          @media screen and (min-width: 770px) {
+            color: #8adbf3;
+          }
+        }
       }
 
       table, th, td {
@@ -124,6 +179,10 @@
       th, td {
         padding: 0.5rem 1rem;
         line-height: 2.2;
+
+        @media screen and (min-width: 770px) {
+          padding: 1rem 2rem;
+        }
       }
 
       table {
@@ -140,6 +199,10 @@
 
         li {
           padding-left: 0.4rem;
+
+          @media screen and (min-width: 770px) {
+            padding-left: 0.9rem;
+          }
         }
       }
 
@@ -149,12 +212,21 @@
 
         li {
           padding-left: 0.2rem;
+
+          @media screen and (min-width: 770px) {
+            padding-left: 0.5rem;
+          }
         }
       }
 
       li {
         &::marker {
           color: #ED1E79;
+
+          @media screen and (min-width: 770px) {
+            line-height: 1.67;
+            font-size: 1.8rem;
+          }
         }
       }
     }
@@ -164,6 +236,11 @@
       justify-content: space-between;
       font-family: "futura-pt", sans-serif;
       font-size: 1.4rem;
+      font-weight: 500;
+
+      @media screen and (min-width: 770px) {
+        font-size: 1.6rem;
+      }
     }
 
     &__prev {
@@ -172,6 +249,17 @@
         display: block;
         width: 5.6rem;
         text-align: right;
+        transition: 0.3s;
+
+        @media screen and (min-width: 770px) {
+          width: 7.4rem;
+        }
+
+        &:hover {
+          @media screen and (min-width: 770px) {
+            filter: invert(60%);
+          }
+        }
 
         &::before {
           content: "";
@@ -182,6 +270,10 @@
           aspect-ratio: 192 / 82;
           transform: translate(0, -50%) rotate(180deg);
           background: url(../image/single/arrow_black.svg) center center / contain no-repeat;
+
+          @media screen and (min-width: 770px) {
+            width: 1.92rem;
+          }
         }
       }
     }
@@ -191,6 +283,17 @@
         position: relative;
         display: block;
         width: 5.6rem;
+        transition: 0.3s;
+
+        @media screen and (min-width: 770px) {
+          width: 7.4rem;
+        }
+
+        &:hover {
+          @media screen and (min-width: 770px) {
+            filter: invert(60%);
+          }
+        }
         
         &::after {
           content: "";
@@ -201,6 +304,10 @@
           aspect-ratio: 192 / 82;
           transform: translate(0, -50%);
           background: url(../image/single/arrow_black.svg) center center / contain no-repeat;
+
+          @media screen and (min-width: 770px) {
+            width: 1.92rem;
+          }
         }
       }
     }
