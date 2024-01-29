@@ -1,0 +1,78 @@
+<% let title='お問い合わせ | 株式会社マーベリックス';
+ let description='Mavericks(マーベリックス)は、北海道札幌市を拠点にホームページ制作・Webシステム開発会社です。長所を活かしたチームづくりで最高のパフォーマンスを提供致します。';
+ let pageId='contact'; %>
+<%- include('./common/_header', { title: title, description: description, pageId: pageId }) %>
+
+<main id="contact">
+    <div class="wrapper">
+        <div class="pageTtl">
+            <h2 class="pageTtl__ttl"><span>C</span>ONTACT</h2>
+            <p class="pageTtl__sub">お問い合わせ</p>
+        </div>
+        <div class="contactForm">
+            <p class="contactForm__txt">
+                株式会社マーベリックスへのお問い合わせページです。<br>
+                プライバシーポリシーをご確認の上、お気軽にお問い合わせください。
+            </p>
+            <!-- お問い合わせフォーム -->
+            <form id="contactForm__form" action="#" method="post" class="contactForm__form">
+                <dl class="contactForm__dl">
+                    <div class="contactForm__box">
+                        <dt class="contactForm__dt"><label for="name">お名前</label></dt>
+                        <dd class="contactForm__dd"><input id="name" type="text" name="name" required placeholder="田中 太郎"></dd>
+                    </div>
+                    <div class="contactForm__box">
+                        <dt class="contactForm__dt"><label for="company">会社名</label></dt>
+                        <dd class="contactForm__dd"><input id="company" type="text" name="company"></dd>
+                    </div>
+                    <div class="contactForm__box">
+                        <dt class="contactForm__dt"><label for="email">メールアドレス</label></dt>
+                        <dd class="contactForm__dd"><input id="email" type="email" name="email" required></dd>
+                    </div>
+                    <div class="contactForm__box">
+                        <dt class="contactForm__dt">性別</dt>
+                        <dd class="contactForm__dd">
+                            <label><input type="radio" name="sex" value="男性">男性</label>
+                            <label><input type="radio" name="sex" value="女性">女性</label>
+                        </dd>
+                    </div>
+                    <div class="contactForm__box">
+                        <dt class="contactForm__dt">お問い合わせ種別</dt>
+                        <dd class="contactForm__dd">
+                            <label><input type="checkbox" name="category" value="ホームページの制作依頼">ホームページの制作依頼</label>
+                            <label><input type="checkbox" name="category" value="新規お取引に関するお問い合わせ">新規お取引に関するお問い合わせ</label>
+                            <label><input type="checkbox" name="category" value="採用に関するお問い合わせ">採用に関するお問い合わせ</label>
+                        </dd>
+                    </div>
+                    <div class="contactForm__box">
+                        <dt class="contactForm__dt">都合のいい時間帯</dt>
+                        <dd class="contactForm__dd">
+                            <select name="time">
+                                <option value="午前中">午前中</option>
+                                <option value="12:00〜14:00">12:00〜14:00</option>
+                                <option value="14:00〜16:00">14:00〜16:00</option>
+                                <option value="16:00〜18:00">16:00〜18:00</option>
+                                <option value="18:00〜20:00">18:00〜20:00</option>
+                            </select>
+                        </dd>
+                    </div>
+                    <div class="contactForm__box">
+                        <dt class="contactForm__dt"><label for="message">お問い合わせ内容</label></dt>
+                        <dd class="contactForm__dd">
+                            <textarea name="message" id="message" required></textarea>
+                        </dd>
+                    </div>
+                </dl>
+                <div class="contactForm__btn">
+                    <input type="submit" value="内容確認">
+                </div>
+            </form>
+        </div>
+        <div class="pageBg">
+            <div class="pageBg__img--01"></div>
+            <div class="pageBg__img--02"></div>
+        </div>
+    </div>
+</main>
+
+<%- include('./common/_footer', { pageId: pageId }) %>
