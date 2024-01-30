@@ -1,0 +1,346 @@
+@import "_variable.scss";
+
+#contact {
+  .wrapper {
+    position: relative;
+  }
+
+  .pageTtl {
+    margin-top: 112px;
+    margin-left: 3.3rem;
+    margin-bottom: 6rem;
+
+    @media screen and (min-width: 770px) {
+      margin-top: 139px;
+      margin-left: 22rem;
+      margin-bottom: 6.7rem;
+    }
+
+    &__ttl {
+      @include secTtl("C");
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+
+    &__sub {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+  }
+  
+  .contactForm {
+    width: 36rem;
+    margin: 0 auto;
+    margin-bottom: 18rem;
+    padding: 3.5rem 1.5rem;
+    background: rgba(255, 255, 255, 0.90);
+    box-shadow: 0 0.4rem 4px rgba(0, 0, 0, 0.25);
+    line-height: 1.75;
+    font-size: 1.4rem;
+
+    @media screen and (min-width: 770px) {
+      width: 124rem;
+      margin-bottom: 26.5rem;
+      padding: 10rem 12rem;
+    }
+
+    &__txt {
+      margin-bottom: 4rem;
+      font-weight: 700;
+    }
+
+    &__br {
+      display: none;
+
+      @media screen and (min-width: 770px) {
+        display: block;
+      }
+    }
+
+    &__dl {
+      margin-bottom: 6rem;
+    }
+
+    &__box {
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+
+      &:nth-last-child(1) {
+        margin-bottom: 0;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      select,
+      textarea {
+        &:focus {
+          outline: 2px solid #000;
+        }
+      }
+
+      // 設問個別設定
+      // お名前
+      &:nth-child(1) {
+        dt {
+          @include required;
+        }
+
+        input {
+          @include inputTxt;
+
+          &::placeholder {
+            color: #e6e6e6;
+          }
+        }
+      }
+
+      // 会社名
+      &:nth-child(2) {
+        input {
+          @include inputTxt;
+        }
+      }
+
+      // メールアドレス
+      &:nth-child(3) {
+        dt {
+          @include required;
+        }
+
+        input {
+          @include inputTxt;
+        }
+      }
+
+      // 性別
+      &:nth-child(4) {
+        dd {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+
+        label {
+          position: relative;
+          display: block;
+          padding-left: 1.8rem;
+
+          // ラジオボタン枠
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            display: block;
+            width: 1.5rem;
+            aspect-ratio: 1 / 1;
+            transform: translateY(-50%);
+            border: 1px solid #A0A0A0;
+            border-radius: 50%;
+            background: #fff;
+          }
+        }
+
+        input {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          display: block;
+          width: 1.5rem;
+          aspect-ratio: 1 / 1;
+          margin: 0;
+          transform: translateY(-50%);
+          accent-color: #000;
+          opacity: 0;
+
+          &:checked {
+            opacity: 1;
+          }
+        }
+      }
+
+      // お問い合わせ種別
+      &:nth-child(5) {
+        label {
+          position: relative;
+          display: block;
+          margin-bottom: 0.5rem;
+          padding-left: 2rem;
+
+          // チェックボックス枠
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            z-index: 1;
+            display: block;
+            width: 1.5rem;
+            aspect-ratio: 1 / 1;
+            transform: translateY(-50%);
+            border: 1px solid #A0A0A0;
+            border-radius: 0.3rem;
+            pointer-events: none;
+          }
+          // チェックボックス背景
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            z-index: -1;
+            display: block;
+            width: 1.5rem;
+            aspect-ratio: 1 / 1;
+            transform: translateY(-50%);
+            border: 1px solid #fff;
+            border-radius: 0.3rem;
+            background: #fff;
+            pointer-events: none;
+          }
+        }
+
+        input {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          display: block;
+          width: 1.5rem;
+          aspect-ratio: 1 / 1;
+          margin: 0;
+          transform: translateY(-50%);
+          accent-color: #fff;
+          opacity: 0;
+
+          &:checked {
+            opacity: 1;
+          }
+        }
+      }
+
+      // 時間帯
+      &:nth-child(6) {
+        dd {
+          position: relative;
+          width: fit-content;
+  
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            // left: 8rem;
+            right: 2rem;
+            display: block;
+            width: 1.2rem;
+            aspect-ratio: 1 / 1;
+            transform: rotate(45deg) translateY(-100%);
+            border-right: 3px solid #000;
+            border-bottom: 3px solid #000;
+            pointer-events: none;
+          }
+        }
+
+        select {
+          appearance: none;
+          @include inputTxt;
+          width: 15rem;
+          padding-left: 1rem;
+        }
+      }
+
+      // 問い合わせ内容テキストエリア
+      &:nth-child(7) {
+        dt {
+          @include required;
+        }
+
+        textarea {
+          @include inputTxt;
+          aspect-ratio: 10 / 6;
+        }
+      }
+    }
+
+    &__dt {
+      font-weight: 700;
+    }
+
+    &__btn {
+      position: relative;
+      width: fit-content;
+      margin: 0 auto;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 2rem;
+        display: block;
+        width: 1.9rem;
+        aspect-ratio: 192 / 82;
+        margin-left: 2rem;
+        transform: translateY(-50%);
+        background: url(../image/arrow.svg) center center / contain no-repeat;
+        pointer-events: none;
+      }
+
+      input {
+        appearance: none;
+        display: block;
+        width: 15.2rem;
+        padding: 0.6rem 0;
+        padding-right: 1.2rem;
+        border: 1px solid #000;
+        border-radius: 999px;
+        background: #000;
+        color: #fff;
+      }
+    }
+  }
+
+  .pageBg {
+    position: absolute;
+    top: -112px;
+    left: 0;
+    z-index: -5;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 308vh;
+    transform: translateX(-42.5vh);
+
+    @media screen and (min-width: 770px) {
+      top: -139px;
+      left: calc(3rem * 1.73);
+    }
+
+    @media screen and (min-width: 1000px) {
+      left: -5rem;
+    }
+
+    &__img {
+      &--01 {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        height: 308vh;
+        aspect-ratio: 1392 / 2606;
+        background: url(../image/child/child_bg1.png) center center / cover;
+      }
+
+      &--02 {
+        position: absolute;
+        top: 112px;
+        z-index: -2;
+        height: 260vh;
+        aspect-ratio: 1224 / 2202;
+        transform: translateX(-20px);
+        background: url(../image/child/child_bg2.png) center center / cover;
+      }
+    }
+  }
+}

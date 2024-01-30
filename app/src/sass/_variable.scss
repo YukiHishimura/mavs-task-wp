@@ -305,3 +305,31 @@ mixin
   -webkit-background-clip: text; //テキストでくり抜く
   -webkit-text-fill-color: transparent; //くり抜いた部分は背景を表示
 }
+
+
+// ----------CONTACTページ--------------------
+// 必須マーク
+@mixin required {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &::after {
+    content: "必須";
+    display: block;
+    width: 4.4rem;
+    padding-bottom: 0.1rem;
+    background: #ED1E79;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}
+
+// テキスト入力欄
+@mixin inputTxt {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #A0A0A0;
+  border-radius: 0.5rem;
+}

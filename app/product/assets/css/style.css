@@ -2249,6 +2249,381 @@ mixin
 /* ================================================================
 mixin
 ================================================================ */
+#contact .wrapper {
+  position: relative;
+}
+#contact .pageTtl {
+  margin-top: 112px;
+  margin-left: 3.3rem;
+  margin-bottom: 6rem;
+}
+@media screen and (min-width: 770px) {
+  #contact .pageTtl {
+    margin-top: 139px;
+    margin-left: 22rem;
+    margin-bottom: 6.7rem;
+  }
+}
+#contact .pageTtl__ttl {
+  width: fit-content;
+  margin-bottom: 0.5rem;
+  line-height: 0.9;
+  font-family: "M PLUS 1", sans-serif;
+  font-size: 5.3rem;
+}
+@media screen and (min-width: 770px) {
+  #contact .pageTtl__ttl {
+    font-size: 7.1rem;
+  }
+}
+#contact .pageTtl__ttl::after {
+  content: "";
+  display: block;
+  height: 1.2px;
+  margin-top: 0.5rem;
+  margin-left: calc(50% - 50vw);
+  background: #000;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+@media screen and (min-width: 770px) {
+  #contact .pageTtl__ttl::after {
+    height: 2px;
+  }
+}
+#contact .pageTtl__ttl span {
+  position: relative;
+}
+#contact .pageTtl__ttl span::before {
+  content: "C";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: block;
+  padding-top: 0.3rem;
+  background: #000;
+  color: #fff;
+}
+#contact .pageTtl__ttl::after {
+  transform: scaleX(1);
+}
+#contact .pageTtl__sub {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+#contact .contactForm {
+  width: 36rem;
+  margin: 0 auto;
+  margin-bottom: 18rem;
+  padding: 3.5rem 1.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0.4rem 4px rgba(0, 0, 0, 0.25);
+  line-height: 1.75;
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 770px) {
+  #contact .contactForm {
+    width: 124rem;
+    margin-bottom: 26.5rem;
+    padding: 10rem 12rem;
+  }
+}
+#contact .contactForm__txt {
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+#contact .contactForm__br {
+  display: none;
+}
+@media screen and (min-width: 770px) {
+  #contact .contactForm__br {
+    display: block;
+  }
+}
+#contact .contactForm__dl {
+  margin-bottom: 6rem;
+}
+#contact .contactForm__box {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+#contact .contactForm__box:nth-last-child(1) {
+  margin-bottom: 0;
+}
+#contact .contactForm__box input[type=text]:focus,
+#contact .contactForm__box input[type=email]:focus,
+#contact .contactForm__box select:focus,
+#contact .contactForm__box textarea:focus {
+  outline: 2px solid #000;
+}
+#contact .contactForm__box:nth-child(1) dt {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#contact .contactForm__box:nth-child(1) dt::after {
+  content: "必須";
+  display: block;
+  width: 4.4rem;
+  padding-bottom: 0.1rem;
+  background: #ED1E79;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+}
+#contact .contactForm__box:nth-child(1) input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #A0A0A0;
+  border-radius: 0.5rem;
+}
+#contact .contactForm__box:nth-child(1) input::placeholder {
+  color: #e6e6e6;
+}
+#contact .contactForm__box:nth-child(2) input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #A0A0A0;
+  border-radius: 0.5rem;
+}
+#contact .contactForm__box:nth-child(3) dt {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#contact .contactForm__box:nth-child(3) dt::after {
+  content: "必須";
+  display: block;
+  width: 4.4rem;
+  padding-bottom: 0.1rem;
+  background: #ED1E79;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+}
+#contact .contactForm__box:nth-child(3) input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #A0A0A0;
+  border-radius: 0.5rem;
+}
+#contact .contactForm__box:nth-child(4) dd {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#contact .contactForm__box:nth-child(4) label {
+  position: relative;
+  display: block;
+  padding-left: 1.8rem;
+}
+#contact .contactForm__box:nth-child(4) label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 1.5rem;
+  aspect-ratio: 1/1;
+  transform: translateY(-50%);
+  border: 1px solid #A0A0A0;
+  border-radius: 50%;
+  background: #fff;
+}
+#contact .contactForm__box:nth-child(4) input {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 1.5rem;
+  aspect-ratio: 1/1;
+  margin: 0;
+  transform: translateY(-50%);
+  accent-color: #000;
+  opacity: 0;
+}
+#contact .contactForm__box:nth-child(4) input:checked {
+  opacity: 1;
+}
+#contact .contactForm__box:nth-child(5) label {
+  position: relative;
+  display: block;
+  margin-bottom: 0.5rem;
+  padding-left: 2rem;
+}
+#contact .contactForm__box:nth-child(5) label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 1.5rem;
+  aspect-ratio: 1/1;
+  transform: translateY(-50%);
+  border: 1px solid #A0A0A0;
+  border-radius: 0.3rem;
+  pointer-events: none;
+}
+#contact .contactForm__box:nth-child(5) label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+  display: block;
+  width: 1.5rem;
+  aspect-ratio: 1/1;
+  transform: translateY(-50%);
+  border: 1px solid #fff;
+  border-radius: 0.3rem;
+  background: #fff;
+  pointer-events: none;
+}
+#contact .contactForm__box:nth-child(5) input {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 1.5rem;
+  aspect-ratio: 1/1;
+  margin: 0;
+  transform: translateY(-50%);
+  accent-color: #fff;
+  opacity: 0;
+}
+#contact .contactForm__box:nth-child(5) input:checked {
+  opacity: 1;
+}
+#contact .contactForm__box:nth-child(6) dd {
+  position: relative;
+  width: fit-content;
+}
+#contact .contactForm__box:nth-child(6) dd::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  display: block;
+  width: 1.2rem;
+  aspect-ratio: 1/1;
+  transform: rotate(45deg) translateY(-100%);
+  border-right: 3px solid #000;
+  border-bottom: 3px solid #000;
+  pointer-events: none;
+}
+#contact .contactForm__box:nth-child(6) select {
+  appearance: none;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #A0A0A0;
+  border-radius: 0.5rem;
+  width: 15rem;
+  padding-left: 1rem;
+}
+#contact .contactForm__box:nth-child(7) dt {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#contact .contactForm__box:nth-child(7) dt::after {
+  content: "必須";
+  display: block;
+  width: 4.4rem;
+  padding-bottom: 0.1rem;
+  background: #ED1E79;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+}
+#contact .contactForm__box:nth-child(7) textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #A0A0A0;
+  border-radius: 0.5rem;
+  aspect-ratio: 10/6;
+}
+#contact .contactForm__dt {
+  font-weight: 700;
+}
+#contact .contactForm__btn {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+#contact .contactForm__btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  display: block;
+  width: 1.9rem;
+  aspect-ratio: 192/82;
+  margin-left: 2rem;
+  transform: translateY(-50%);
+  background: url(../image/arrow.svg) center center/contain no-repeat;
+  pointer-events: none;
+}
+#contact .contactForm__btn input {
+  appearance: none;
+  display: block;
+  width: 15.2rem;
+  padding: 0.6rem 0;
+  padding-right: 1.2rem;
+  border: 1px solid #000;
+  border-radius: 999px;
+  background: #000;
+  color: #fff;
+}
+#contact .pageBg {
+  position: absolute;
+  top: -112px;
+  left: 0;
+  z-index: -5;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 308vh;
+  transform: translateX(-42.5vh);
+}
+@media screen and (min-width: 770px) {
+  #contact .pageBg {
+    top: -139px;
+    left: 5.19rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  #contact .pageBg {
+    left: -5rem;
+  }
+}
+#contact .pageBg__img--01 {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  height: 308vh;
+  aspect-ratio: 1392/2606;
+  background: url(../image/child/child_bg1.png) center center/cover;
+}
+#contact .pageBg__img--02 {
+  position: absolute;
+  top: 112px;
+  z-index: -2;
+  height: 260vh;
+  aspect-ratio: 1224/2202;
+  transform: translateX(-20px);
+  background: url(../image/child/child_bg2.png) center center/cover;
+}
+
+/* ================================================================
+変数
+================================================================ */
+/* ================================================================
+mixin
+================================================================ */
 .loader {
   position: fixed;
   top: 0;
