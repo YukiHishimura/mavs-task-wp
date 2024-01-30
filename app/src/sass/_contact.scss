@@ -42,8 +42,9 @@
 
     @media screen and (min-width: 770px) {
       width: 124rem;
-      margin-bottom: 26.5rem;
+      margin-bottom: 31.8rem;
       padding: 10rem 12rem;
+      font-size: 1.6rem;
     }
 
     &__txt {
@@ -69,10 +70,15 @@
       flex-direction: column;
       gap: 0.8rem;
 
+      @media screen and (min-width: 770px) {
+        flex-direction: row;
+      }
+
       &:nth-last-child(1) {
         margin-bottom: 0;
       }
 
+      // フォーカス時
       input[type="text"],
       input[type="email"],
       select,
@@ -122,12 +128,21 @@
           display: flex;
           align-items: center;
           gap: 1rem;
+
+          @media screen and (min-width: 770px) {
+            gap: 2rem;
+            padding-left: 1rem;
+          }
         }
 
         label {
           position: relative;
           display: block;
           padding-left: 1.8rem;
+
+          @media screen and (min-width: 770px) {
+            padding-left: 3.1rem;
+          }
 
           // ラジオボタン枠
           &::before {
@@ -142,6 +157,11 @@
             border: 1px solid #A0A0A0;
             border-radius: 50%;
             background: #fff;
+
+            @media screen and (min-width: 770px) {
+              width: 2.1rem;
+              transform: translateY(-45%);
+            }
           }
         }
 
@@ -157,6 +177,11 @@
           accent-color: #000;
           opacity: 0;
 
+          @media screen and (min-width: 770px) {
+            width: 2.1rem;
+            transform: translateY(-45%);
+          }
+
           &:checked {
             opacity: 1;
           }
@@ -165,11 +190,22 @@
 
       // お問い合わせ種別
       &:nth-child(5) {
+        dd {
+          @media screen and (min-width: 770px) {
+            padding-left: 1rem;
+          }
+        }
+
         label {
           position: relative;
           display: block;
           margin-bottom: 0.5rem;
           padding-left: 2rem;
+
+          @media screen and (min-width: 770px) {
+            margin-bottom: 1rem;
+            padding-left: 3rem;
+          }
 
           // チェックボックス枠
           &::before {
@@ -185,6 +221,11 @@
             border: 1px solid #A0A0A0;
             border-radius: 0.3rem;
             pointer-events: none;
+
+            @media screen and (min-width: 770px) {
+              width: 2rem;
+              transform: translateY(-45%);
+            }
           }
           // チェックボックス背景
           &::after {
@@ -201,6 +242,11 @@
             border-radius: 0.3rem;
             background: #fff;
             pointer-events: none;
+
+            @media screen and (min-width: 770px) {
+              width: 2rem;
+              transform: translateY(-45%);
+            }
           }
         }
 
@@ -215,6 +261,11 @@
           transform: translateY(-50%);
           accent-color: #fff;
           opacity: 0;
+
+          @media screen and (min-width: 770px) {
+            width: 2rem;
+            transform: translateY(-45%);
+          }
 
           &:checked {
             opacity: 1;
@@ -233,13 +284,13 @@
             position: absolute;
             top: 50%;
             // left: 8rem;
-            right: 2rem;
+            right: 2.2rem;
             display: block;
             width: 1.2rem;
             aspect-ratio: 1 / 1;
             transform: rotate(45deg) translateY(-100%);
-            border-right: 3px solid #000;
-            border-bottom: 3px solid #000;
+            border-right: 2px solid #000;
+            border-bottom: 2px solid #000;
             pointer-events: none;
           }
         }
@@ -247,7 +298,7 @@
         select {
           appearance: none;
           @include inputTxt;
-          width: 15rem;
+          width: 16rem;
           padding-left: 1rem;
         }
       }
@@ -261,12 +312,28 @@
         textarea {
           @include inputTxt;
           aspect-ratio: 10 / 6;
+
+          @media screen and (min-width: 770px) {
+            aspect-ratio: 696 / 150;
+          }
         }
       }
     }
 
     &__dt {
       font-weight: 700;
+
+      @media screen and (min-width: 770px) {
+        display: flex;
+        align-items: center;
+        width: 30.4%;
+      }
+    }
+
+    &__dd {
+      @media screen and (min-width: 770px) {
+        width: 69.6%;
+      }
     }
 
     &__btn {
@@ -285,7 +352,16 @@
         margin-left: 2rem;
         transform: translateY(-50%);
         background: url(../image/arrow.svg) center center / contain no-repeat;
+        transition: 0.3s;
         pointer-events: none;
+      }
+
+      &:hover {
+        &::after {
+          @media screen and (min-width: 770px) {
+            filter: invert(100%);
+          }
+        }
       }
 
       input {
@@ -298,6 +374,21 @@
         border-radius: 999px;
         background: #000;
         color: #fff;
+
+        @media screen and (min-width: 770px) {
+          padding: 0.9rem 0;
+          padding-right: 1.2rem;
+          line-height: 1.6;
+          transition: 0.3s;
+          cursor: pointer;
+        }
+
+        &:hover {
+          @media screen and (min-width: 770px) {
+            background: #fff;
+            color: #000;
+          }
+        }
       }
     }
   }

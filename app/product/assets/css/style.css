@@ -2325,8 +2325,9 @@ mixin
 @media screen and (min-width: 770px) {
   #contact .contactForm {
     width: 124rem;
-    margin-bottom: 26.5rem;
+    margin-bottom: 31.8rem;
     padding: 10rem 12rem;
+    font-size: 1.6rem;
   }
 }
 #contact .contactForm__txt {
@@ -2349,6 +2350,11 @@ mixin
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+}
+@media screen and (min-width: 770px) {
+  #contact .contactForm__box {
+    flex-direction: row;
+  }
 }
 #contact .contactForm__box:nth-last-child(1) {
   margin-bottom: 0;
@@ -2380,6 +2386,11 @@ mixin
   border: 1px solid #A0A0A0;
   border-radius: 0.5rem;
 }
+@media screen and (min-width: 770px) {
+  #contact .contactForm__box:nth-child(1) input {
+    padding: 1rem;
+  }
+}
 #contact .contactForm__box:nth-child(1) input::placeholder {
   color: #e6e6e6;
 }
@@ -2388,6 +2399,11 @@ mixin
   padding: 0.5rem;
   border: 1px solid #A0A0A0;
   border-radius: 0.5rem;
+}
+@media screen and (min-width: 770px) {
+  #contact .contactForm__box:nth-child(2) input {
+    padding: 1rem;
+  }
 }
 #contact .contactForm__box:nth-child(3) dt {
   display: flex;
@@ -2410,15 +2426,31 @@ mixin
   border: 1px solid #A0A0A0;
   border-radius: 0.5rem;
 }
+@media screen and (min-width: 770px) {
+  #contact .contactForm__box:nth-child(3) input {
+    padding: 1rem;
+  }
+}
 #contact .contactForm__box:nth-child(4) dd {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
+@media screen and (min-width: 770px) {
+  #contact .contactForm__box:nth-child(4) dd {
+    gap: 2rem;
+    padding-left: 1rem;
+  }
+}
 #contact .contactForm__box:nth-child(4) label {
   position: relative;
   display: block;
   padding-left: 1.8rem;
+}
+@media screen and (min-width: 770px) {
+  #contact .contactForm__box:nth-child(4) label {
+    padding-left: 3.1rem;
+  }
 }
 #contact .contactForm__box:nth-child(4) label::before {
   content: "";
@@ -2433,6 +2465,12 @@ mixin
   border-radius: 50%;
   background: #fff;
 }
+@media screen and (min-width: 770px) {
+  #contact .contactForm__box:nth-child(4) label::before {
+    width: 2.1rem;
+    transform: translateY(-45%);
+  }
+}
 #contact .contactForm__box:nth-child(4) input {
   position: absolute;
   top: 50%;
@@ -2445,14 +2483,31 @@ mixin
   accent-color: #000;
   opacity: 0;
 }
+@media screen and (min-width: 770px) {
+  #contact .contactForm__box:nth-child(4) input {
+    width: 2.1rem;
+    transform: translateY(-45%);
+  }
+}
 #contact .contactForm__box:nth-child(4) input:checked {
   opacity: 1;
+}
+@media screen and (min-width: 770px) {
+  #contact .contactForm__box:nth-child(5) dd {
+    padding-left: 1rem;
+  }
 }
 #contact .contactForm__box:nth-child(5) label {
   position: relative;
   display: block;
   margin-bottom: 0.5rem;
   padding-left: 2rem;
+}
+@media screen and (min-width: 770px) {
+  #contact .contactForm__box:nth-child(5) label {
+    margin-bottom: 1rem;
+    padding-left: 3rem;
+  }
 }
 #contact .contactForm__box:nth-child(5) label::before {
   content: "";
@@ -2467,6 +2522,12 @@ mixin
   border: 1px solid #A0A0A0;
   border-radius: 0.3rem;
   pointer-events: none;
+}
+@media screen and (min-width: 770px) {
+  #contact .contactForm__box:nth-child(5) label::before {
+    width: 2rem;
+    transform: translateY(-45%);
+  }
 }
 #contact .contactForm__box:nth-child(5) label::after {
   content: "";
@@ -2483,6 +2544,12 @@ mixin
   background: #fff;
   pointer-events: none;
 }
+@media screen and (min-width: 770px) {
+  #contact .contactForm__box:nth-child(5) label::after {
+    width: 2rem;
+    transform: translateY(-45%);
+  }
+}
 #contact .contactForm__box:nth-child(5) input {
   position: absolute;
   top: 50%;
@@ -2495,6 +2562,12 @@ mixin
   accent-color: #fff;
   opacity: 0;
 }
+@media screen and (min-width: 770px) {
+  #contact .contactForm__box:nth-child(5) input {
+    width: 2rem;
+    transform: translateY(-45%);
+  }
+}
 #contact .contactForm__box:nth-child(5) input:checked {
   opacity: 1;
 }
@@ -2506,13 +2579,13 @@ mixin
   content: "";
   position: absolute;
   top: 50%;
-  right: 2rem;
+  right: 2.2rem;
   display: block;
   width: 1.2rem;
   aspect-ratio: 1/1;
   transform: rotate(45deg) translateY(-100%);
-  border-right: 3px solid #000;
-  border-bottom: 3px solid #000;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
   pointer-events: none;
 }
 #contact .contactForm__box:nth-child(6) select {
@@ -2521,8 +2594,13 @@ mixin
   padding: 0.5rem;
   border: 1px solid #A0A0A0;
   border-radius: 0.5rem;
-  width: 15rem;
+  width: 16rem;
   padding-left: 1rem;
+}
+@media screen and (min-width: 770px) {
+  #contact .contactForm__box:nth-child(6) select {
+    padding: 1rem;
+  }
 }
 #contact .contactForm__box:nth-child(7) dt {
   display: flex;
@@ -2546,8 +2624,30 @@ mixin
   border-radius: 0.5rem;
   aspect-ratio: 10/6;
 }
+@media screen and (min-width: 770px) {
+  #contact .contactForm__box:nth-child(7) textarea {
+    padding: 1rem;
+  }
+}
+@media screen and (min-width: 770px) {
+  #contact .contactForm__box:nth-child(7) textarea {
+    aspect-ratio: 696/150;
+  }
+}
 #contact .contactForm__dt {
   font-weight: 700;
+}
+@media screen and (min-width: 770px) {
+  #contact .contactForm__dt {
+    display: flex;
+    align-items: center;
+    width: 30.4%;
+  }
+}
+@media screen and (min-width: 770px) {
+  #contact .contactForm__dd {
+    width: 69.6%;
+  }
 }
 #contact .contactForm__btn {
   position: relative;
@@ -2565,7 +2665,13 @@ mixin
   margin-left: 2rem;
   transform: translateY(-50%);
   background: url(../image/arrow.svg) center center/contain no-repeat;
+  transition: 0.3s;
   pointer-events: none;
+}
+@media screen and (min-width: 770px) {
+  #contact .contactForm__btn:hover::after {
+    filter: invert(100%);
+  }
 }
 #contact .contactForm__btn input {
   appearance: none;
@@ -2577,6 +2683,21 @@ mixin
   border-radius: 999px;
   background: #000;
   color: #fff;
+}
+@media screen and (min-width: 770px) {
+  #contact .contactForm__btn input {
+    padding: 0.9rem 0;
+    padding-right: 1.2rem;
+    line-height: 1.6;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 770px) {
+  #contact .contactForm__btn input:hover {
+    background: #fff;
+    color: #000;
+  }
 }
 #contact .pageBg {
   position: absolute;

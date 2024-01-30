@@ -332,4 +332,8 @@ mixin
   padding: 0.5rem;
   border: 1px solid #A0A0A0;
   border-radius: 0.5rem;
+
+  @media screen and (min-width: 770px) {
+    padding: 1rem;
+  }
 }
