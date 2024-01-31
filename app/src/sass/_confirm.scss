@@ -91,54 +91,68 @@
       // 設問個別設定
       // お名前
       &:nth-child(1) {
-        input {
-          @include inputConfirm;
+        dd {
+          input, p {
+            @include inputConfirm;
+          }
         }
       }
 
       // 会社名
       &:nth-child(2) {
-        input {
-          @include inputConfirm;
+        dd {
+          input, p {
+            @include inputConfirm;
+          }
         }
       }
 
       // メールアドレス
       &:nth-child(3) {
-        input {
-          @include inputConfirm;
+        dd {
+          input, p {
+            @include inputConfirm;
+          }
         }
       }
 
       // 性別
       &:nth-child(4) {
-        input {
-          @include inputConfirm;
+        dd {
+          input, p {
+            @include inputConfirm;
+          }
         }
       }
 
       // お問い合わせ種別
       &:nth-child(5) {
-        input {
-          @include inputConfirm;
+        dd {
+          input, p {
+            @include inputConfirm;
+          }
         }
       }
 
       // 時間帯
       &:nth-child(6) {
-        input {
-          @include inputConfirm;
+        dd {
+          input, p {
+            @include inputConfirm;
+          }
         }
       }
 
       // 問い合わせ内容テキストエリア
       &:nth-child(7) {
-        textarea {
-          @include inputConfirm;
-          aspect-ratio: 10 / 6;
-
-          @media screen and (min-width: 770px) {
-            aspect-ratio: 696 / 150;
+        dd {
+          textarea, p {
+            @include inputConfirm;
+            aspect-ratio: 10 / 6;
+  
+            @media screen and (min-width: 770px) {
+              aspect-ratio: 696 / 150;
+            }
           }
         }
       }
@@ -228,6 +242,11 @@
           }
         }
       }
+
+      // ContactForm7 修正
+      .wpcf7-spinner, br {
+        display: none;
+      }
     }
 
     &__btn {
@@ -286,6 +305,11 @@
             color: #000;
           }
         }
+      }
+
+      // ContactForm7 修正
+      .wpcf7-spinner, br {
+        display: none;
       }
     }
   }

@@ -191,6 +191,11 @@
       // お問い合わせ種別
       &:nth-child(5) {
         dd {
+          // ContactForm7 修正
+          .wpcf7-list-item {
+            display: block;
+          }
+
           @media screen and (min-width: 770px) {
             padding-left: 1rem;
           }
@@ -199,6 +204,7 @@
         label {
           position: relative;
           display: block;
+          width: fit-content;
           margin-bottom: 0.5rem;
           padding-left: 2rem;
 
@@ -390,6 +396,16 @@
           }
         }
       }
+
+      // ContactForm7 修正
+      .wpcf7-spinner, br {
+        display: none;
+      }
+    }
+
+    // ContactForm7 修正
+    .wpcf7-response-output {
+      display: none;
     }
   }
 

@@ -2492,6 +2492,9 @@ mixin
 #contact .contactForm__box:nth-child(4) input:checked {
   opacity: 1;
 }
+#contact .contactForm__box:nth-child(5) dd .wpcf7-list-item {
+  display: block;
+}
 @media screen and (min-width: 770px) {
   #contact .contactForm__box:nth-child(5) dd {
     padding-left: 1rem;
@@ -2500,6 +2503,7 @@ mixin
 #contact .contactForm__box:nth-child(5) label {
   position: relative;
   display: block;
+  width: fit-content;
   margin-bottom: 0.5rem;
   padding-left: 2rem;
 }
@@ -2699,6 +2703,12 @@ mixin
     color: #000;
   }
 }
+#contact .contactForm__btn .wpcf7-spinner, #contact .contactForm__btn br {
+  display: none;
+}
+#contact .contactForm .wpcf7-response-output {
+  display: none;
+}
 #contact .pageBg {
   position: absolute;
   top: -112px;
@@ -2861,7 +2871,7 @@ mixin
 #confirm .contactForm__box textarea:focus {
   outline: none;
 }
-#confirm .contactForm__box:nth-child(1) input {
+#confirm .contactForm__box:nth-child(1) dd input, #confirm .contactForm__box:nth-child(1) dd p {
   width: 100%;
   padding: 0.5rem;
   border: 1px solid #A0A0A0;
@@ -2869,11 +2879,11 @@ mixin
   background: #F5F5F5;
 }
 @media screen and (min-width: 770px) {
-  #confirm .contactForm__box:nth-child(1) input {
+  #confirm .contactForm__box:nth-child(1) dd input, #confirm .contactForm__box:nth-child(1) dd p {
     padding: 1rem;
   }
 }
-#confirm .contactForm__box:nth-child(2) input {
+#confirm .contactForm__box:nth-child(2) dd input, #confirm .contactForm__box:nth-child(2) dd p {
   width: 100%;
   padding: 0.5rem;
   border: 1px solid #A0A0A0;
@@ -2881,11 +2891,11 @@ mixin
   background: #F5F5F5;
 }
 @media screen and (min-width: 770px) {
-  #confirm .contactForm__box:nth-child(2) input {
+  #confirm .contactForm__box:nth-child(2) dd input, #confirm .contactForm__box:nth-child(2) dd p {
     padding: 1rem;
   }
 }
-#confirm .contactForm__box:nth-child(3) input {
+#confirm .contactForm__box:nth-child(3) dd input, #confirm .contactForm__box:nth-child(3) dd p {
   width: 100%;
   padding: 0.5rem;
   border: 1px solid #A0A0A0;
@@ -2893,11 +2903,11 @@ mixin
   background: #F5F5F5;
 }
 @media screen and (min-width: 770px) {
-  #confirm .contactForm__box:nth-child(3) input {
+  #confirm .contactForm__box:nth-child(3) dd input, #confirm .contactForm__box:nth-child(3) dd p {
     padding: 1rem;
   }
 }
-#confirm .contactForm__box:nth-child(4) input {
+#confirm .contactForm__box:nth-child(4) dd input, #confirm .contactForm__box:nth-child(4) dd p {
   width: 100%;
   padding: 0.5rem;
   border: 1px solid #A0A0A0;
@@ -2905,11 +2915,11 @@ mixin
   background: #F5F5F5;
 }
 @media screen and (min-width: 770px) {
-  #confirm .contactForm__box:nth-child(4) input {
+  #confirm .contactForm__box:nth-child(4) dd input, #confirm .contactForm__box:nth-child(4) dd p {
     padding: 1rem;
   }
 }
-#confirm .contactForm__box:nth-child(5) input {
+#confirm .contactForm__box:nth-child(5) dd input, #confirm .contactForm__box:nth-child(5) dd p {
   width: 100%;
   padding: 0.5rem;
   border: 1px solid #A0A0A0;
@@ -2917,11 +2927,11 @@ mixin
   background: #F5F5F5;
 }
 @media screen and (min-width: 770px) {
-  #confirm .contactForm__box:nth-child(5) input {
+  #confirm .contactForm__box:nth-child(5) dd input, #confirm .contactForm__box:nth-child(5) dd p {
     padding: 1rem;
   }
 }
-#confirm .contactForm__box:nth-child(6) input {
+#confirm .contactForm__box:nth-child(6) dd input, #confirm .contactForm__box:nth-child(6) dd p {
   width: 100%;
   padding: 0.5rem;
   border: 1px solid #A0A0A0;
@@ -2929,11 +2939,11 @@ mixin
   background: #F5F5F5;
 }
 @media screen and (min-width: 770px) {
-  #confirm .contactForm__box:nth-child(6) input {
+  #confirm .contactForm__box:nth-child(6) dd input, #confirm .contactForm__box:nth-child(6) dd p {
     padding: 1rem;
   }
 }
-#confirm .contactForm__box:nth-child(7) textarea {
+#confirm .contactForm__box:nth-child(7) dd textarea, #confirm .contactForm__box:nth-child(7) dd p {
   width: 100%;
   padding: 0.5rem;
   border: 1px solid #A0A0A0;
@@ -2942,12 +2952,12 @@ mixin
   aspect-ratio: 10/6;
 }
 @media screen and (min-width: 770px) {
-  #confirm .contactForm__box:nth-child(7) textarea {
+  #confirm .contactForm__box:nth-child(7) dd textarea, #confirm .contactForm__box:nth-child(7) dd p {
     padding: 1rem;
   }
 }
 @media screen and (min-width: 770px) {
-  #confirm .contactForm__box:nth-child(7) textarea {
+  #confirm .contactForm__box:nth-child(7) dd textarea, #confirm .contactForm__box:nth-child(7) dd p {
     aspect-ratio: 696/150;
   }
 }
@@ -3031,6 +3041,9 @@ mixin
     color: #000;
   }
 }
+#confirm .contactForm__back .wpcf7-spinner, #confirm .contactForm__back br {
+  display: none;
+}
 #confirm .contactForm__btn {
   position: relative;
   width: fit-content;
@@ -3084,6 +3097,9 @@ mixin
     background: #fff;
     color: #000;
   }
+}
+#confirm .contactForm__btn .wpcf7-spinner, #confirm .contactForm__btn br {
+  display: none;
 }
 #confirm .pageBg {
   position: absolute;
