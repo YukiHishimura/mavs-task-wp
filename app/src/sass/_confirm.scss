@@ -1,0 +1,334 @@
+@import "_variable.scss";
+
+#confirm {
+  .wrapper {
+    position: relative;
+  }
+
+  .pageTtl {
+    margin-top: 112px;
+    margin-left: 3.3rem;
+    margin-bottom: 6rem;
+
+    @media screen and (min-width: 770px) {
+      margin-top: 139px;
+      margin-left: 22rem;
+      margin-bottom: 6.7rem;
+    }
+
+    &__ttl {
+      @include secTtl("C");
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+
+    &__sub {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+  }
+  
+  .contactForm {
+    width: 36rem;
+    margin: 0 auto;
+    margin-bottom: 18rem;
+    padding: 3.5rem 1.5rem;
+    background: rgba(255, 255, 255, 0.90);
+    box-shadow: 0 0.4rem 4px rgba(0, 0, 0, 0.25);
+    line-height: 1.75;
+    font-size: 1.4rem;
+
+    @media screen and (min-width: 770px) {
+      width: 124rem;
+      margin-bottom: 31.8rem;
+      padding: 10rem 12rem;
+      font-size: 1.6rem;
+    }
+
+    &__txt {
+      margin-bottom: 4rem;
+      font-weight: 700;
+    }
+
+    &__br {
+      display: none;
+
+      @media screen and (min-width: 770px) {
+        display: block;
+      }
+    }
+
+    &__dl {
+      margin-bottom: 6rem;
+    }
+
+    &__box {
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+
+      @media screen and (min-width: 770px) {
+        flex-direction: row;
+      }
+
+      &:nth-last-child(1) {
+        margin-bottom: 0;
+      }
+
+      // フォーカス時
+      input[type="text"],
+      input[type="email"],
+      select,
+      textarea {
+        &:focus {
+          outline: none;
+        }
+      }
+
+      // 設問個別設定
+      // お名前
+      &:nth-child(1) {
+        input {
+          @include inputConfirm;
+        }
+      }
+
+      // 会社名
+      &:nth-child(2) {
+        input {
+          @include inputConfirm;
+        }
+      }
+
+      // メールアドレス
+      &:nth-child(3) {
+        input {
+          @include inputConfirm;
+        }
+      }
+
+      // 性別
+      &:nth-child(4) {
+        input {
+          @include inputConfirm;
+        }
+      }
+
+      // お問い合わせ種別
+      &:nth-child(5) {
+        input {
+          @include inputConfirm;
+        }
+      }
+
+      // 時間帯
+      &:nth-child(6) {
+        input {
+          @include inputConfirm;
+        }
+      }
+
+      // 問い合わせ内容テキストエリア
+      &:nth-child(7) {
+        textarea {
+          @include inputConfirm;
+          aspect-ratio: 10 / 6;
+
+          @media screen and (min-width: 770px) {
+            aspect-ratio: 696 / 150;
+          }
+        }
+      }
+    }
+
+    &__dt {
+      font-weight: 700;
+
+      @media screen and (min-width: 770px) {
+        display: flex;
+        align-items: center;
+        width: 30.4%;
+      }
+    }
+
+    &__dd {
+      @media screen and (min-width: 770px) {
+        width: 69.6%;
+      }
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+
+      @media screen and (min-width: 770px) {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    &__back {
+      position: relative;
+      width: fit-content;
+      margin: 0 auto;
+
+      @media screen and (min-width: 770px) {
+        margin: 0;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 2rem;
+        display: block;
+        width: 1.9rem;
+        aspect-ratio: 192 / 82;
+        transform: translateY(-50%) rotate(180deg);
+        background: url(../image/arrow.svg) center center / contain no-repeat;
+        transition: 0.3s;
+        pointer-events: none;
+      }
+
+      &:hover {
+        &::before {
+          @media screen and (min-width: 770px) {
+            filter: invert(100%);
+          }
+        }
+      }
+
+      input {
+        appearance: none;
+        display: block;
+        width: 12rem;
+        padding: 0.6rem 0;
+        padding-left: 1.2rem;
+        border: 1px solid #888;
+        border-radius: 999px;
+        background: #888;
+        color: #fff;
+
+        @media screen and (min-width: 770px) {
+          padding: 0.9rem 0;
+          padding-left: 1.2rem;
+          line-height: 1.6;
+          transition: 0.3s;
+          cursor: pointer;
+        }
+
+        &:hover {
+          @media screen and (min-width: 770px) {
+            background: #fff;
+            color: #000;
+          }
+        }
+      }
+    }
+
+    &__btn {
+      position: relative;
+      width: fit-content;
+      margin: 0 auto;
+
+      @media screen and (min-width: 770px) {
+        margin: 0;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 2rem;
+        display: block;
+        width: 1.9rem;
+        aspect-ratio: 192 / 82;
+        transform: translateY(-50%);
+        background: url(../image/arrow.svg) center center / contain no-repeat;
+        transition: 0.3s;
+        pointer-events: none;
+      }
+
+      &:hover {
+        &::after {
+          @media screen and (min-width: 770px) {
+            filter: invert(100%);
+          }
+        }
+      }
+
+      input {
+        appearance: none;
+        display: block;
+        width: 15.2rem;
+        padding: 0.6rem 0;
+        padding-right: 1.2rem;
+        border: 1px solid #000;
+        border-radius: 999px;
+        background: #000;
+        color: #fff;
+
+        @media screen and (min-width: 770px) {
+          padding: 0.9rem 0;
+          padding-right: 1.2rem;
+          line-height: 1.6;
+          transition: 0.3s;
+          cursor: pointer;
+        }
+
+        &:hover {
+          @media screen and (min-width: 770px) {
+            background: #fff;
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+
+  .pageBg {
+    position: absolute;
+    top: -112px;
+    left: 0;
+    z-index: -5;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 308vh;
+    transform: translateX(-42.5vh);
+
+    @media screen and (min-width: 770px) {
+      top: -139px;
+      left: calc(3rem * 1.73);
+    }
+
+    @media screen and (min-width: 1000px) {
+      left: -5rem;
+    }
+
+    &__img {
+      &--01 {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        height: 308vh;
+        aspect-ratio: 1392 / 2606;
+        background: url(../image/child/child_bg1.png) center center / cover;
+      }
+
+      &--02 {
+        position: absolute;
+        top: 112px;
+        z-index: -2;
+        height: 260vh;
+        aspect-ratio: 1224 / 2202;
+        transform: translateX(-20px);
+        background: url(../image/child/child_bg2.png) center center / cover;
+      }
+    }
+  }
+}

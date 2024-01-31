@@ -1,0 +1,73 @@
+<% let title='お問い合わせ内容確認 | 株式会社マーベリックス';
+ let description='Mavericks(マーベリックス)は、北海道札幌市を拠点にホームページ制作・Webシステム開発会社です。長所を活かしたチームづくりで最高のパフォーマンスを提供致します。';
+ let pageId='confirm'; %>
+<%- include('./common/_header', { title: title, description: description, pageId: pageId }) %>
+
+<main id="confirm">
+    <div class="wrapper">
+        <div class="pageTtl">
+            <h2 class="pageTtl__ttl"><span>C</span>ONFIRM</h2>
+            <p class="pageTtl__sub">お問い合わせ内容確認</p>
+        </div>
+        <div class="contactForm">
+            <p class="contactForm__txt">
+                内容に間違いがないかご確認をお願いします。
+            </p>
+            <!-- お問い合わせフォーム -->
+            <form id="contactForm__form" action="#" method="post" class="contactForm__form">
+                <dl class="contactForm__dl">
+                    <div class="contactForm__box">
+                        <dt class="contactForm__dt">お名前</dt>
+                        <dd class="contactForm__dd"><input id="name" type="text" name="name"></dd>
+                    </div>
+                    <div class="contactForm__box">
+                        <dt class="contactForm__dt">会社名</dt>
+                        <dd class="contactForm__dd"><input id="company" type="text" name="company"></dd>
+                    </div>
+                    <div class="contactForm__box">
+                        <dt class="contactForm__dt">メールアドレス</dt>
+                        <dd class="contactForm__dd"><input id="email" type="email" name="email"></dd>
+                    </div>
+                    <div class="contactForm__box">
+                        <dt class="contactForm__dt">性別</dt>
+                        <dd class="contactForm__dd">
+                            <input id="sex" type="text" name="sex">
+                        </dd>
+                    </div>
+                    <div class="contactForm__box">
+                        <dt class="contactForm__dt">お問い合わせ種別</dt>
+                        <dd class="contactForm__dd">
+                            <input id="category" type="text" name="category">
+                        </dd>
+                    </div>
+                    <div class="contactForm__box">
+                        <dt class="contactForm__dt">都合のいい時間帯</dt>
+                        <dd class="contactForm__dd">
+                            <input id="time" type="text" name="time">
+                        </dd>
+                    </div>
+                    <div class="contactForm__box">
+                        <dt class="contactForm__dt">お問い合わせ内容</dt>
+                        <dd class="contactForm__dd">
+                            <textarea name="message" id="message"></textarea>
+                        </dd>
+                    </div>
+                </dl>
+                <div class="contactForm__container">
+                    <div class="contactForm__back">
+                        <input type="button" value="戻る">
+                    </div>
+                    <div class="contactForm__btn">
+                        <input type="submit" value="送信する">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="pageBg">
+            <div class="pageBg__img--01"></div>
+            <div class="pageBg__img--02"></div>
+        </div>
+    </div>
+</main>
+
+<%- include('./common/_footer', { pageId: pageId }) %>
