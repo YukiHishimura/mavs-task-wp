@@ -2821,7 +2821,7 @@ mixin
 @media screen and (min-width: 770px) {
   #confirm .contactForm {
     width: 124rem;
-    margin-bottom: 31.8rem;
+    margin-bottom: 22.8rem;
     padding: 10rem 12rem;
     font-size: 1.6rem;
   }
@@ -3116,6 +3116,194 @@ mixin
   background: url(../image/child/child_bg1.png) center center/cover;
 }
 #confirm .pageBg__img--02 {
+  position: absolute;
+  top: 112px;
+  z-index: -2;
+  height: 260vh;
+  aspect-ratio: 1224/2202;
+  transform: translateX(-20px);
+  background: url(../image/child/child_bg2.png) center center/cover;
+}
+
+/* ================================================================
+変数
+================================================================ */
+/* ================================================================
+mixin
+================================================================ */
+#complete .wrapper {
+  position: relative;
+}
+#complete .pageTtl {
+  margin-top: 112px;
+  margin-left: 3.3rem;
+  margin-bottom: 6rem;
+}
+@media screen and (min-width: 770px) {
+  #complete .pageTtl {
+    margin-top: 139px;
+    margin-left: 22rem;
+    margin-bottom: 6.7rem;
+  }
+}
+#complete .pageTtl__ttl {
+  width: fit-content;
+  margin-bottom: 0.5rem;
+  line-height: 0.9;
+  font-family: "M PLUS 1", sans-serif;
+  font-size: 5.3rem;
+}
+@media screen and (min-width: 770px) {
+  #complete .pageTtl__ttl {
+    font-size: 7.1rem;
+  }
+}
+#complete .pageTtl__ttl::after {
+  content: "";
+  display: block;
+  height: 1.2px;
+  margin-top: 0.5rem;
+  margin-left: calc(50% - 50vw);
+  background: #000;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+@media screen and (min-width: 770px) {
+  #complete .pageTtl__ttl::after {
+    height: 2px;
+  }
+}
+#complete .pageTtl__ttl span {
+  position: relative;
+}
+#complete .pageTtl__ttl span::before {
+  content: "C";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: block;
+  padding-top: 0.3rem;
+  background: #000;
+  color: #fff;
+}
+#complete .pageTtl__ttl::after {
+  transform: scaleX(1);
+}
+#complete .pageTtl__sub {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+#complete .thanks {
+  width: 36rem;
+  margin: 0 auto;
+  margin-bottom: 18rem;
+  padding: 3.5rem 1.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0.4rem 4px rgba(0, 0, 0, 0.25);
+  line-height: 1.75;
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 770px) {
+  #complete .thanks {
+    width: 124rem;
+    margin-bottom: 21.4rem;
+    padding: 10rem 12rem;
+    font-size: 1.6rem;
+  }
+}
+#complete .thanks__txt {
+  margin-bottom: 6rem;
+  font-weight: 700;
+}
+#complete .thanks__br {
+  display: none;
+}
+@media screen and (min-width: 770px) {
+  #complete .thanks__br {
+    display: block;
+  }
+}
+#complete .thanks__btn {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+#complete .thanks__btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  display: block;
+  width: 1.9rem;
+  aspect-ratio: 192/82;
+  transform: translateY(-50%);
+  background: url(../image/arrow.svg) center center/contain no-repeat;
+  transition: 0.3s;
+  pointer-events: none;
+}
+@media screen and (min-width: 770px) {
+  #complete .thanks__btn:hover::after {
+    filter: invert(100%);
+  }
+}
+#complete .thanks__btn a {
+  display: block;
+  width: 20rem;
+  padding: 0.6rem 0;
+  padding-right: 1.2rem;
+  border: 1px solid #000;
+  border-radius: 999px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+@media screen and (min-width: 770px) {
+  #complete .thanks__btn a {
+    padding: 0.9rem 0;
+    padding-right: 1.2rem;
+    line-height: 1.6;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 770px) {
+  #complete .thanks__btn a:hover {
+    background: #fff;
+    color: #000;
+  }
+}
+#complete .pageBg {
+  position: absolute;
+  top: -112px;
+  left: 0;
+  z-index: -5;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 308vh;
+  transform: translateX(-42.5vh);
+}
+@media screen and (min-width: 770px) {
+  #complete .pageBg {
+    top: -139px;
+    left: 5.19rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  #complete .pageBg {
+    left: -5rem;
+  }
+}
+#complete .pageBg__img--01 {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  height: 308vh;
+  aspect-ratio: 1392/2606;
+  background: url(../image/child/child_bg1.png) center center/cover;
+}
+#complete .pageBg__img--02 {
   position: absolute;
   top: 112px;
   z-index: -2;
