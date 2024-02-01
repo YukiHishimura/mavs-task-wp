@@ -2075,7 +2075,7 @@ mixin
     color: #8adbf3;
   }
 }
-#single .content__area table, #single .content__area th, #single .content__area td {
+#single .content__area table, #single .content__area thead, #single .content__area th, #single .content__area td {
   border-collapse: collapse;
   border: 1px solid #999;
   text-align: left;
@@ -2140,7 +2140,7 @@ mixin
     font-size: 1.6rem;
   }
 }
-#single .content__prevLink {
+#single .content__prev a {
   position: relative;
   display: block;
   width: 5.6rem;
@@ -2148,16 +2148,16 @@ mixin
   transition: 0.3s;
 }
 @media screen and (min-width: 770px) {
-  #single .content__prevLink {
+  #single .content__prev a {
     width: 7.4rem;
   }
 }
 @media screen and (min-width: 770px) {
-  #single .content__prevLink:hover {
+  #single .content__prev a:hover {
     filter: invert(60%);
   }
 }
-#single .content__prevLink::before {
+#single .content__prev a::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -2168,27 +2168,27 @@ mixin
   background: url(../image/single/arrow_black.svg) center center/contain no-repeat;
 }
 @media screen and (min-width: 770px) {
-  #single .content__prevLink::before {
+  #single .content__prev a::before {
     width: 1.92rem;
   }
 }
-#single .content__nextLink {
+#single .content__next a {
   position: relative;
   display: block;
   width: 5.6rem;
   transition: 0.3s;
 }
 @media screen and (min-width: 770px) {
-  #single .content__nextLink {
+  #single .content__next a {
     width: 7.4rem;
   }
 }
 @media screen and (min-width: 770px) {
-  #single .content__nextLink:hover {
+  #single .content__next a:hover {
     filter: invert(60%);
   }
 }
-#single .content__nextLink::after {
+#single .content__next a::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -2199,7 +2199,7 @@ mixin
   background: url(../image/single/arrow_black.svg) center center/contain no-repeat;
 }
 @media screen and (min-width: 770px) {
-  #single .content__nextLink::after {
+  #single .content__next a::after {
     width: 1.92rem;
   }
 }

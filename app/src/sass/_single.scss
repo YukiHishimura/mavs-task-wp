@@ -170,7 +170,7 @@
         }
       }
 
-      table, th, td {
+      table, thead, th, td {
         border-collapse: collapse;
         border: 1px solid #999;
         text-align: left;
@@ -244,7 +244,7 @@
     }
 
     &__prev {
-      &Link {
+      a {
         position: relative;
         display: block;
         width: 5.6rem;
@@ -279,7 +279,7 @@
     }
 
     &__next {
-      &Link {
+      a {
         position: relative;
         display: block;
         width: 5.6rem;
