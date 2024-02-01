@@ -7,16 +7,19 @@
         <p class="pageTtl__sub">ブログ</p>
       </div>
       <div id="category" class="category">
+        <p class="category__name">TECHNOLOGY</p>
         <div id="category__btn" class="category__btn">CATEGORY</div>
         <ul id="category__ul" class="category__ul">
-          <li class="current-cat"><a href="<?php echo esc_url(home_url('/')); ?>blog/">ALL</a></li>
-          <li><a href="<?php echo esc_url(home_url('/')); ?>blog_cat/technology/">TECHNOLOGY</a></li>
+          <li><a href="<?php echo esc_url(home_url('/')); ?>blog/">ALL</a></li>
+          <li class="current-cat"><a href="<?php echo esc_url(home_url('/')); ?>blog_cat/technology/">TECHNOLOGY</a></li>
           <li><a href="<?php echo esc_url(home_url('/')); ?>blog_cat/curry/">CURRY</a></li>
           <li><a href="<?php echo esc_url(home_url('/')); ?>blog_cat/event/">EVENT</a></li>
         </ul>
       </div>
       <div class="archive">
         <?php
+        $term_object = get_queried_object();
+        $term_slug = $term_object->slug;
         if (wp_is_mobile()) {
           $num = 6;
         } else {
@@ -28,6 +31,8 @@
           'post_type' => 'blog',
           'posts_per_page' => $num,
           'paged' => $paged,
+          'taxonomy' => 'blog_cat',
+          'term' => $term_slug,
         );
 
         $wp_query->query($my_posts);
