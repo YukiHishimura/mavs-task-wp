@@ -1,18 +1,19 @@
 <?php get_header(); ?>
 
-  <main id="contact">
+  <main id="notFound">
     <div class="wrapper">
       <div class="pageTtl">
-        <h2 class="pageTtl__ttl"><span>C</span>ONTACT</h2>
-        <p class="pageTtl__sub">お問い合わせ</p>
+        <h2 class="pageTtl__ttl"><span>N</span>OT FOUND</h2>
+        <p class="pageTtl__sub">ページが見つかりません</p>
       </div>
-      <div class="contactForm">
-        <p class="contactForm__txt">
-          株式会社マーベリックスへのお問い合わせページです。<br class="contactForm__br">
-          プライバシーポリシーをご確認の上、お気軽にお問い合わせください。
+      <div class="message">
+        <p class="message__txt">
+          お探しのページは、削除されたか、名前が変更された可能性があります。<br>
+          直接アドレスを入力された場合は、アドレスが正しく入力されているかもう一度ご確認ください。
         </p>
-        <!-- お問い合わせフォーム -->
-        <?php the_content(); ?>
+        <div class="message__btn">
+          <a href="<?php echo esc_url(home_url('/')); ?>" class="message__link">トップページへ</a>
+        </div>
       </div>
       <div class="pageBg">
         <div class="pageBg__img--01"></div>

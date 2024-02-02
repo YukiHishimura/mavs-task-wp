@@ -18,7 +18,7 @@
       <div class="archive">
         <?php
         if (wp_is_mobile()) {
-          $num = 6;
+          $num = 12;
         } else {
           $num = 12;
         }

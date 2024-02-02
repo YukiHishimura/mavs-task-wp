@@ -1,0 +1,160 @@
+@import "_variable.scss";
+
+#notFound {
+  .wrapper {
+    position: relative;
+  }
+
+  .pageTtl {
+    margin-top: 112px;
+    margin-left: 3.3rem;
+    margin-bottom: 6rem;
+
+    @media screen and (min-width: 770px) {
+      margin-top: 139px;
+      margin-left: 22rem;
+      margin-bottom: 6.7rem;
+    }
+
+    &__ttl {
+      @include secTtl("N");
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+
+    &__sub {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+  }
+  
+  .message {
+    width: 36rem;
+    margin: 0 auto;
+    margin-bottom: 18rem;
+    padding: 3.5rem 1.5rem;
+    background: rgba(255, 255, 255, 0.90);
+    box-shadow: 0 0.4rem 4px rgba(0, 0, 0, 0.25);
+    line-height: 1.75;
+    font-size: 1.4rem;
+
+    @media screen and (min-width: 770px) {
+      width: 124rem;
+      margin-bottom: 21.4rem;
+      padding: 10rem 12rem;
+      font-size: 1.6rem;
+    }
+
+    &__txt {
+      margin-bottom: 6rem;
+      font-weight: 700;
+    }
+
+    &__br {
+      display: none;
+
+      @media screen and (min-width: 770px) {
+        display: block;
+      }
+    }
+
+    &__btn {
+      position: relative;
+      width: fit-content;
+      margin: 0 auto;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 2rem;
+        display: block;
+        width: 1.9rem;
+        aspect-ratio: 192 / 82;
+        transform: translateY(-50%);
+        background: url(../image/arrow.svg) center center / contain no-repeat;
+        transition: 0.3s;
+        pointer-events: none;
+      }
+
+      &:hover {
+        &::after {
+          @media screen and (min-width: 770px) {
+            filter: invert(100%);
+          }
+        }
+      }
+
+      a {
+        display: block;
+        width: 20rem;
+        padding: 0.6rem 0;
+        padding-right: 1.2rem;
+        border: 1px solid #000;
+        border-radius: 999px;
+        background: #000;
+        color: #fff;
+        text-align: center;
+
+        @media screen and (min-width: 770px) {
+          padding: 0.9rem 0;
+          padding-right: 1.2rem;
+          line-height: 1.6;
+          transition: 0.3s;
+          cursor: pointer;
+        }
+
+        &:hover {
+          @media screen and (min-width: 770px) {
+            background: #fff;
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+
+  .pageBg {
+    position: absolute;
+    top: -112px;
+    left: 0;
+    z-index: -5;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 308vh;
+    transform: translateX(-42.5vh);
+
+    @media screen and (min-width: 770px) {
+      top: -139px;
+      left: calc(3rem * 1.73);
+    }
+
+    @media screen and (min-width: 1000px) {
+      left: -5rem;
+    }
+
+    &__img {
+      &--01 {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        height: 308vh;
+        aspect-ratio: 1392 / 2606;
+        background: url(../image/child/child_bg1.png) center center / cover;
+      }
+
+      &--02 {
+        position: absolute;
+        top: 112px;
+        z-index: -2;
+        height: 260vh;
+        aspect-ratio: 1224 / 2202;
+        transform: translateX(-20px);
+        background: url(../image/child/child_bg2.png) center center / cover;
+      }
+    }
+  }
+}

@@ -26,7 +26,11 @@
   </footer>
 
   <?php wp_footer(); ?>
-  <?php if(is_archive() || is_tax()) : ?>
+  <?php wp_reset_query(); if(is_front_page()): ?>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/swiper.js"></script>
+    <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/scroll-anime.js"></script>
+  <?php elseif(is_archive() || is_tax()): ?>
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/blog.js"></script>
   <?php endif; ?>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/script.js"></script>

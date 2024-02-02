@@ -17,6 +17,11 @@
 </head>
 
 <body>
+  <?php if(is_front_page()): ?>
+    <div class="loader">
+      <div class="loader__logo"></div>
+    </div>
+  <?php endif; ?>
   <header class="header">
     <h1 class="header__ttl"><a href="<?php echo esc_url(home_url('/')); ?>" class="header__ttlLink"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/image/mavs_logo.svg" alt="株式会社マーベリックス" id="header__img" class="header__img"></a></h1>
     <div id="menuBtn" class="menuBtn">

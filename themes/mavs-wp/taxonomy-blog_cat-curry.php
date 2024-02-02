@@ -21,7 +21,7 @@
         $term_object = get_queried_object();
         $term_slug = $term_object->slug;
         if (wp_is_mobile()) {
-          $num = 6;
+          $num = 12;
         } else {
           $num = 12;
         }
