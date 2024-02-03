@@ -605,6 +605,7 @@ mixin
 }
 @media screen and (min-width: 770px) {
   #top .service__pic {
+    top: 1.3rem;
     width: 60.9rem;
     aspect-ratio: 609/359;
   }
@@ -766,12 +767,18 @@ mixin
   }
 }
 #top .blog__cap {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  aspect-ratio: 3149/638;
   line-height: 1.67;
   font-size: 1.8rem;
   font-weight: 700;
 }
 @media screen and (min-width: 770px) {
   #top .blog__cap {
+    aspect-ratio: 4449/681;
     line-height: 1.75;
     font-size: 2rem;
     transition: 0.3s;
@@ -1092,7 +1099,7 @@ mixin
 }
 #top .recruit {
   position: relative;
-  margin-bottom: 13rem;
+  margin-bottom: 15rem;
   background: url(../image/top/banner_bg_sp.jpg) center center/cover;
 }
 @media screen and (min-width: 770px) {
@@ -1764,6 +1771,7 @@ mixin
   transition: 0.3s;
 }
 #archive .archive__box {
+  aspect-ratio: 383/134;
   padding: 2rem;
   background: rgba(255, 255, 255, 0.9);
 }
@@ -1780,6 +1788,10 @@ mixin
   }
 }
 #archive .archive__cap {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
   line-height: 1.67;
   font-size: 1.8rem;
   font-weight: 700;
@@ -1977,7 +1989,6 @@ mixin
 @media screen and (min-width: 770px) {
   #single .content__cap {
     margin-bottom: 6rem;
-    line-height: 1;
     font-size: 3.4rem;
   }
 }
@@ -2876,6 +2887,7 @@ mixin
 }
 #confirm .contactForm__box:nth-child(1) dd input, #confirm .contactForm__box:nth-child(1) dd p {
   width: 100%;
+  min-height: 3.7rem;
   padding: 0.5rem;
   border: 1px solid #A0A0A0;
   border-radius: 0.5rem;
@@ -2883,11 +2895,13 @@ mixin
 }
 @media screen and (min-width: 770px) {
   #confirm .contactForm__box:nth-child(1) dd input, #confirm .contactForm__box:nth-child(1) dd p {
+    min-height: 4.9rem;
     padding: 1rem;
   }
 }
 #confirm .contactForm__box:nth-child(2) dd input, #confirm .contactForm__box:nth-child(2) dd p {
   width: 100%;
+  min-height: 3.7rem;
   padding: 0.5rem;
   border: 1px solid #A0A0A0;
   border-radius: 0.5rem;
@@ -2895,11 +2909,13 @@ mixin
 }
 @media screen and (min-width: 770px) {
   #confirm .contactForm__box:nth-child(2) dd input, #confirm .contactForm__box:nth-child(2) dd p {
+    min-height: 4.9rem;
     padding: 1rem;
   }
 }
 #confirm .contactForm__box:nth-child(3) dd input, #confirm .contactForm__box:nth-child(3) dd p {
   width: 100%;
+  min-height: 3.7rem;
   padding: 0.5rem;
   border: 1px solid #A0A0A0;
   border-radius: 0.5rem;
@@ -2907,11 +2923,13 @@ mixin
 }
 @media screen and (min-width: 770px) {
   #confirm .contactForm__box:nth-child(3) dd input, #confirm .contactForm__box:nth-child(3) dd p {
+    min-height: 4.9rem;
     padding: 1rem;
   }
 }
 #confirm .contactForm__box:nth-child(4) dd input, #confirm .contactForm__box:nth-child(4) dd p {
   width: 100%;
+  min-height: 3.7rem;
   padding: 0.5rem;
   border: 1px solid #A0A0A0;
   border-radius: 0.5rem;
@@ -2919,11 +2937,13 @@ mixin
 }
 @media screen and (min-width: 770px) {
   #confirm .contactForm__box:nth-child(4) dd input, #confirm .contactForm__box:nth-child(4) dd p {
+    min-height: 4.9rem;
     padding: 1rem;
   }
 }
 #confirm .contactForm__box:nth-child(5) dd input, #confirm .contactForm__box:nth-child(5) dd p {
   width: 100%;
+  min-height: 3.7rem;
   padding: 0.5rem;
   border: 1px solid #A0A0A0;
   border-radius: 0.5rem;
@@ -2931,11 +2951,13 @@ mixin
 }
 @media screen and (min-width: 770px) {
   #confirm .contactForm__box:nth-child(5) dd input, #confirm .contactForm__box:nth-child(5) dd p {
+    min-height: 4.9rem;
     padding: 1rem;
   }
 }
 #confirm .contactForm__box:nth-child(6) dd input, #confirm .contactForm__box:nth-child(6) dd p {
   width: 100%;
+  min-height: 3.7rem;
   padding: 0.5rem;
   border: 1px solid #A0A0A0;
   border-radius: 0.5rem;
@@ -2943,25 +2965,28 @@ mixin
 }
 @media screen and (min-width: 770px) {
   #confirm .contactForm__box:nth-child(6) dd input, #confirm .contactForm__box:nth-child(6) dd p {
+    min-height: 4.9rem;
     padding: 1rem;
   }
 }
 #confirm .contactForm__box:nth-child(7) dd textarea, #confirm .contactForm__box:nth-child(7) dd p {
   width: 100%;
+  min-height: 3.7rem;
   padding: 0.5rem;
   border: 1px solid #A0A0A0;
   border-radius: 0.5rem;
   background: #F5F5F5;
-  aspect-ratio: 10/6;
+  min-height: 19.8rem;
 }
 @media screen and (min-width: 770px) {
   #confirm .contactForm__box:nth-child(7) dd textarea, #confirm .contactForm__box:nth-child(7) dd p {
+    min-height: 4.9rem;
     padding: 1rem;
   }
 }
 @media screen and (min-width: 770px) {
   #confirm .contactForm__box:nth-child(7) dd textarea, #confirm .contactForm__box:nth-child(7) dd p {
-    aspect-ratio: 696/150;
+    min-height: 14.5rem;
   }
 }
 #confirm .contactForm__dt {

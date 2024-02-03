@@ -221,6 +221,7 @@
     }
 
     &__box {
+      aspect-ratio: 383 / 134;
       padding: 2rem;
       background: rgba(255, 255, 255, 0.90);
     }
@@ -238,6 +239,10 @@
     }
 
     &__cap {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
       line-height: 1.67;
       font-size: 1.8rem;
       font-weight: 700;

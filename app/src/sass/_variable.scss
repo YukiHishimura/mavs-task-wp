@@ -341,12 +341,14 @@ mixin
 // 確認ページ
 @mixin inputConfirm {
   width: 100%;
+  min-height: 3.7rem;
   padding: 0.5rem;
   border: 1px solid #A0A0A0;
   border-radius: 0.5rem;
   background: #F5F5F5;
 
   @media screen and (min-width: 770px) {
+    min-height: 4.9rem;
     padding: 1rem;
   }
 }

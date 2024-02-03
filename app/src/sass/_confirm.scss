@@ -148,10 +148,10 @@
         dd {
           textarea, p {
             @include inputConfirm;
-            aspect-ratio: 10 / 6;
+            min-height: 19.8rem;
   
             @media screen and (min-width: 770px) {
-              aspect-ratio: 696 / 150;
+              min-height: 14.5rem;
             }
           }
         }

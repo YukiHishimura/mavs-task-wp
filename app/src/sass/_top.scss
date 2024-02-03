@@ -444,6 +444,7 @@
       position: relative;
 
       @media screen and (min-width: 770px) {
+        top: 1.3rem;
         width: 60.9rem;
         aspect-ratio: 609 / 359;
       }
@@ -567,11 +568,17 @@
     }
 
     &__cap {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      aspect-ratio: 3149 / 638;
       line-height: 1.67;
       font-size: 1.8rem;
       font-weight: 700;
 
       @media screen and (min-width: 770px) {
+        aspect-ratio: 4449 / 681;
         line-height: 1.75;
         font-size: 2rem;
         transition: 0.3s;
@@ -727,7 +734,7 @@
   // ----------リクルートバナー--------------------
   .recruit {
     position: relative;
-    margin-bottom: 13rem;
+    margin-bottom: 15rem;
     background: url(../image/top/banner_bg_sp.jpg) center center / cover;
 
     @media screen and (min-width: 770px) {
