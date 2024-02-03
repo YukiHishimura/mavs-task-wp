@@ -18,7 +18,7 @@ function initSwiper() {
             slidesPerView: 2.5,  // PC
             spaceBetween: gap,
             autoplay: {
-                delay: 2500,
+                delay: 2800,
                 disableOnInteraction: false,
             },
             speed: 500,
@@ -32,7 +32,7 @@ function initSwiper() {
             slidesPerView: 1.2,
             spaceBetween: gap,
             autoplay: {
-                delay: 2500,
+                delay: 2800,
                 disableOnInteraction: false,
             },
             speed: 500,

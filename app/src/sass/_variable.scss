@@ -288,8 +288,8 @@ mixin
 
 
 // ----------各要素スライドイン--------------------
-@mixin slideIn($delay) {
-  animation: slideInAnime 0.3s $delay forwards;
+@mixin slideIn($delay, $duration: 0.3s) {
+  animation: slideInAnime $duration $delay forwards;
   @keyframes slideInAnime {
     100% {
       transform: translateX(0);

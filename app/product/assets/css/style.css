@@ -3741,7 +3741,7 @@ mixin
   }
 }
 #top .show .about__btn {
-  animation: slideInAnime 0.3s 0.9s forwards;
+  animation: slideInAnime 1s 0.9s forwards;
 }
 @keyframes slideInAnime {
   100% {
@@ -3750,7 +3750,7 @@ mixin
   }
 }
 #top .show .about__bgBox::before {
-  animation: scaleDown 0.6s 0.1s forwards;
+  animation: scaleDown 0.8s 0.1s forwards;
 }
 @keyframes scaleDown {
   100% {
@@ -3799,7 +3799,7 @@ mixin
   }
 }
 #top .show .service__btn {
-  animation: slideInAnime 0.3s 0.9s forwards;
+  animation: slideInAnime 1s 0.9s forwards;
 }
 @keyframes slideInAnime {
   100% {
@@ -3808,7 +3808,7 @@ mixin
   }
 }
 #top .show .service__box {
-  animation: slideInAnime 0.3s 1.2s forwards;
+  animation: slideInAnime 1s 1.2s forwards;
 }
 @keyframes slideInAnime {
   100% {
@@ -3858,7 +3858,7 @@ mixin
   }
 }
 #top .show .blog__btn {
-  animation: slideInAnime 0.3s 0.9s forwards;
+  animation: slideInAnime 1s 0.9s forwards;
 }
 @keyframes slideInAnime {
   100% {
@@ -3908,7 +3908,7 @@ mixin
   }
 }
 #top .show .member__pic {
-  animation: slideInAnime 0.3s 0.9s forwards;
+  animation: slideInAnime 1s 0.9s forwards;
 }
 @keyframes slideInAnime {
   100% {
@@ -3926,7 +3926,7 @@ mixin
   }
 }
 #top .show .member__btn {
-  animation: slideInAnime 0.3s 1.5s forwards;
+  animation: slideInAnime 1s 1.5s forwards;
 }
 @keyframes slideInAnime {
   100% {
@@ -3935,7 +3935,7 @@ mixin
   }
 }
 #top .show.recruit {
-  animation: slideInAnime 0.3s 0.6s forwards;
+  animation: slideInAnime 1s 0.3s forwards;
 }
 @keyframes slideInAnime {
   100% {
@@ -3944,7 +3944,7 @@ mixin
   }
 }
 #top .show.recruit .recruit__wrapper {
-  animation: slideInAnime 0.3s 0.9s forwards;
+  animation: slideInAnime 0.3s 0.8s forwards;
 }
 @keyframes slideInAnime {
   100% {
@@ -4003,7 +4003,7 @@ mixin
   }
 }
 #top .show .news__btn {
-  animation: slideInAnime 0.3s 1.2s forwards;
+  animation: slideInAnime 1s 1.2s forwards;
 }
 @keyframes slideInAnime {
   100% {
