@@ -2109,6 +2109,8 @@ mixin
 }
 #single .content__area ol {
   margin-left: 1.8rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   list-style-type: decimal;
 }
 #single .content__area ol li {
@@ -2120,8 +2122,15 @@ mixin
     padding-left: 0.9rem;
   }
 }
+@media screen and (min-width: 770px) {
+  #single .content__area ol li:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+}
 #single .content__area ul {
   margin-left: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   list-style-type: disc;
 }
 #single .content__area ul li {
@@ -2131,6 +2140,11 @@ mixin
   #single .content__area ul li {
     margin-bottom: 1rem;
     padding-left: 0.5rem;
+  }
+}
+@media screen and (min-width: 770px) {
+  #single .content__area ul li:nth-last-child(1) {
+    margin-bottom: 0;
   }
 }
 #single .content__area li::marker {
