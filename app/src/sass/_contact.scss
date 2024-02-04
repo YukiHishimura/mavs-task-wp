@@ -129,23 +129,37 @@
       // 性別
       &:nth-child(4) {
         dd {
-          display: flex;
-          align-items: center;
-          gap: 1rem;
+          // display: flex;
+          // align-items: center;
+          // gap: 1rem;
 
-          @media screen and (min-width: 770px) {
-            gap: 2rem;
-            padding-left: 1rem;
+          // @media screen and (min-width: 770px) {
+          //   gap: 3rem;
+          // }
+
+          // ContactForm7 修正
+          .wpcf7-list-item {
+            &.first {
+              @media screen and (min-width: 770px) {
+                margin-left: 1rem;
+              }
+            }
+            &.last {
+            @media screen and (min-width: 770px) {
+                margin-left: 3rem;
+              }
+            }
           }
         }
 
         label {
           position: relative;
           display: block;
-          padding-left: 1.8rem;
+          padding-left: 0.8rem;
+          cursor: pointer;
 
           @media screen and (min-width: 770px) {
-            padding-left: 3.1rem;
+            padding-left: 1.6rem;
           }
 
           // ラジオボタン枠
@@ -154,11 +168,33 @@
             position: absolute;
             top: 50%;
             left: 0;
+            z-index: 1;
             display: block;
             width: 1.5rem;
             aspect-ratio: 1 / 1;
             transform: translateY(-50%);
             border: 1px solid #A0A0A0;
+            border-radius: 50%;
+            // background: #fff;
+
+            @media screen and (min-width: 770px) {
+              width: 2.1rem;
+              transform: translateY(-45%);
+            }
+          }
+
+          // ラジオボタン背景
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            z-index: -1;
+            display: block;
+            width: 1.5rem;
+            aspect-ratio: 1 / 1;
+            transform: translateY(-50%);
+            border: 1px solid #fff;
             border-radius: 50%;
             background: #fff;
 
@@ -170,24 +206,34 @@
         }
 
         input {
-          position: absolute;
-          top: 50%;
-          left: 0;
-          display: block;
-          width: 1.5rem;
-          aspect-ratio: 1 / 1;
-          margin: 0;
-          transform: translateY(-50%);
-          accent-color: #000;
-          opacity: 0;
+          width: 0;
+          height: 0;
 
-          @media screen and (min-width: 770px) {
-            width: 2.1rem;
-            transform: translateY(-45%);
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            display: block;
+            width: 1.5rem;
+            aspect-ratio: 1 / 1;
+            transform: translateY(-50%);
+            border: 0.3rem solid #fff;
+            border-radius: 50%;
+            background: #000;
+            opacity: 0;
+
+            @media screen and (min-width: 770px) {
+              width: 2.1rem;
+              transform: translateY(-45%);
+              border: 0.5rem solid #fff;
+            }
           }
 
           &:checked {
-            opacity: 1;
+            &::after {
+              opacity: 1;
+            }
           }
         }
       }
@@ -198,10 +244,10 @@
           // ContactForm7 修正
           .wpcf7-list-item {
             display: block;
-          }
 
-          @media screen and (min-width: 770px) {
-            padding-left: 1rem;
+            @media screen and (min-width: 770px) {
+              margin-left: 1rem;  
+            }
           }
         }
 
@@ -211,6 +257,7 @@
           width: fit-content;
           margin-bottom: 0.5rem;
           padding-left: 2rem;
+          cursor: pointer;
 
           @media screen and (min-width: 770px) {
             margin-bottom: 1rem;
@@ -271,6 +318,7 @@
           transform: translateY(-50%);
           accent-color: #fff;
           opacity: 0;
+          cursor: pointer;
 
           @media screen and (min-width: 770px) {
             width: 2rem;
@@ -310,6 +358,7 @@
           @include inputTxt;
           width: 16rem;
           padding-left: 1rem;
+          cursor: pointer;
         }
       }
 
@@ -319,8 +368,15 @@
           @include required;
         }
 
+        dd {
+          .wpcf7-form-control-wrap {
+            display: block;
+          }
+        }
+
         textarea {
           @include inputTxt;
+          display: block;
           aspect-ratio: 10 / 6;
 
           @media screen and (min-width: 770px) {

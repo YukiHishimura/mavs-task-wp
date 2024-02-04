@@ -2840,28 +2840,71 @@ mixin
     padding: 1rem;
   }
 }
-#contact .contactForm__box:nth-child(4) dd {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+@media screen and (min-width: 770px) {
+  #contact .contactForm__box:nth-child(4) dd .wpcf7-list-item.first {
+    margin-left: 1rem;
+  }
 }
 @media screen and (min-width: 770px) {
-  #contact .contactForm__box:nth-child(4) dd {
-    gap: 2rem;
-    padding-left: 1rem;
+  #contact .contactForm__box:nth-child(4) dd .wpcf7-list-item.last {
+    margin-left: 3rem;
   }
 }
 #contact .contactForm__box:nth-child(4) label {
   position: relative;
   display: block;
-  padding-left: 1.8rem;
+  padding-left: 0.8rem;
+  cursor: pointer;
 }
 @media screen and (min-width: 770px) {
   #contact .contactForm__box:nth-child(4) label {
-    padding-left: 3.1rem;
+    padding-left: 1.6rem;
   }
 }
 #contact .contactForm__box:nth-child(4) label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 1.5rem;
+  aspect-ratio: 1/1;
+  transform: translateY(-50%);
+  border: 1px solid #A0A0A0;
+  border-radius: 50%;
+}
+@media screen and (min-width: 770px) {
+  #contact .contactForm__box:nth-child(4) label::before {
+    width: 2.1rem;
+    transform: translateY(-45%);
+  }
+}
+#contact .contactForm__box:nth-child(4) label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+  display: block;
+  width: 1.5rem;
+  aspect-ratio: 1/1;
+  transform: translateY(-50%);
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background: #fff;
+}
+@media screen and (min-width: 770px) {
+  #contact .contactForm__box:nth-child(4) label::after {
+    width: 2.1rem;
+    transform: translateY(-45%);
+  }
+}
+#contact .contactForm__box:nth-child(4) input {
+  width: 0;
+  height: 0;
+}
+#contact .contactForm__box:nth-child(4) input::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -2870,43 +2913,27 @@ mixin
   width: 1.5rem;
   aspect-ratio: 1/1;
   transform: translateY(-50%);
-  border: 1px solid #A0A0A0;
+  border: 0.3rem solid #fff;
   border-radius: 50%;
-  background: #fff;
-}
-@media screen and (min-width: 770px) {
-  #contact .contactForm__box:nth-child(4) label::before {
-    width: 2.1rem;
-    transform: translateY(-45%);
-  }
-}
-#contact .contactForm__box:nth-child(4) input {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  display: block;
-  width: 1.5rem;
-  aspect-ratio: 1/1;
-  margin: 0;
-  transform: translateY(-50%);
-  accent-color: #000;
+  background: #000;
   opacity: 0;
 }
 @media screen and (min-width: 770px) {
-  #contact .contactForm__box:nth-child(4) input {
+  #contact .contactForm__box:nth-child(4) input::after {
     width: 2.1rem;
     transform: translateY(-45%);
+    border: 0.5rem solid #fff;
   }
 }
-#contact .contactForm__box:nth-child(4) input:checked {
+#contact .contactForm__box:nth-child(4) input:checked::after {
   opacity: 1;
 }
 #contact .contactForm__box:nth-child(5) dd .wpcf7-list-item {
   display: block;
 }
 @media screen and (min-width: 770px) {
-  #contact .contactForm__box:nth-child(5) dd {
-    padding-left: 1rem;
+  #contact .contactForm__box:nth-child(5) dd .wpcf7-list-item {
+    margin-left: 1rem;
   }
 }
 #contact .contactForm__box:nth-child(5) label {
@@ -2915,6 +2942,7 @@ mixin
   width: fit-content;
   margin-bottom: 0.5rem;
   padding-left: 2rem;
+  cursor: pointer;
 }
 @media screen and (min-width: 770px) {
   #contact .contactForm__box:nth-child(5) label {
@@ -2974,6 +3002,7 @@ mixin
   transform: translateY(-50%);
   accent-color: #fff;
   opacity: 0;
+  cursor: pointer;
 }
 @media screen and (min-width: 770px) {
   #contact .contactForm__box:nth-child(5) input {
@@ -3009,6 +3038,7 @@ mixin
   border-radius: 0.5rem;
   width: 16rem;
   padding-left: 1rem;
+  cursor: pointer;
 }
 @media screen and (min-width: 770px) {
   #contact .contactForm__box:nth-child(6) select {
@@ -3030,11 +3060,15 @@ mixin
   text-align: center;
   font-size: 1.2rem;
 }
+#contact .contactForm__box:nth-child(7) dd .wpcf7-form-control-wrap {
+  display: block;
+}
 #contact .contactForm__box:nth-child(7) textarea {
   width: 100%;
   padding: 0.5rem;
   border: 1px solid #A0A0A0;
   border-radius: 0.5rem;
+  display: block;
   aspect-ratio: 10/6;
 }
 @media screen and (min-width: 770px) {
@@ -3376,17 +3410,11 @@ mixin
   border: 1px solid #A0A0A0;
   border-radius: 0.5rem;
   background: #F5F5F5;
-  min-height: 19.8rem;
 }
 @media screen and (min-width: 770px) {
   #confirm .contactForm__box:nth-child(7) dd textarea, #confirm .contactForm__box:nth-child(7) dd p {
     min-height: 4.9rem;
     padding: 1rem;
-  }
-}
-@media screen and (min-width: 770px) {
-  #confirm .contactForm__box:nth-child(7) dd textarea, #confirm .contactForm__box:nth-child(7) dd p {
-    min-height: 14.5rem;
   }
 }
 #confirm .contactForm__dt {

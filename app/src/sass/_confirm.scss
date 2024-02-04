@@ -152,10 +152,10 @@
         dd {
           textarea, p {
             @include inputConfirm;
-            min-height: 19.8rem;
+            // min-height: 19.8rem;
   
             @media screen and (min-width: 770px) {
-              min-height: 14.5rem;
+              // min-height: 14.5rem;
             }
           }
         }
