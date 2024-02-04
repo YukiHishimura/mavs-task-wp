@@ -155,13 +155,19 @@
     .current-cat {
       @media screen and (min-width: 770px) {
         border-bottom: 2px solid #000;
+        transition: 0.3s;
       }
 
-      a {
-        &:hover {
-          @media screen and (min-width: 770px) {
-            color: #000;
-          }
+      // a {
+      //   &:hover {
+      //     @media screen and (min-width: 770px) {
+      //       color: #000;
+      //     }
+      //   }
+      // }
+      &:hover {
+        @media screen and (min-width: 770px) {
+          border-color: #888;
         }
       }
     }

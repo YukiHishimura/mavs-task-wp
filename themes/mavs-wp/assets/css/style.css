@@ -1717,11 +1717,12 @@ mixin
 @media screen and (min-width: 770px) {
   #archive .category .current-cat {
     border-bottom: 2px solid #000;
+    transition: 0.3s;
   }
 }
 @media screen and (min-width: 770px) {
-  #archive .category .current-cat a:hover {
-    color: #000;
+  #archive .category .current-cat:hover {
+    border-color: #888;
   }
 }
 #archive .archive {
@@ -1821,7 +1822,8 @@ mixin
   display: flex;
   gap: 0.2rem;
 }
-#archive .wp-pagenavi a, #archive .wp-pagenavi span {
+#archive .wp-pagenavi a,
+#archive .wp-pagenavi span {
   display: block;
   width: 4rem;
   padding: 0.7rem 0;
@@ -1832,10 +1834,12 @@ mixin
   font-size: 1.6rem;
   font-weight: 500;
 }
-#archive .wp-pagenavi a:nth-child(1), #archive .wp-pagenavi span:nth-child(1) {
+#archive .wp-pagenavi a:nth-child(1),
+#archive .wp-pagenavi span:nth-child(1) {
   border-radius: 999px 0 0 999px;
 }
-#archive .wp-pagenavi a:nth-last-child(1), #archive .wp-pagenavi span:nth-last-child(1) {
+#archive .wp-pagenavi a:nth-last-child(1),
+#archive .wp-pagenavi span:nth-last-child(1) {
   border-radius: 0 999px 999px 0;
 }
 #archive .wp-pagenavi a {
@@ -2083,11 +2087,12 @@ mixin
 @media screen and (min-width: 770px) {
   #archive-cat .category .current-cat {
     border-bottom: 2px solid #000;
+    transition: 0.3s;
   }
 }
 @media screen and (min-width: 770px) {
-  #archive-cat .category .current-cat a:hover {
-    color: #000;
+  #archive-cat .category .current-cat:hover {
+    border-color: #888;
   }
 }
 #archive-cat .archive {
@@ -3711,6 +3716,7 @@ mixin
   position: absolute;
   top: 50%;
   right: 2rem;
+  z-index: 1;
   display: block;
   width: 1.9rem;
   aspect-ratio: 192/82;
@@ -3737,17 +3743,55 @@ mixin
 }
 @media screen and (min-width: 770px) {
   #complete .thanks__btn a {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
     padding: 0.9rem 0;
     padding-right: 1.2rem;
+    background: transparent;
     line-height: 1.6;
     transition: 0.3s;
     cursor: pointer;
   }
 }
 @media screen and (min-width: 770px) {
-  #complete .thanks__btn a:hover {
+  #complete .thanks__btn a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -2;
+    display: block;
+    width: 110%;
+    aspect-ratio: 1/1;
+    transform: translate(-50%, -50%);
+    background: #000;
+  }
+}
+@media screen and (min-width: 770px) {
+  #complete .thanks__btn a::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    display: block;
+    width: 110%;
+    aspect-ratio: 1/1;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
     background: #fff;
+    transition: 0.4s;
+  }
+}
+@media screen and (min-width: 770px) {
+  #complete .thanks__btn a:hover {
     color: #000;
+  }
+}
+@media screen and (min-width: 770px) {
+  #complete .thanks__btn a:hover::after {
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 #complete .pageBg {
@@ -3904,6 +3948,7 @@ mixin
   position: absolute;
   top: 50%;
   right: 2rem;
+  z-index: 1;
   display: block;
   width: 1.9rem;
   aspect-ratio: 192/82;
@@ -3930,6 +3975,9 @@ mixin
 }
 @media screen and (min-width: 770px) {
   #notFound .message__btn a {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
     padding: 0.9rem 0;
     padding-right: 1.2rem;
     line-height: 1.6;
@@ -3938,9 +3986,43 @@ mixin
   }
 }
 @media screen and (min-width: 770px) {
-  #notFound .message__btn a:hover {
+  #notFound .message__btn a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -2;
+    display: block;
+    width: 110%;
+    aspect-ratio: 1/1;
+    transform: translate(-50%, -50%);
+    background: #000;
+  }
+}
+@media screen and (min-width: 770px) {
+  #notFound .message__btn a::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    display: block;
+    width: 110%;
+    aspect-ratio: 1/1;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
     background: #fff;
+    transition: 0.4s;
+  }
+}
+@media screen and (min-width: 770px) {
+  #notFound .message__btn a:hover {
     color: #000;
+  }
+}
+@media screen and (min-width: 770px) {
+  #notFound .message__btn a:hover::after {
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 #notFound .pageBg {
