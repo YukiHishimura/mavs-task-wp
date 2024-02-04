@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-  <main id="archive">
+  <main id="archive-cat">
     <div class="wrapper">
       <div class="pageTtl">
         <h2 class="pageTtl__ttl"><span>B</span>LOG</h2>

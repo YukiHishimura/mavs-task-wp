@@ -27,6 +27,10 @@
     &__sub {
       font-size: 1.2rem;
       font-weight: 700;
+
+      @media screen and (min-width: 770px) {
+        font-size: 1.6rem;
+      }
     }
   }
   
