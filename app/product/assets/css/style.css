@@ -120,7 +120,7 @@ mixin
 @media screen and (min-width: 1000px) {
   #top .mv__txtBox {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 0;
     margin: 0;
     margin-left: 3.1rem;
