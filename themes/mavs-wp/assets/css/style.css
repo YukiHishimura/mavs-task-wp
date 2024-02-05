@@ -2941,6 +2941,9 @@ mixin
     margin-left: 1rem;
   }
 }
+#contact .contactForm__box:nth-child(5) dd .wpcf7-list-item.last label {
+  margin-bottom: 0;
+}
 #contact .contactForm__box:nth-child(5) label {
   position: relative;
   display: block;
