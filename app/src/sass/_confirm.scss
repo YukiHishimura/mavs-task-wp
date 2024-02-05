@@ -190,15 +190,36 @@
     }
 
     &__back {
+      overflow: hidden;
       position: relative;
       width: fit-content;
       margin: 0 auto;
+      border: 1px solid #888;
+      border-radius: 999px;
+      background: #888;
 
       @media screen and (min-width: 770px) {
         margin: 0;
       }
 
       &::before {
+        @media screen and (min-width: 770px) {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: 0;
+          display: block;
+          width: 110%;
+          aspect-ratio: 1 / 1;
+          transform: translate(-50%, -50%) scale(0);
+          border-radius: 50%;
+          background: #fff;
+          transition: 0.4s;
+        }
+      }
+
+      &::after {
         content: "";
         position: absolute;
         top: 50%;
@@ -214,6 +235,12 @@
 
       &:hover {
         &::before {
+          @media screen and (min-width: 770px) {
+            transform: translate(-50%, -50%) scale(1);
+          }
+        }
+
+        &::after {
           @media screen and (min-width: 770px) {
             filter: invert(100%);
           }
@@ -232,8 +259,11 @@
         color: #fff;
 
         @media screen and (min-width: 770px) {
+          position: relative;
+          z-index: 1;
           padding: 0.9rem 0;
           padding-left: 1.2rem;
+          background: transparent;
           line-height: 1.6;
           transition: 0.3s;
           cursor: pointer;
@@ -241,7 +271,7 @@
 
         &:hover {
           @media screen and (min-width: 770px) {
-            background: #fff;
+            // background: #fff;
             color: #000;
           }
         }
@@ -254,12 +284,33 @@
     }
 
     &__btn {
+      overflow: hidden;
       position: relative;
       width: fit-content;
       margin: 0 auto;
+      border: 1px solid #000;
+      border-radius: 999px;
+      background: #000;
 
       @media screen and (min-width: 770px) {
         margin: 0;
+      }
+
+      &::before {
+        @media screen and (min-width: 770px) {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          z-index: 0;
+          display: block;
+          width: 110%;
+          aspect-ratio: 1 / 1;
+          transform: translate(-50%, -50%) scale(0);
+          border-radius: 50%;
+          background: #fff;
+          transition: 0.4s;
+        }
       }
 
       &::after {
@@ -277,6 +328,12 @@
       }
 
       &:hover {
+        &::before {
+          @media screen and (min-width: 770px) {
+            transform: translate(-50%, -50%) scale(1);
+          }
+        }
+
         &::after {
           @media screen and (min-width: 770px) {
             filter: invert(100%);
@@ -296,8 +353,11 @@
         color: #fff;
 
         @media screen and (min-width: 770px) {
+          position: relative;
+          z-index: 1;
           padding: 0.9rem 0;
           padding-right: 1.2rem;
+          background: transparent;
           line-height: 1.6;
           transition: 0.3s;
           cursor: pointer;
@@ -305,7 +365,7 @@
 
         &:hover {
           @media screen and (min-width: 770px) {
-            background: #fff;
+            // background: #fff;
             color: #000;
           }
         }

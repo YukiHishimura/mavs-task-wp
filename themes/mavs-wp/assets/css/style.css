@@ -3105,9 +3105,29 @@ mixin
   }
 }
 #contact .contactForm__btn {
+  overflow: hidden;
   position: relative;
   width: fit-content;
   margin: 0 auto;
+  border: 1px solid #000;
+  border-radius: 999px;
+  background: #000;
+}
+@media screen and (min-width: 770px) {
+  #contact .contactForm__btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    display: block;
+    width: 110%;
+    aspect-ratio: 1/1;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    background: #fff;
+    transition: 0.4s;
+  }
 }
 #contact .contactForm__btn::after {
   content: "";
@@ -3122,6 +3142,11 @@ mixin
   background: url(../image/arrow.svg) center center/contain no-repeat;
   transition: 0.3s;
   pointer-events: none;
+}
+@media screen and (min-width: 770px) {
+  #contact .contactForm__btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 @media screen and (min-width: 770px) {
   #contact .contactForm__btn:hover::after {
@@ -3141,8 +3166,11 @@ mixin
 }
 @media screen and (min-width: 770px) {
   #contact .contactForm__btn input {
+    position: relative;
+    z-index: 1;
     padding: 0.9rem 0;
     padding-right: 1.2rem;
+    background: transparent;
     line-height: 1.6;
     transition: 0.3s;
     cursor: pointer;
@@ -3150,7 +3178,6 @@ mixin
 }
 @media screen and (min-width: 770px) {
   #contact .contactForm__btn input:hover {
-    background: #fff;
     color: #000;
   }
 }
@@ -3452,16 +3479,36 @@ mixin
   }
 }
 #confirm .contactForm__back {
+  overflow: hidden;
   position: relative;
   width: fit-content;
   margin: 0 auto;
+  border: 1px solid #888;
+  border-radius: 999px;
+  background: #888;
 }
 @media screen and (min-width: 770px) {
   #confirm .contactForm__back {
     margin: 0;
   }
 }
-#confirm .contactForm__back::before {
+@media screen and (min-width: 770px) {
+  #confirm .contactForm__back::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    display: block;
+    width: 110%;
+    aspect-ratio: 1/1;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    background: #fff;
+    transition: 0.4s;
+  }
+}
+#confirm .contactForm__back::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -3476,6 +3523,11 @@ mixin
 }
 @media screen and (min-width: 770px) {
   #confirm .contactForm__back:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@media screen and (min-width: 770px) {
+  #confirm .contactForm__back:hover::after {
     filter: invert(100%);
   }
 }
@@ -3492,8 +3544,11 @@ mixin
 }
 @media screen and (min-width: 770px) {
   #confirm .contactForm__back input {
+    position: relative;
+    z-index: 1;
     padding: 0.9rem 0;
     padding-left: 1.2rem;
+    background: transparent;
     line-height: 1.6;
     transition: 0.3s;
     cursor: pointer;
@@ -3501,7 +3556,6 @@ mixin
 }
 @media screen and (min-width: 770px) {
   #confirm .contactForm__back input:hover {
-    background: #fff;
     color: #000;
   }
 }
@@ -3509,13 +3563,33 @@ mixin
   display: none;
 }
 #confirm .contactForm__btn {
+  overflow: hidden;
   position: relative;
   width: fit-content;
   margin: 0 auto;
+  border: 1px solid #000;
+  border-radius: 999px;
+  background: #000;
 }
 @media screen and (min-width: 770px) {
   #confirm .contactForm__btn {
     margin: 0;
+  }
+}
+@media screen and (min-width: 770px) {
+  #confirm .contactForm__btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 0;
+    display: block;
+    width: 110%;
+    aspect-ratio: 1/1;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    background: #fff;
+    transition: 0.4s;
   }
 }
 #confirm .contactForm__btn::after {
@@ -3530,6 +3604,11 @@ mixin
   background: url(../image/arrow.svg) center center/contain no-repeat;
   transition: 0.3s;
   pointer-events: none;
+}
+@media screen and (min-width: 770px) {
+  #confirm .contactForm__btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 @media screen and (min-width: 770px) {
   #confirm .contactForm__btn:hover::after {
@@ -3549,8 +3628,11 @@ mixin
 }
 @media screen and (min-width: 770px) {
   #confirm .contactForm__btn input {
+    position: relative;
+    z-index: 1;
     padding: 0.9rem 0;
     padding-right: 1.2rem;
+    background: transparent;
     line-height: 1.6;
     transition: 0.3s;
     cursor: pointer;
@@ -3558,7 +3640,6 @@ mixin
 }
 @media screen and (min-width: 770px) {
   #confirm .contactForm__btn input:hover {
-    background: #fff;
     color: #000;
   }
 }
